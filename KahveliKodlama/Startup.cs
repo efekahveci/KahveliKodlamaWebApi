@@ -1,7 +1,11 @@
+using KahveliKodlama.Infrastructure;
+using KahveliKodlama.Persistence.Context;
+using KahveliKodlama.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -15,7 +19,7 @@ namespace KahveliKodlama
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+    public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
@@ -25,13 +29,18 @@ namespace KahveliKodlama
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddServiceLayer(Configuration);
+            services.AddInfrastructureServices(Configuration);
+            services.AddDbContext<KahveliContext>(options =>
+            options.UseSqlServer(Configuration?.GetConnectionString("DefaultConnection")));
             services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.ConfigureRequestPipeline();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -40,6 +49,8 @@ namespace KahveliKodlama
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseStaticFiles();
 
             app.UseAuthorization();
 

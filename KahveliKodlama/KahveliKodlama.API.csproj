@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure.csproj" />
+    <ProjectReference Include="..\KahveliKodlama.Persistence\KahveliKodlama.Persistence\KahveliKodlama.Persistence.csproj" />
+    <ProjectReference Include="..\KahveliKodlama.Service\KahveliKodlama.Service\KahveliKodlama.Service.csproj" />
+  </ItemGroup>
+
+</Project>
