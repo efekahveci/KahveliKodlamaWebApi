@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "8961c33b-dd6d-493c-9c9b-df44779a0e30": {
+      "ProjectGuid": "8961c33b-dd6d-493c-9c9b-df44779a0e30",
+      "DisplayName": "KahveliKodlama.Domain",
+      "ColorIndex": 0
+    },
+    "e706edc4-2555-4c40-8372-1b68dfd3a829": {
+      "ProjectGuid": "e706edc4-2555-4c40-8372-1b68dfd3a829",
+      "DisplayName": "KahveliKodlama.Infrastructure",
+      "ColorIndex": 1
+    },
+    "babf8009-e68f-4a1f-a356-57c2488696bf": {
+      "ProjectGuid": "babf8009-e68f-4a1f-a356-57c2488696bf",
+      "DisplayName": "KahveliKodlama.Persistence",
+      "ColorIndex": 2
+    },
+    "65d1576a-cd2f-49db-aa25-3c25bf4f6914": {
+      "ProjectGuid": "65d1576a-cd2f-49db-aa25-3c25bf4f6914",
+      "DisplayName": "KahveliKodlama.API",
+      "ColorIndex": 3
+    },
+    "5be4d7cc-4e83-4d4a-848a-22436f2a521c": {
+      "ProjectGuid": "5be4d7cc-4e83-4d4a-848a-22436f2a521c",
+      "DisplayName": "KahveliKodlama.Service",
+      "ColorIndex": 4
+    },
+    "db1245d4-6e4b-4cd3-adee-88fe87e93751": {
+      "ProjectGuid": "db1245d4-6e4b-4cd3-adee-88fe87e93751",
+      "DisplayName": "KahveliKodlama.Application",
+      "ColorIndex": 5
+    }
+  },
+  "NextColorIndex": 6
+}

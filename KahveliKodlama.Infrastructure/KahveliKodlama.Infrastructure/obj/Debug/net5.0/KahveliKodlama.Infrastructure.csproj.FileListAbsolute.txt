@@ -1,0 +1,60 @@
+C:\Users\Yusuf\Desktop\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\bin\Debug\net5.0\KahveliKodlama.Infrastructure.deps.json
+C:\Users\Yusuf\Desktop\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\bin\Debug\net5.0\KahveliKodlama.Infrastructure.dll
+C:\Users\Yusuf\Desktop\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\bin\Debug\net5.0\ref\KahveliKodlama.Infrastructure.dll
+C:\Users\Yusuf\Desktop\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\bin\Debug\net5.0\KahveliKodlama.Infrastructure.pdb
+C:\Users\Yusuf\Desktop\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\KahveliKodlama.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Yusuf\Desktop\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\KahveliKodlama.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yusuf\Desktop\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\KahveliKodlama.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Yusuf\Desktop\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\KahveliKodlama.Infrastructure.AssemblyInfo.cs
+C:\Users\Yusuf\Desktop\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\KahveliKodlama.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Yusuf\Desktop\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\KahveliKodlama.Infrastructure.dll
+C:\Users\Yusuf\Desktop\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\ref\KahveliKodlama.Infrastructure.dll
+C:\Users\Yusuf\Desktop\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\KahveliKodlama.Infrastructure.pdb
+C:\Users\oguzh\OneDrive\Masaüstü\KahveliKodlama\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\bin\Debug\net5.0\KahveliKodlama.Infrastructure.deps.json
+C:\Users\oguzh\OneDrive\Masaüstü\KahveliKodlama\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\bin\Debug\net5.0\KahveliKodlama.Infrastructure.dll
+C:\Users\oguzh\OneDrive\Masaüstü\KahveliKodlama\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\bin\Debug\net5.0\ref\KahveliKodlama.Infrastructure.dll
+C:\Users\oguzh\OneDrive\Masaüstü\KahveliKodlama\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\bin\Debug\net5.0\KahveliKodlama.Infrastructure.pdb
+C:\Users\oguzh\OneDrive\Masaüstü\KahveliKodlama\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\KahveliKodlama.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\oguzh\OneDrive\Masaüstü\KahveliKodlama\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\KahveliKodlama.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\oguzh\OneDrive\Masaüstü\KahveliKodlama\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\KahveliKodlama.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\oguzh\OneDrive\Masaüstü\KahveliKodlama\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\KahveliKodlama.Infrastructure.AssemblyInfo.cs
+C:\Users\oguzh\OneDrive\Masaüstü\KahveliKodlama\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\KahveliKodlama.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\oguzh\OneDrive\Masaüstü\KahveliKodlama\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\KahveliKodlama.Infrastructure.dll
+C:\Users\oguzh\OneDrive\Masaüstü\KahveliKodlama\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\ref\KahveliKodlama.Infrastructure.dll
+C:\Users\oguzh\OneDrive\Masaüstü\KahveliKodlama\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\KahveliKodlama.Infrastructure.pdb
+C:\Users\Legion\Desktop\proje gncel (1)\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\bin\Debug\net5.0\KahveliKodlama.Infrastructure.deps.json
+C:\Users\Legion\Desktop\proje gncel (1)\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\bin\Debug\net5.0\KahveliKodlama.Infrastructure.dll
+C:\Users\Legion\Desktop\proje gncel (1)\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\bin\Debug\net5.0\ref\KahveliKodlama.Infrastructure.dll
+C:\Users\Legion\Desktop\proje gncel (1)\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\bin\Debug\net5.0\KahveliKodlama.Infrastructure.pdb
+C:\Users\Legion\Desktop\proje gncel (1)\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\KahveliKodlama.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Legion\Desktop\proje gncel (1)\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\KahveliKodlama.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Legion\Desktop\proje gncel (1)\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\KahveliKodlama.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Legion\Desktop\proje gncel (1)\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\KahveliKodlama.Infrastructure.AssemblyInfo.cs
+C:\Users\Legion\Desktop\proje gncel (1)\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\KahveliKodlama.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Legion\Desktop\proje gncel (1)\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\KahveliKodlama.Infrastructure.dll
+C:\Users\Legion\Desktop\proje gncel (1)\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\ref\KahveliKodlama.Infrastructure.dll
+C:\Users\Legion\Desktop\proje gncel (1)\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\KahveliKodlama.Infrastructure.pdb
+C:\Users\Legion\Desktop\efe\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\bin\Debug\net5.0\KahveliKodlama.Infrastructure.deps.json
+C:\Users\Legion\Desktop\efe\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\bin\Debug\net5.0\KahveliKodlama.Infrastructure.dll
+C:\Users\Legion\Desktop\efe\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\bin\Debug\net5.0\ref\KahveliKodlama.Infrastructure.dll
+C:\Users\Legion\Desktop\efe\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\bin\Debug\net5.0\KahveliKodlama.Infrastructure.pdb
+C:\Users\Legion\Desktop\efe\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\KahveliKodlama.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Legion\Desktop\efe\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\KahveliKodlama.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Legion\Desktop\efe\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\KahveliKodlama.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Legion\Desktop\efe\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\KahveliKodlama.Infrastructure.AssemblyInfo.cs
+C:\Users\Legion\Desktop\efe\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\KahveliKodlama.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Legion\Desktop\efe\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\KahveliKodlama.Infrastructure.dll
+C:\Users\Legion\Desktop\efe\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\ref\KahveliKodlama.Infrastructure.dll
+C:\Users\Legion\Desktop\efe\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\KahveliKodlama.Infrastructure.pdb
+C:\Users\efekh\Desktop\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\bin\Debug\net5.0\KahveliKodlama.Infrastructure.deps.json
+C:\Users\efekh\Desktop\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\bin\Debug\net5.0\KahveliKodlama.Infrastructure.dll
+C:\Users\efekh\Desktop\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\bin\Debug\net5.0\ref\KahveliKodlama.Infrastructure.dll
+C:\Users\efekh\Desktop\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\bin\Debug\net5.0\KahveliKodlama.Infrastructure.pdb
+C:\Users\efekh\Desktop\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\KahveliKodlama.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\efekh\Desktop\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\KahveliKodlama.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\efekh\Desktop\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\KahveliKodlama.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\efekh\Desktop\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\KahveliKodlama.Infrastructure.AssemblyInfo.cs
+C:\Users\efekh\Desktop\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\KahveliKodlama.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\efekh\Desktop\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\KahveliKodlama.Infrastructure.dll
+C:\Users\efekh\Desktop\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\ref\KahveliKodlama.Infrastructure.dll
+C:\Users\efekh\Desktop\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Debug\net5.0\KahveliKodlama.Infrastructure.pdb

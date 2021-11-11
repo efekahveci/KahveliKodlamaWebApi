@@ -28,6 +28,7 @@ namespace KahveliKodlama.API.Controllers
             return result;
         }
 
+
         [HttpPost]
         public async Task<Member> AddMember([FromBody] Member member)
         {

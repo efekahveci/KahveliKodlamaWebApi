@@ -16,8 +16,10 @@ namespace KahveliKodlama.Service
         {
 
             serviceCollection.AddScoped<IMemberService, MemberService>();
-            serviceCollection.AddScoped<IContactService, ContactService>();
+            serviceCollection.AddScoped<ICategoryService, CategoryService>();
             serviceCollection.AddScoped<IFileUpload, FileUpload>();
+            serviceCollection.AddScoped<IContactService, ContactService>();
+            serviceCollection.AddScoped<IHeadingService, HeadingService>();
 
         }
     }

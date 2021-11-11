@@ -19,6 +19,47 @@ namespace KahveliKodlama.Persistence.Migrations
                 .HasAnnotation("ProductVersion", "5.0.11")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("KahveliKodlama.Domain.Entities.Category", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CategoryName")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<string>("CategoryType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreatedTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeleteTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("LastModifyTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Category");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CategoryName = "Nesneye Yönelimli Programalama",
+                            CategoryType = "OOP",
+                            Status = false
+                        });
+                });
+
             modelBuilder.Entity("KahveliKodlama.Domain.Entities.Contact", b =>
                 {
                     b.Property<int>("Id")
@@ -54,29 +95,67 @@ namespace KahveliKodlama.Persistence.Migrations
                     b.ToTable("Contacts");
                 });
 
-            modelBuilder.Entity("KahveliKodlama.Domain.Entities.Grade", b =>
+            modelBuilder.Entity("KahveliKodlama.Domain.Entities.Heading", b =>
                 {
-                    b.Property<int>("GradeId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("GradeName")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
 
-                    b.Property<string>("Section")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime?>("CreatedTime")
+                        .HasColumnType("datetime2");
 
-                    b.HasKey("GradeId");
+                    b.Property<DateTime?>("DeleteTime")
+                        .HasColumnType("datetime2");
 
-                    b.ToTable("Grades");
+                    b.Property<string>("HeadingContent")
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
+
+                    b.Property<string>("HeadingName")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<string>("HeadingTag")
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
+
+                    b.Property<int>("HeadingViews")
+                        .HasMaxLength(20)
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("LastModifyTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("MemberId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
+
+                    b.HasIndex("MemberId");
+
+                    b.ToTable("Headings");
 
                     b.HasData(
                         new
                         {
-                            GradeId = 1,
-                            GradeName = "Mezun",
-                            Section = "a"
+                            Id = 1,
+                            CategoryId = 1,
+                            HeadingContent = "WEB AP",
+                            HeadingName = ".NET CORE",
+                            HeadingTag = "Kahveci",
+                            HeadingViews = 99,
+                            MemberId = 1,
+                            Status = false
                         });
                 });
 
@@ -177,38 +256,10 @@ namespace KahveliKodlama.Persistence.Migrations
                         });
                 });
 
-            modelBuilder.Entity("KahveliKodlama.Domain.Entities.Student", b =>
-                {
-                    b.Property<int>("StudentId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("GradeId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("StudentName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("StudentId");
-
-                    b.HasIndex("GradeId");
-
-                    b.ToTable("Students");
-
-                    b.HasData(
-                        new
-                        {
-                            StudentId = 1,
-                            GradeId = 1,
-                            StudentName = "Sefo"
-                        });
-                });
-
             modelBuilder.Entity("KahveliKodlama.Domain.Entities.Contact", b =>
                 {
                     b.HasOne("KahveliKodlama.Domain.Entities.Member", "Member")
-                        .WithMany("Contacts")
+                        .WithMany()
                         .HasForeignKey("MemberId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -216,25 +267,29 @@ namespace KahveliKodlama.Persistence.Migrations
                     b.Navigation("Member");
                 });
 
-            modelBuilder.Entity("KahveliKodlama.Domain.Entities.Student", b =>
+            modelBuilder.Entity("KahveliKodlama.Domain.Entities.Heading", b =>
                 {
-                    b.HasOne("KahveliKodlama.Domain.Entities.Grade", "Grade")
-                        .WithMany("Students")
-                        .HasForeignKey("GradeId")
+                    b.HasOne("KahveliKodlama.Domain.Entities.Category", null)
+                        .WithMany("Headings")
+                        .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Grade");
+                    b.HasOne("KahveliKodlama.Domain.Entities.Member", null)
+                        .WithMany("Headings")
+                        .HasForeignKey("MemberId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
-            modelBuilder.Entity("KahveliKodlama.Domain.Entities.Grade", b =>
+            modelBuilder.Entity("KahveliKodlama.Domain.Entities.Category", b =>
                 {
-                    b.Navigation("Students");
+                    b.Navigation("Headings");
                 });
 
             modelBuilder.Entity("KahveliKodlama.Domain.Entities.Member", b =>
                 {
-                    b.Navigation("Contacts");
+                    b.Navigation("Headings");
                 });
 #pragma warning restore 612, 618
         }

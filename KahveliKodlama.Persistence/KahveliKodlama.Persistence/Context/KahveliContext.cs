@@ -13,8 +13,8 @@ namespace KahveliKodlama.Persistence.Context
         public KahveliContext(DbContextOptions<KahveliContext> options) : base(options)
         {
         }
-        public DbSet<Student> Students { get; set; }
-        public DbSet<Grade> Grades { get; set; }
+ 
+        public DbSet<Heading> Headings { get; set; }
         public DbSet<Member> Members { get; set; }
         public DbSet<Contact> Contacts { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -45,26 +45,26 @@ namespace KahveliKodlama.Persistence.Context
                 Title = "Developer",
                 Authority = true,
                 Status = true,
-            }); ;
-
-            modelBuilder.Entity<Member>()
-               .HasMany(I => I.Contacts)
-               .WithOne(I => I.Member)
-               .HasForeignKey(I => I.MemberId);
-
-            modelBuilder.Entity<Grade>().HasData(new Grade
+            });
+            modelBuilder.Entity<Heading>().HasData(new Heading
             {
-              GradeId=1,
-              GradeName="Mezun",
-              Section="a",
-              
-            }); ;
-            modelBuilder.Entity<Student>().HasData(new Student
+                Id = 1,
+                CategoryId = 1,
+                 HeadingName= ".NET CORE",
+                HeadingContent = "WEB AP",
+                 HeadingViews= 99,
+                MemberId = 1,
+                HeadingTag = "Kahveci",
+         
+            });
+            modelBuilder.Entity<Category>().HasData(new Category
             {
-               GradeId=1,
-               StudentId=1,
-               StudentName="Sefo"
-            }); ;
+                Id=1,
+                CategoryName="Nesneye Yönelimli Programalama",
+                   
+
+            });
+            ;
             base.OnModelCreating(modelBuilder);
 
         }

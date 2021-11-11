@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "KahveliKodlama.Application/1.0.0": {
+        "dependencies": {
+          "KahveliKodlama.Domain": "1.0.0"
+        },
+        "runtime": {
+          "KahveliKodlama.Application.dll": {}
+        }
+      },
+      "KahveliKodlama.Domain/1.0.0": {
+        "runtime": {
+          "KahveliKodlama.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "KahveliKodlama.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KahveliKodlama.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\efekh\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\efekh\\.nuget\\packages"
+    ]
+  }
+}

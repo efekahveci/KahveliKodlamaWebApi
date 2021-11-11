@@ -1,0 +1,60 @@
+C:\Users\Yusuf\Desktop\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\bin\Debug\net5.0\KahveliKodlama.Domain.deps.json
+C:\Users\Yusuf\Desktop\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\bin\Debug\net5.0\KahveliKodlama.Domain.dll
+C:\Users\Yusuf\Desktop\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\bin\Debug\net5.0\ref\KahveliKodlama.Domain.dll
+C:\Users\Yusuf\Desktop\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\bin\Debug\net5.0\KahveliKodlama.Domain.pdb
+C:\Users\Yusuf\Desktop\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\KahveliKodlama.Domain.csproj.AssemblyReference.cache
+C:\Users\Yusuf\Desktop\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\KahveliKodlama.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yusuf\Desktop\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\KahveliKodlama.Domain.AssemblyInfoInputs.cache
+C:\Users\Yusuf\Desktop\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\KahveliKodlama.Domain.AssemblyInfo.cs
+C:\Users\Yusuf\Desktop\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\KahveliKodlama.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Yusuf\Desktop\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\KahveliKodlama.Domain.dll
+C:\Users\Yusuf\Desktop\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\ref\KahveliKodlama.Domain.dll
+C:\Users\Yusuf\Desktop\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\KahveliKodlama.Domain.pdb
+C:\Users\oguzh\OneDrive\Masaüstü\KahveliKodlama\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\bin\Debug\net5.0\KahveliKodlama.Domain.deps.json
+C:\Users\oguzh\OneDrive\Masaüstü\KahveliKodlama\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\bin\Debug\net5.0\KahveliKodlama.Domain.dll
+C:\Users\oguzh\OneDrive\Masaüstü\KahveliKodlama\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\bin\Debug\net5.0\ref\KahveliKodlama.Domain.dll
+C:\Users\oguzh\OneDrive\Masaüstü\KahveliKodlama\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\bin\Debug\net5.0\KahveliKodlama.Domain.pdb
+C:\Users\oguzh\OneDrive\Masaüstü\KahveliKodlama\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\KahveliKodlama.Domain.csproj.AssemblyReference.cache
+C:\Users\oguzh\OneDrive\Masaüstü\KahveliKodlama\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\KahveliKodlama.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\oguzh\OneDrive\Masaüstü\KahveliKodlama\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\KahveliKodlama.Domain.AssemblyInfoInputs.cache
+C:\Users\oguzh\OneDrive\Masaüstü\KahveliKodlama\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\KahveliKodlama.Domain.AssemblyInfo.cs
+C:\Users\oguzh\OneDrive\Masaüstü\KahveliKodlama\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\KahveliKodlama.Domain.csproj.CoreCompileInputs.cache
+C:\Users\oguzh\OneDrive\Masaüstü\KahveliKodlama\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\KahveliKodlama.Domain.dll
+C:\Users\oguzh\OneDrive\Masaüstü\KahveliKodlama\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\ref\KahveliKodlama.Domain.dll
+C:\Users\oguzh\OneDrive\Masaüstü\KahveliKodlama\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\KahveliKodlama.Domain.pdb
+C:\Users\Legion\Desktop\proje gncel (1)\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\KahveliKodlama.Domain.csproj.AssemblyReference.cache
+C:\Users\Legion\Desktop\proje gncel (1)\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\KahveliKodlama.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Legion\Desktop\proje gncel (1)\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\KahveliKodlama.Domain.AssemblyInfoInputs.cache
+C:\Users\Legion\Desktop\proje gncel (1)\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\KahveliKodlama.Domain.AssemblyInfo.cs
+C:\Users\Legion\Desktop\proje gncel (1)\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\KahveliKodlama.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Legion\Desktop\proje gncel (1)\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\KahveliKodlama.Domain.dll
+C:\Users\Legion\Desktop\proje gncel (1)\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\ref\KahveliKodlama.Domain.dll
+C:\Users\Legion\Desktop\proje gncel (1)\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\KahveliKodlama.Domain.pdb
+C:\Users\Legion\Desktop\proje gncel (1)\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\bin\Debug\net5.0\KahveliKodlama.Domain.deps.json
+C:\Users\Legion\Desktop\proje gncel (1)\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\bin\Debug\net5.0\KahveliKodlama.Domain.dll
+C:\Users\Legion\Desktop\proje gncel (1)\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\bin\Debug\net5.0\ref\KahveliKodlama.Domain.dll
+C:\Users\Legion\Desktop\proje gncel (1)\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\bin\Debug\net5.0\KahveliKodlama.Domain.pdb
+C:\Users\Legion\Desktop\efe\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\bin\Debug\net5.0\KahveliKodlama.Domain.deps.json
+C:\Users\Legion\Desktop\efe\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\bin\Debug\net5.0\KahveliKodlama.Domain.dll
+C:\Users\Legion\Desktop\efe\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\bin\Debug\net5.0\ref\KahveliKodlama.Domain.dll
+C:\Users\Legion\Desktop\efe\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\bin\Debug\net5.0\KahveliKodlama.Domain.pdb
+C:\Users\Legion\Desktop\efe\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\KahveliKodlama.Domain.csproj.AssemblyReference.cache
+C:\Users\Legion\Desktop\efe\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\KahveliKodlama.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Legion\Desktop\efe\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\KahveliKodlama.Domain.AssemblyInfoInputs.cache
+C:\Users\Legion\Desktop\efe\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\KahveliKodlama.Domain.AssemblyInfo.cs
+C:\Users\Legion\Desktop\efe\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\KahveliKodlama.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Legion\Desktop\efe\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\KahveliKodlama.Domain.dll
+C:\Users\Legion\Desktop\efe\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\ref\KahveliKodlama.Domain.dll
+C:\Users\Legion\Desktop\efe\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\KahveliKodlama.Domain.pdb
+C:\Users\efekh\Desktop\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\bin\Debug\net5.0\KahveliKodlama.Domain.deps.json
+C:\Users\efekh\Desktop\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\bin\Debug\net5.0\KahveliKodlama.Domain.dll
+C:\Users\efekh\Desktop\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\bin\Debug\net5.0\ref\KahveliKodlama.Domain.dll
+C:\Users\efekh\Desktop\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\bin\Debug\net5.0\KahveliKodlama.Domain.pdb
+C:\Users\efekh\Desktop\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\KahveliKodlama.Domain.csproj.AssemblyReference.cache
+C:\Users\efekh\Desktop\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\KahveliKodlama.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\efekh\Desktop\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\KahveliKodlama.Domain.AssemblyInfoInputs.cache
+C:\Users\efekh\Desktop\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\KahveliKodlama.Domain.AssemblyInfo.cs
+C:\Users\efekh\Desktop\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\KahveliKodlama.Domain.csproj.CoreCompileInputs.cache
+C:\Users\efekh\Desktop\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\KahveliKodlama.Domain.dll
+C:\Users\efekh\Desktop\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\ref\KahveliKodlama.Domain.dll
+C:\Users\efekh\Desktop\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net5.0\KahveliKodlama.Domain.pdb

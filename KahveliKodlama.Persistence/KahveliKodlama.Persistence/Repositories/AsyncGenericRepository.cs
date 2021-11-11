@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -36,6 +37,11 @@ namespace KahveliKodlama.Persistence.Repositories
         public IQueryable<TEntity> GetAll()
         {
             return _context.Set<TEntity>().AsNoTracking();
+        }
+
+        public List<TEntity> GetAll(Expression<Func<TEntity, object>> includes)
+        {
+            return _context.Set<TEntity>().Include(includes).ToList();
         }
 
         public async Task<TEntity> GetById(int id)
