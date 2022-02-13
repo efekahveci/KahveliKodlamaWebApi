@@ -12,8 +12,8 @@ namespace KahveliKodlama.Domain.Common
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public bool Status { get; set; }
-        public DateTime? CreatedTime { get; set; }
+        public bool Status { get; set; } = true;
+        public DateTime CreatedTime { get; set; } 
         public DateTime? LastModifyTime { get; set; }
         public DateTime? DeleteTime { get; set; }
     }

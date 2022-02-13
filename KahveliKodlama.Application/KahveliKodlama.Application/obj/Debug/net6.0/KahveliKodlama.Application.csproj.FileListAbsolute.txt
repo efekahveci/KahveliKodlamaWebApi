@@ -1,0 +1,17 @@
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Application\KahveliKodlama.Application\bin\Debug\net6.0\KahveliKodlama.Application.deps.json
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Application\KahveliKodlama.Application\bin\Debug\net6.0\KahveliKodlama.Application.dll
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Application\KahveliKodlama.Application\bin\Debug\net6.0\ref\KahveliKodlama.Application.dll
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Application\KahveliKodlama.Application\bin\Debug\net6.0\KahveliKodlama.Application.pdb
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Application\KahveliKodlama.Application\bin\Debug\net6.0\KahveliKodlama.Core.dll
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Application\KahveliKodlama.Application\bin\Debug\net6.0\KahveliKodlama.Domain.dll
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Application\KahveliKodlama.Application\bin\Debug\net6.0\KahveliKodlama.Core.pdb
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Application\KahveliKodlama.Application\bin\Debug\net6.0\KahveliKodlama.Domain.pdb
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Application\KahveliKodlama.Application\obj\Debug\net6.0\KahveliKodlama.Application.csproj.AssemblyReference.cache
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Application\KahveliKodlama.Application\obj\Debug\net6.0\KahveliKodlama.Application.GeneratedMSBuildEditorConfig.editorconfig
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Application\KahveliKodlama.Application\obj\Debug\net6.0\KahveliKodlama.Application.AssemblyInfoInputs.cache
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Application\KahveliKodlama.Application\obj\Debug\net6.0\KahveliKodlama.Application.AssemblyInfo.cs
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Application\KahveliKodlama.Application\obj\Debug\net6.0\KahveliKodlama.Application.csproj.CoreCompileInputs.cache
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Application\KahveliKodlama.Application\obj\Debug\net6.0\KahveliKodlama.Application.csproj.CopyComplete
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Application\KahveliKodlama.Application\obj\Debug\net6.0\KahveliKodlama.Application.dll
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Application\KahveliKodlama.Application\obj\Debug\net6.0\ref\KahveliKodlama.Application.dll
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Application\KahveliKodlama.Application\obj\Debug\net6.0\KahveliKodlama.Application.pdb

@@ -1,19 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31624.102
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32002.185
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KahveliKodlama.API", "KahveliKodlama\KahveliKodlama.API.csproj", "{65D1576A-CD2F-49DB-AA25-3C25BF4F6914}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KahveliKodlama.Domain", "KahveliKodlama.Domain\KahveliKodlama.Domain\KahveliKodlama.Domain.csproj", "{8961C33B-DD6D-493C-9C9B-DF44779A0E30}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KahveliKodlama.Infrastructure", "KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure.csproj", "{E706EDC4-2555-4C40-8372-1B68DFD3A829}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KahveliKodlama.Persistence", "KahveliKodlama.Persistence\KahveliKodlama.Persistence\KahveliKodlama.Persistence.csproj", "{BABF8009-E68F-4A1F-A356-57C2488696BF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KahveliKodlama.Service", "KahveliKodlama.Service\KahveliKodlama.Service\KahveliKodlama.Service.csproj", "{5BE4D7CC-4E83-4D4A-848A-22436F2A521C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KahveliKodlama.Application", "KahveliKodlama.Application\KahveliKodlama.Application\KahveliKodlama.Application.csproj", "{DB1245D4-6E4B-4CD3-ADEE-88FE87E93751}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KahveliKodlama.Application", "KahveliKodlama.Application\KahveliKodlama.Application\KahveliKodlama.Application.csproj", "{DB1245D4-6E4B-4CD3-ADEE-88FE87E93751}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KahveliKodlama.Core", "KahveliKodlama.Core\KahveliKodlama.Core\KahveliKodlama.Core.csproj", "{D334C0E3-128B-4744-9F0B-F941969BEE93}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,6 @@ Global
 		{8961C33B-DD6D-493C-9C9B-DF44779A0E30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8961C33B-DD6D-493C-9C9B-DF44779A0E30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8961C33B-DD6D-493C-9C9B-DF44779A0E30}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E706EDC4-2555-4C40-8372-1B68DFD3A829}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E706EDC4-2555-4C40-8372-1B68DFD3A829}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E706EDC4-2555-4C40-8372-1B68DFD3A829}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E706EDC4-2555-4C40-8372-1B68DFD3A829}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BABF8009-E68F-4A1F-A356-57C2488696BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BABF8009-E68F-4A1F-A356-57C2488696BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BABF8009-E68F-4A1F-A356-57C2488696BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +41,10 @@ Global
 		{DB1245D4-6E4B-4CD3-ADEE-88FE87E93751}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB1245D4-6E4B-4CD3-ADEE-88FE87E93751}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB1245D4-6E4B-4CD3-ADEE-88FE87E93751}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D334C0E3-128B-4744-9F0B-F941969BEE93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D334C0E3-128B-4744-9F0B-F941969BEE93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D334C0E3-128B-4744-9F0B-F941969BEE93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D334C0E3-128B-4744-9F0B-F941969BEE93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

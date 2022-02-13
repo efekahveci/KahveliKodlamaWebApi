@@ -3,8 +3,10 @@ using System;
 using KahveliKodlama.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
+
+#nullable disable
 
 namespace KahveliKodlama.Persistence.Migrations
 {
@@ -15,48 +17,80 @@ namespace KahveliKodlama.Persistence.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.11")
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("ProductVersion", "6.0.0")
+                .HasAnnotation("Relational:MaxIdentifierLength", 63);
+
+            NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
             modelBuilder.Entity("KahveliKodlama.Domain.Entities.Category", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("CategoryActive")
+                        .HasColumnType("boolean");
+
+                    b.Property<int>("CategoryClick")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("CategoryCode")
+                        .HasColumnType("text");
 
                     b.Property<string>("CategoryName")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                        .HasColumnType("text");
 
-                    b.Property<string>("CategoryType")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("CreatedTime")
-                        .HasColumnType("datetime2");
+                    b.Property<DateTime>("CreatedTime")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<DateTime?>("DeleteTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<DateTime?>("LastModifyTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<bool>("Status")
-                        .HasColumnType("bit");
+                        .HasColumnType("boolean");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Category");
+                    b.ToTable("Categories");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            CategoryName = "Nesneye Yönelimli Programalama",
-                            CategoryType = "OOP",
-                            Status = false
+                            CategoryActive = true,
+                            CategoryClick = 54,
+                            CategoryCode = "001",
+                            CategoryName = ".Net Core",
+                            CreatedTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3658),
+                            LastModifyTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3658),
+                            Status = true
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CategoryActive = true,
+                            CategoryClick = 20,
+                            CategoryCode = "002",
+                            CategoryName = "Angular",
+                            CreatedTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3669),
+                            LastModifyTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3668),
+                            Status = true
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CategoryActive = true,
+                            CategoryClick = 4,
+                            CategoryCode = "003",
+                            CategoryName = "Nesneye Yönelimli Programlama",
+                            CreatedTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3677),
+                            LastModifyTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3676),
+                            Status = true
                         });
                 });
 
@@ -64,78 +98,122 @@ namespace KahveliKodlama.Persistence.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Content")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("character varying(1000)");
 
-                    b.Property<DateTime?>("CreatedTime")
-                        .HasColumnType("datetime2");
+                    b.Property<DateTime>("CreatedTime")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<DateTime?>("DeleteTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<DateTime?>("LastModifyTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<int>("MemberId")
-                        .HasColumnType("int");
+                        .HasColumnType("integer");
 
                     b.Property<bool>("Status")
-                        .HasColumnType("bit");
+                        .HasColumnType("boolean");
 
                     b.Property<string>("Title")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("character varying(30)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MemberId");
-
                     b.ToTable("Contacts");
+                });
+
+            modelBuilder.Entity("KahveliKodlama.Domain.Entities.Content", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedTime")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime?>("DeleteTime")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("HeadingId")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTime?>("LastModifyTime")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Post")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("boolean");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Contents");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            HeadingId = 1,
+                            Post = "Ef Coreda İlişki kuramıyorum",
+                            Status = true
+                        });
                 });
 
             modelBuilder.Entity("KahveliKodlama.Domain.Entities.Heading", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<int>("CategoryId")
-                        .HasColumnType("int");
+                        .HasColumnType("integer");
 
-                    b.Property<DateTime?>("CreatedTime")
-                        .HasColumnType("datetime2");
+                    b.Property<int>("ContentId")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTime>("CreatedTime")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<DateTime?>("DeleteTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("HeadingContent")
-                        .HasMaxLength(15)
-                        .HasColumnType("nvarchar(15)");
+                        .HasColumnType("text");
 
                     b.Property<string>("HeadingName")
-                        .IsRequired()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasColumnType("text");
 
                     b.Property<string>("HeadingTag")
-                        .HasMaxLength(15)
-                        .HasColumnType("nvarchar(15)");
+                        .HasColumnType("text");
 
                     b.Property<int>("HeadingViews")
-                        .HasMaxLength(20)
-                        .HasColumnType("int");
+                        .HasColumnType("integer");
 
                     b.Property<DateTime?>("LastModifyTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<int>("MemberId")
-                        .HasColumnType("int");
+                        .HasColumnType("integer");
 
                     b.Property<bool>("Status")
-                        .HasColumnType("bit");
+                        .HasColumnType("boolean");
 
                     b.HasKey("Id");
 
@@ -150,12 +228,127 @@ namespace KahveliKodlama.Persistence.Migrations
                         {
                             Id = 1,
                             CategoryId = 1,
-                            HeadingContent = "WEB AP",
-                            HeadingName = ".NET CORE",
-                            HeadingTag = "Kahveci",
-                            HeadingViews = 99,
+                            ContentId = 1,
+                            CreatedTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3416),
+                            HeadingContent = "Yüklerken aniden yarıda kesiliyor ve hata alıyor nasıl çözülmesi gerekiyor bilen var mı ?",
+                            HeadingName = "Visual Studio 2022 nasıl yükleniyor ?",
+                            HeadingTag = "Visual Studio",
+                            HeadingViews = 45,
+                            LastModifyTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3416),
                             MemberId = 1,
-                            Status = false
+                            Status = true
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CategoryId = 2,
+                            ContentId = 1,
+                            CreatedTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3429),
+                            HeadingContent = "Bana gelen bir json objesi var ve içinde sadece name alanını almak istiyorum ne yapmam gerekiyor.",
+                            HeadingName = "Angular'da json içersinde tek bir alanı almak için ne yapmam gerekiyor?",
+                            HeadingTag = "Angular",
+                            HeadingViews = 98,
+                            LastModifyTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3429),
+                            MemberId = 1,
+                            Status = true
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CategoryId = 3,
+                            ContentId = 1,
+                            CreatedTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3437),
+                            HeadingContent = "switch case veya if kullanmanın performansa erkileri tam olarak nedir?",
+                            HeadingName = "c# üzerinde if kullanmak mı daha performanslı yoksa switch case mi kullanmak daha avantajlıdır farkları nelerdir.",
+                            HeadingTag = "c#",
+                            HeadingViews = 90,
+                            LastModifyTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3437),
+                            MemberId = 1,
+                            Status = true
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CategoryId = 1,
+                            ContentId = 1,
+                            CreatedTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3497),
+                            HeadingContent = "Yüklerken aniden yarıda kesiliyor ve hata alıyor nasıl çözülmesi gerekiyor bilen var mı ?",
+                            HeadingName = "Visual Studio 2022 nasıl yükleniyor ?",
+                            HeadingTag = "Visual Studio",
+                            HeadingViews = 45,
+                            LastModifyTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3497),
+                            MemberId = 2,
+                            Status = true
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CategoryId = 2,
+                            ContentId = 1,
+                            CreatedTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3505),
+                            HeadingContent = "Bana gelen bir json objesi var ve içinde sadece name alanını almak istiyorum ne yapmam gerekiyor.",
+                            HeadingName = "Angular'da json içersinde tek bir alanı almak için ne yapmam gerekiyor?",
+                            HeadingTag = "Angular",
+                            HeadingViews = 98,
+                            LastModifyTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3506),
+                            MemberId = 2,
+                            Status = true
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CategoryId = 3,
+                            ContentId = 1,
+                            CreatedTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3516),
+                            HeadingContent = "switch case veya if kullanmanın performansa erkileri tam olarak nedir?",
+                            HeadingName = "c# üzerinde if kullanmak mı daha performanslı yoksa switch case mi kullanmak daha avantajlıdır farkları nelerdir.",
+                            HeadingTag = "c#",
+                            HeadingViews = 90,
+                            LastModifyTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3517),
+                            MemberId = 2,
+                            Status = true
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CategoryId = 1,
+                            ContentId = 1,
+                            CreatedTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3523),
+                            HeadingContent = "Yüklerken aniden yarıda kesiliyor ve hata alıyor nasıl çözülmesi gerekiyor bilen var mı ?",
+                            HeadingName = "Visual Studio 2022 nasıl yükleniyor ?",
+                            HeadingTag = "Visual Studio",
+                            HeadingViews = 45,
+                            LastModifyTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3524),
+                            MemberId = 3,
+                            Status = true
+                        },
+                        new
+                        {
+                            Id = 8,
+                            CategoryId = 2,
+                            ContentId = 1,
+                            CreatedTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3530),
+                            HeadingContent = "Bana gelen bir json objesi var ve içinde sadece name alanını almak istiyorum ne yapmam gerekiyor.",
+                            HeadingName = "Angular'da json içersinde tek bir alanı almak için ne yapmam gerekiyor?",
+                            HeadingTag = "Angular",
+                            HeadingViews = 98,
+                            LastModifyTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3531),
+                            MemberId = 3,
+                            Status = true
+                        },
+                        new
+                        {
+                            Id = 9,
+                            CategoryId = 3,
+                            ContentId = 1,
+                            CreatedTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3538),
+                            HeadingContent = "switch case veya if kullanmanın performansa erkileri tam olarak nedir?",
+                            HeadingName = "c# üzerinde if kullanmak mı daha performanslı yoksa switch case mi kullanmak daha avantajlıdır farkları nelerdir.",
+                            HeadingTag = "c#",
+                            HeadingViews = 90,
+                            LastModifyTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3538),
+                            MemberId = 3,
+                            Status = true
                         });
                 });
 
@@ -163,13 +356,13 @@ namespace KahveliKodlama.Persistence.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("About")
                         .ValueGeneratedOnAdd()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)")
+                        .HasColumnType("text")
                         .HasDefaultValue("Empty");
 
                     b.Property<short?>("Age")
@@ -179,61 +372,70 @@ namespace KahveliKodlama.Persistence.Migrations
 
                     b.Property<bool?>("Authority")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
+                        .HasColumnType("boolean")
                         .HasDefaultValue(false);
 
-                    b.Property<DateTime?>("CreatedTime")
+                    b.Property<DateTime>("CreatedTime")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("getdate()");
+                        .HasColumnType("timestamp with time zone")
+                        .HasDefaultValueSql("now()");
 
                     b.Property<DateTime?>("DeleteTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("Dislike")
+                        .HasColumnType("integer");
 
                     b.Property<string>("Email")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                        .HasColumnType("text");
+
+                    b.Property<bool>("Gender")
+                        .HasColumnType("boolean");
 
                     b.Property<string>("Image")
                         .ValueGeneratedOnAdd()
                         .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)")
+                        .HasColumnType("character varying(500)")
                         .HasDefaultValue("Empty");
+
+                    b.Property<bool>("IsVerifiedEmail")
+                        .HasColumnType("boolean");
+
+                    b.Property<bool>("IsVerifiedInfo")
+                        .HasColumnType("boolean");
 
                     b.Property<DateTime?>("LastModifyTime")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("getdate()");
+                        .HasColumnType("timestamp with time zone")
+                        .HasDefaultValueSql("now()");
+
+                    b.Property<int>("Like")
+                        .HasColumnType("integer");
 
                     b.Property<string>("Name")
-                        .HasMaxLength(15)
-                        .HasColumnType("nvarchar(15)");
+                        .HasColumnType("text");
 
                     b.Property<string>("Password")
-                        .IsRequired()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasColumnType("text");
+
+                    b.Property<int>("Point")
+                        .HasColumnType("integer");
 
                     b.Property<bool>("Status")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
+                        .HasColumnType("boolean")
                         .HasDefaultValue(false);
 
                     b.Property<string>("Surname")
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
+                        .HasColumnType("text");
 
                     b.Property<string>("Title")
                         .ValueGeneratedOnAdd()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)")
+                        .HasColumnType("text")
                         .HasDefaultValue("Empty");
 
                     b.Property<string>("UserName")
-                        .IsRequired()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
@@ -243,28 +445,72 @@ namespace KahveliKodlama.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            About = "Konya Teknik Üniversitesi Bilgisayar Mühendisliği",
+                            About = "Konya Teknik Üniversitesi Bilgisayar Mühendisliğinden Mezunum Aktif olarak t-soft e ticaret sistemleri bünyesinde çalışmaktayım. Net core ve angular üzerinde kendimi geliştiriyorum az düzeyde ingilizce biliyorum",
                             Age = (short)23,
                             Authority = true,
+                            CreatedTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3275),
+                            Dislike = 14,
                             Email = "efekhvci@hotmail.com",
+                            Gender = true,
+                            Image = "Resim Yok",
+                            IsVerifiedEmail = true,
+                            IsVerifiedInfo = true,
+                            LastModifyTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3276),
+                            Like = 8,
                             Name = "Mehmet Efe",
-                            Password = "12345",
+                            Password = "12345efe",
+                            Point = 98,
                             Status = true,
                             Surname = "Kahveci",
-                            Title = "Developer",
-                            UserName = "efekhvci"
+                            Title = "Software Engineer",
+                            UserName = "efekahveci"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            About = "Konya Teknik Üniversitesi Bilgisayar Mühendisliğinden Mezunum Aktif olarak iş arayaşım devam etmektedir fronted tarafında react js beckend tarafında ise.net ile çalışmalar yapıyorum.",
+                            Age = (short)24,
+                            Authority = true,
+                            CreatedTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3301),
+                            Dislike = 1,
+                            Email = "ysfckmk@hotmail.com",
+                            Gender = true,
+                            Image = "Resim Yok",
+                            IsVerifiedEmail = true,
+                            IsVerifiedInfo = true,
+                            LastModifyTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3301),
+                            Like = 6,
+                            Name = "Yusuf",
+                            Password = "12345yusuf",
+                            Point = 657,
+                            Status = true,
+                            Surname = "Çakmak",
+                            Title = "Student",
+                            UserName = "yusufcakmak"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            About = "Konya Teknik Üniversitesi Bilgisayar Mühendisliğinden Mezunum Aktif olarak iş arayaşım devam etmektedir fronted tarafında angular js beckend tarafında ise.net ile çalışmalar yapıyorum. Ayrıca yurtdışında çalışmak ilk tercihim olacaktır.",
+                            Age = (short)24,
+                            Authority = true,
+                            CreatedTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3309),
+                            Dislike = 13,
+                            Email = "remzican@hotmail.com",
+                            Gender = true,
+                            Image = "Resim Yok",
+                            IsVerifiedEmail = true,
+                            IsVerifiedInfo = true,
+                            LastModifyTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3310),
+                            Like = 65,
+                            Name = "Remzi Can",
+                            Password = "12345remzi",
+                            Point = 12,
+                            Status = true,
+                            Surname = "Akmansoy",
+                            Title = "Student",
+                            UserName = "akmansoy"
                         });
-                });
-
-            modelBuilder.Entity("KahveliKodlama.Domain.Entities.Contact", b =>
-                {
-                    b.HasOne("KahveliKodlama.Domain.Entities.Member", "Member")
-                        .WithMany()
-                        .HasForeignKey("MemberId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Member");
                 });
 
             modelBuilder.Entity("KahveliKodlama.Domain.Entities.Heading", b =>

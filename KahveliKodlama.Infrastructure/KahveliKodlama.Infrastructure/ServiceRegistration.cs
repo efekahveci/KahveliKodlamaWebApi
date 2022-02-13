@@ -1,4 +1,5 @@
 ﻿using KahveliKodlama.Infrastructure.ContextEngine;
+using KahveliKodlama.Infrastructure.Mapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
@@ -16,6 +17,8 @@ namespace KahveliKodlama.Infrastructure
         public static void AddInfrastructureServices(this IServiceCollection serviceCollection, IConfiguration configuration = null)
         {
 
+
+            serviceCollection.AddAutoMapper(typeof(MappingProfile));
             serviceCollection.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             serviceCollection.AddSingleton<IEngine, KahveliContextEngine>();
         }
@@ -23,7 +26,6 @@ namespace KahveliKodlama.Infrastructure
         public static void ConfigureRequestPipeline(this IApplicationBuilder application)
         {
             EngineContext.Current.ConfigureRequestPipeline(application);
-
         }
     }
 }

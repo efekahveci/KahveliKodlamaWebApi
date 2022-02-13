@@ -30,7 +30,17 @@
       "ProjectGuid": "db1245d4-6e4b-4cd3-adee-88fe87e93751",
       "DisplayName": "KahveliKodlama.Application",
       "ColorIndex": 5
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "d334c0e3-128b-4744-9f0b-f941969bee93": {
+      "ProjectGuid": "d334c0e3-128b-4744-9f0b-f941969bee93",
+      "DisplayName": "KahveliKodlama.Core",
+      "ColorIndex": 6
     }
   },
-  "NextColorIndex": 6
+  "NextColorIndex": 7
 }

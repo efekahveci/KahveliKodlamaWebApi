@@ -1,35 +1,38 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\efekh\\Desktop\\KahveliKodlama\\KahveliKodlama.Application\\KahveliKodlama.Application\\KahveliKodlama.Application.csproj": {}
+    "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama.Application\\KahveliKodlama.Application\\KahveliKodlama.Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\efekh\\Desktop\\KahveliKodlama\\KahveliKodlama.Application\\KahveliKodlama.Application\\KahveliKodlama.Application.csproj": {
+    "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama.Application\\KahveliKodlama.Application\\KahveliKodlama.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\efekh\\Desktop\\KahveliKodlama\\KahveliKodlama.Application\\KahveliKodlama.Application\\KahveliKodlama.Application.csproj",
+        "projectUniqueName": "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama.Application\\KahveliKodlama.Application\\KahveliKodlama.Application.csproj",
         "projectName": "KahveliKodlama.Application",
-        "projectPath": "C:\\Users\\efekh\\Desktop\\KahveliKodlama\\KahveliKodlama.Application\\KahveliKodlama.Application\\KahveliKodlama.Application.csproj",
-        "packagesPath": "C:\\Users\\efekh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\efekh\\Desktop\\KahveliKodlama\\KahveliKodlama.Application\\KahveliKodlama.Application\\obj\\",
+        "projectPath": "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama.Application\\KahveliKodlama.Application\\KahveliKodlama.Application.csproj",
+        "packagesPath": "C:\\Users\\Legion\\.nuget\\packages\\",
+        "outputPath": "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama.Application\\KahveliKodlama.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\efekh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Legion\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\efekh\\Desktop\\KahveliKodlama\\KahveliKodlama.Domain\\KahveliKodlama.Domain\\KahveliKodlama.Domain.csproj": {
-                "projectPath": "C:\\Users\\efekh\\Desktop\\KahveliKodlama\\KahveliKodlama.Domain\\KahveliKodlama.Domain\\KahveliKodlama.Domain.csproj"
+              "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama.Core\\KahveliKodlama.Core\\KahveliKodlama.Core.csproj": {
+                "projectPath": "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama.Core\\KahveliKodlama.Core\\KahveliKodlama.Core.csproj"
+              },
+              "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama.Domain\\KahveliKodlama.Domain\\KahveliKodlama.Domain.csproj": {
+                "projectPath": "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama.Domain\\KahveliKodlama.Domain\\KahveliKodlama.Domain.csproj"
               }
             }
           }
@@ -41,8 +44,54 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[10.3.6, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.13, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -58,33 +107,91 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\efekh\\Desktop\\KahveliKodlama\\KahveliKodlama.Domain\\KahveliKodlama.Domain\\KahveliKodlama.Domain.csproj": {
+    "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama.Core\\KahveliKodlama.Core\\KahveliKodlama.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\efekh\\Desktop\\KahveliKodlama\\KahveliKodlama.Domain\\KahveliKodlama.Domain\\KahveliKodlama.Domain.csproj",
-        "projectName": "KahveliKodlama.Domain",
-        "projectPath": "C:\\Users\\efekh\\Desktop\\KahveliKodlama\\KahveliKodlama.Domain\\KahveliKodlama.Domain\\KahveliKodlama.Domain.csproj",
-        "packagesPath": "C:\\Users\\efekh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\efekh\\Desktop\\KahveliKodlama\\KahveliKodlama.Domain\\KahveliKodlama.Domain\\obj\\",
+        "projectUniqueName": "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama.Core\\KahveliKodlama.Core\\KahveliKodlama.Core.csproj",
+        "projectName": "KahveliKodlama.Core",
+        "projectPath": "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama.Core\\KahveliKodlama.Core\\KahveliKodlama.Core.csproj",
+        "packagesPath": "C:\\Users\\Legion\\.nuget\\packages\\",
+        "outputPath": "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama.Core\\KahveliKodlama.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\efekh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Legion\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama.Domain\\KahveliKodlama.Domain\\KahveliKodlama.Domain.csproj": {
+                "projectPath": "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama.Domain\\KahveliKodlama.Domain\\KahveliKodlama.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama.Domain\\KahveliKodlama.Domain\\KahveliKodlama.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama.Domain\\KahveliKodlama.Domain\\KahveliKodlama.Domain.csproj",
+        "projectName": "KahveliKodlama.Domain",
+        "projectPath": "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama.Domain\\KahveliKodlama.Domain\\KahveliKodlama.Domain.csproj",
+        "packagesPath": "C:\\Users\\Legion\\.nuget\\packages\\",
+        "outputPath": "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama.Domain\\KahveliKodlama.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Legion\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -95,8 +202,14 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -112,7 +225,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

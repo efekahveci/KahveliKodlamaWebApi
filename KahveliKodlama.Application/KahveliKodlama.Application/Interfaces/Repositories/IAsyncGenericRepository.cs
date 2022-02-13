@@ -10,12 +10,16 @@ namespace KahveliKodlama.Application.Interfaces.Repositories
 {
     public interface IAsyncGenericRepository<TEntity> where TEntity : class
     {
-        List<TEntity> GetAll(Expression<Func<TEntity, object>> includes);
-        IQueryable<TEntity> GetAll();
+        Task<List<TEntity>> GetAll(Expression<Func<TEntity, object>> includes);
+        Task<List<TEntity>> GetAll();
 
         Task<TEntity> GetById(int id);
 
+        Task<TEntity> GetById(int id, Expression<Func<TEntity, object>> includes);
+
+
         Task Create(TEntity entity);
+        Task UniqueCreate(TEntity entity);
 
         Task Update(TEntity entity);
 

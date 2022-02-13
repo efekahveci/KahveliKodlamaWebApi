@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\efekh\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\efekh\\.nuget\\packages"
+      "C:\\Users\\Legion\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Legion\\.nuget\\packages"
     ]
   }
 }

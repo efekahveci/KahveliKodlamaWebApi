@@ -1,0 +1,15 @@
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\bin\Release\net6.0\KahveliKodlama.Infrastructure.deps.json
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\bin\Release\net6.0\KahveliKodlama.Infrastructure.dll
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\bin\Release\net6.0\ref\KahveliKodlama.Infrastructure.dll
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\bin\Release\net6.0\KahveliKodlama.Infrastructure.pdb
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\bin\Release\net6.0\KahveliKodlama.Domain.dll
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\bin\Release\net6.0\KahveliKodlama.Domain.pdb
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Release\net6.0\KahveliKodlama.Infrastructure.csproj.AssemblyReference.cache
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Release\net6.0\KahveliKodlama.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Release\net6.0\KahveliKodlama.Infrastructure.AssemblyInfoInputs.cache
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Release\net6.0\KahveliKodlama.Infrastructure.AssemblyInfo.cs
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Release\net6.0\KahveliKodlama.Infrastructure.csproj.CoreCompileInputs.cache
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Release\net6.0\KahveliKodlama.Infrastructure.csproj.CopyComplete
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Release\net6.0\KahveliKodlama.Infrastructure.dll
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Release\net6.0\ref\KahveliKodlama.Infrastructure.dll
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\obj\Release\net6.0\KahveliKodlama.Infrastructure.pdb

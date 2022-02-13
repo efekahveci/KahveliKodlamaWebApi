@@ -1,0 +1,15 @@
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Core\KahveliKodlama.Core\bin\Debug\net6.0\KahveliKodlama.Core.deps.json
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Core\KahveliKodlama.Core\bin\Debug\net6.0\KahveliKodlama.Core.dll
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Core\KahveliKodlama.Core\bin\Debug\net6.0\ref\KahveliKodlama.Core.dll
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Core\KahveliKodlama.Core\bin\Debug\net6.0\KahveliKodlama.Core.pdb
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Core\KahveliKodlama.Core\bin\Debug\net6.0\KahveliKodlama.Domain.dll
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Core\KahveliKodlama.Core\bin\Debug\net6.0\KahveliKodlama.Domain.pdb
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Core\KahveliKodlama.Core\obj\Debug\net6.0\KahveliKodlama.Core.csproj.AssemblyReference.cache
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Core\KahveliKodlama.Core\obj\Debug\net6.0\KahveliKodlama.Core.GeneratedMSBuildEditorConfig.editorconfig
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Core\KahveliKodlama.Core\obj\Debug\net6.0\KahveliKodlama.Core.AssemblyInfoInputs.cache
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Core\KahveliKodlama.Core\obj\Debug\net6.0\KahveliKodlama.Core.AssemblyInfo.cs
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Core\KahveliKodlama.Core\obj\Debug\net6.0\KahveliKodlama.Core.csproj.CoreCompileInputs.cache
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Core\KahveliKodlama.Core\obj\Debug\net6.0\KahveliKodlama.Core.csproj.CopyComplete
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Core\KahveliKodlama.Core\obj\Debug\net6.0\KahveliKodlama.Core.dll
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Core\KahveliKodlama.Core\obj\Debug\net6.0\ref\KahveliKodlama.Core.dll
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Core\KahveliKodlama.Core\obj\Debug\net6.0\KahveliKodlama.Core.pdb

@@ -1,7 +1,7 @@
-﻿using KahveliKodlama.Domain.Entities;
+﻿using KahveliKodlama.Application.Contract;
+using KahveliKodlama.Domain.Entities;
 using KahveliKodlama.Persistence.Context;
 using KahveliKodlama.Persistence.Repositories;
-using KahveliKodlama.Service.Contract;
 using System;
 using System.Collections.Generic;
 using System.Linq;
