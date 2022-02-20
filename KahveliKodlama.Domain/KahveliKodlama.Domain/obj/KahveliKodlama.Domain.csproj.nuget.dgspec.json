@@ -10,11 +10,11 @@
         "projectUniqueName": "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama.Domain\\KahveliKodlama.Domain\\KahveliKodlama.Domain.csproj",
         "projectName": "KahveliKodlama.Domain",
         "projectPath": "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama.Domain\\KahveliKodlama.Domain\\KahveliKodlama.Domain.csproj",
-        "packagesPath": "C:\\Users\\Legion\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\efekh\\.nuget\\packages\\",
         "outputPath": "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama.Domain\\KahveliKodlama.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Legion\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\efekh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

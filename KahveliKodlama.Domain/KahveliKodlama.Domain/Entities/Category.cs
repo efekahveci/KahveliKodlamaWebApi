@@ -15,9 +15,14 @@ namespace KahveliKodlama.Domain.Entities
         //[Display(Name = "Kategori Adı")]
         //[StringLength(30, ErrorMessage = "En fazla 20 karakter en az 3 karakter uzunluğunda olmalıdır.", MinimumLength = 3)]
         public string CategoryName { get; set; }
+        public string CategoryDesc { get; set; }
+
+        public string CategoryImage { get; set; }
+
+
 
         public bool CategoryActive { get; set; }
-        public int CategoryClick { get; set; }
+   
 
         public string CategoryCode { get; set; }
         public ICollection<Heading> Headings { get; set; }

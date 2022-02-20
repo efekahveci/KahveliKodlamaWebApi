@@ -516,7 +516,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Legion\\.nuget\\packages\\": {}
+    "C:\\Users\\efekh\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -524,11 +524,11 @@
       "projectUniqueName": "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama.Core\\KahveliKodlama.Core\\KahveliKodlama.Core.csproj",
       "projectName": "KahveliKodlama.Core",
       "projectPath": "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama.Core\\KahveliKodlama.Core\\KahveliKodlama.Core.csproj",
-      "packagesPath": "C:\\Users\\Legion\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\efekh\\.nuget\\packages\\",
       "outputPath": "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama.Core\\KahveliKodlama.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Legion\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\efekh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

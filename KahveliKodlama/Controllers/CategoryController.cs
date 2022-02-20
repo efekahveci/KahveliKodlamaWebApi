@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using KahveliKodlama.Application.Contract;
 using KahveliKodlama.Application.Dto;
+using KahveliKodlama.Core.Extensions;
 using KahveliKodlama.Domain.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -33,13 +34,19 @@ namespace KahveliKodlama.API.Controllers
         }
 
         [HttpGet("getAllDto")]
-        public List<CategoryDto> GetAllDto()
+        public async Task<IActionResult> GetAllDto()
         {
-            var result = _categoryService.GetAll();
 
-            var retVal = _mapper.Map<Task<List<Category>>, List<CategoryDto>>(result);
+            var result = await _categoryService.GetAll();
 
-            return retVal;
+            if (result.Count > 0)
+            {
+                var retVal = _mapper.Map<List<Category>, List<CategoryDto>>(result);
+                return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, retVal));
+
+            }
+
+            return NoContent();
         }
 
         [HttpGet("getAll")]

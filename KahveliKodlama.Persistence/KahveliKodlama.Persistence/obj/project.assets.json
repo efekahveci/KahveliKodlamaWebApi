@@ -7989,7 +7989,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Legion\\.nuget\\packages\\": {}
+    "C:\\Users\\efekh\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -7997,11 +7997,11 @@
       "projectUniqueName": "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama.Persistence\\KahveliKodlama.Persistence\\KahveliKodlama.Persistence.csproj",
       "projectName": "KahveliKodlama.Persistence",
       "projectPath": "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama.Persistence\\KahveliKodlama.Persistence\\KahveliKodlama.Persistence.csproj",
-      "packagesPath": "C:\\Users\\Legion\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\efekh\\.nuget\\packages\\",
       "outputPath": "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama.Persistence\\KahveliKodlama.Persistence\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Legion\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\efekh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

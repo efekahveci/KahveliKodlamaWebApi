@@ -6,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace KahveliKodlama.Persistence.Migrations.Identity
 {
-    public partial class first : Migration
+    public partial class f : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

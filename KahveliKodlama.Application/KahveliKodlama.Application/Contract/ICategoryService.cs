@@ -10,6 +10,6 @@ namespace KahveliKodlama.Application.Contract
 {
     public interface ICategoryService : IAsyncGenericRepository<Category>
     {
-        Task<List<Category>> GetTopClickCategory();
+   
     }
 }

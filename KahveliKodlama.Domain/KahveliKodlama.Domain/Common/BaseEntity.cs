@@ -16,5 +16,11 @@ namespace KahveliKodlama.Domain.Common
         public DateTime CreatedTime { get; set; } 
         public DateTime? LastModifyTime { get; set; }
         public DateTime? DeleteTime { get; set; }
+
+
+        public string Field0 { get; set; }
+        public string Field1 { get; set; }
+        public string Field2 { get; set; }
+
     }
 }

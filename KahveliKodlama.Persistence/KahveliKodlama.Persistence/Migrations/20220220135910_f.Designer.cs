@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace KahveliKodlama.Persistence.Migrations
 {
     [DbContext(typeof(KahveliContext))]
-    [Migration("20220208113020_first")]
-    partial class first
+    [Migration("20220220135910_f")]
+    partial class f
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -35,10 +35,13 @@ namespace KahveliKodlama.Persistence.Migrations
                     b.Property<bool>("CategoryActive")
                         .HasColumnType("boolean");
 
-                    b.Property<int>("CategoryClick")
-                        .HasColumnType("integer");
-
                     b.Property<string>("CategoryCode")
+                        .HasColumnType("text");
+
+                    b.Property<string>("CategoryDesc")
+                        .HasColumnType("text");
+
+                    b.Property<string>("CategoryImage")
                         .HasColumnType("text");
 
                     b.Property<string>("CategoryName")
@@ -49,6 +52,15 @@ namespace KahveliKodlama.Persistence.Migrations
 
                     b.Property<DateTime?>("DeleteTime")
                         .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Field0")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Field1")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Field2")
+                        .HasColumnType("text");
 
                     b.Property<DateTime?>("LastModifyTime")
                         .HasColumnType("timestamp with time zone");
@@ -65,33 +77,36 @@ namespace KahveliKodlama.Persistence.Migrations
                         {
                             Id = 1,
                             CategoryActive = true,
-                            CategoryClick = 54,
                             CategoryCode = "001",
+                            CategoryDesc = "C# | MVC | WEB API | BLAZOR",
+                            CategoryImage = "https://okankaradag.com/wp-content/uploads/2021/06/asp.net-core-logo.png",
                             CategoryName = ".Net Core",
-                            CreatedTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3658),
-                            LastModifyTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3658),
+                            CreatedTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8290),
+                            LastModifyTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8290),
                             Status = true
                         },
                         new
                         {
                             Id = 2,
                             CategoryActive = true,
-                            CategoryClick = 20,
                             CategoryCode = "002",
+                            CategoryDesc = "Angular JS | TypeScript | JavaScript | HTML | CSS",
+                            CategoryImage = "https://wikiimg.tojsiabtv.com/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png",
                             CategoryName = "Angular",
-                            CreatedTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3669),
-                            LastModifyTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3668),
+                            CreatedTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8301),
+                            LastModifyTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8300),
                             Status = true
                         },
                         new
                         {
                             Id = 3,
                             CategoryActive = true,
-                            CategoryClick = 4,
                             CategoryCode = "003",
+                            CategoryDesc = "SOLID | OOP | CLEAN CODE",
+                            CategoryImage = "https://www.educative.io/v2api/editorpage/4792707659595776/image/5909454286487552",
                             CategoryName = "Nesneye Yönelimli Programlama",
-                            CreatedTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3677),
-                            LastModifyTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3676),
+                            CreatedTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8309),
+                            LastModifyTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8308),
                             Status = true
                         });
                 });
@@ -114,6 +129,15 @@ namespace KahveliKodlama.Persistence.Migrations
 
                     b.Property<DateTime?>("DeleteTime")
                         .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Field0")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Field1")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Field2")
+                        .HasColumnType("text");
 
                     b.Property<DateTime?>("LastModifyTime")
                         .HasColumnType("timestamp with time zone");
@@ -147,6 +171,15 @@ namespace KahveliKodlama.Persistence.Migrations
 
                     b.Property<DateTime?>("DeleteTime")
                         .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Field0")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Field1")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Field2")
+                        .HasColumnType("text");
 
                     b.Property<int>("HeadingId")
                         .HasColumnType("integer");
@@ -196,6 +229,15 @@ namespace KahveliKodlama.Persistence.Migrations
                     b.Property<DateTime?>("DeleteTime")
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<string>("Field0")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Field1")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Field2")
+                        .HasColumnType("text");
+
                     b.Property<string>("HeadingContent")
                         .HasColumnType("text");
 
@@ -231,12 +273,12 @@ namespace KahveliKodlama.Persistence.Migrations
                             Id = 1,
                             CategoryId = 1,
                             ContentId = 1,
-                            CreatedTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3416),
+                            CreatedTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8033),
                             HeadingContent = "Yüklerken aniden yarıda kesiliyor ve hata alıyor nasıl çözülmesi gerekiyor bilen var mı ?",
                             HeadingName = "Visual Studio 2022 nasıl yükleniyor ?",
                             HeadingTag = "Visual Studio",
                             HeadingViews = 45,
-                            LastModifyTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3416),
+                            LastModifyTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8033),
                             MemberId = 1,
                             Status = true
                         },
@@ -245,12 +287,12 @@ namespace KahveliKodlama.Persistence.Migrations
                             Id = 2,
                             CategoryId = 2,
                             ContentId = 1,
-                            CreatedTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3429),
+                            CreatedTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8045),
                             HeadingContent = "Bana gelen bir json objesi var ve içinde sadece name alanını almak istiyorum ne yapmam gerekiyor.",
                             HeadingName = "Angular'da json içersinde tek bir alanı almak için ne yapmam gerekiyor?",
                             HeadingTag = "Angular",
                             HeadingViews = 98,
-                            LastModifyTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3429),
+                            LastModifyTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8046),
                             MemberId = 1,
                             Status = true
                         },
@@ -259,12 +301,12 @@ namespace KahveliKodlama.Persistence.Migrations
                             Id = 3,
                             CategoryId = 3,
                             ContentId = 1,
-                            CreatedTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3437),
+                            CreatedTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8054),
                             HeadingContent = "switch case veya if kullanmanın performansa erkileri tam olarak nedir?",
                             HeadingName = "c# üzerinde if kullanmak mı daha performanslı yoksa switch case mi kullanmak daha avantajlıdır farkları nelerdir.",
                             HeadingTag = "c#",
                             HeadingViews = 90,
-                            LastModifyTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3437),
+                            LastModifyTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8054),
                             MemberId = 1,
                             Status = true
                         },
@@ -273,12 +315,12 @@ namespace KahveliKodlama.Persistence.Migrations
                             Id = 4,
                             CategoryId = 1,
                             ContentId = 1,
-                            CreatedTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3497),
+                            CreatedTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8063),
                             HeadingContent = "Yüklerken aniden yarıda kesiliyor ve hata alıyor nasıl çözülmesi gerekiyor bilen var mı ?",
                             HeadingName = "Visual Studio 2022 nasıl yükleniyor ?",
                             HeadingTag = "Visual Studio",
                             HeadingViews = 45,
-                            LastModifyTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3497),
+                            LastModifyTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8063),
                             MemberId = 2,
                             Status = true
                         },
@@ -287,12 +329,12 @@ namespace KahveliKodlama.Persistence.Migrations
                             Id = 5,
                             CategoryId = 2,
                             ContentId = 1,
-                            CreatedTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3505),
+                            CreatedTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8072),
                             HeadingContent = "Bana gelen bir json objesi var ve içinde sadece name alanını almak istiyorum ne yapmam gerekiyor.",
                             HeadingName = "Angular'da json içersinde tek bir alanı almak için ne yapmam gerekiyor?",
                             HeadingTag = "Angular",
                             HeadingViews = 98,
-                            LastModifyTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3506),
+                            LastModifyTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8072),
                             MemberId = 2,
                             Status = true
                         },
@@ -301,12 +343,12 @@ namespace KahveliKodlama.Persistence.Migrations
                             Id = 6,
                             CategoryId = 3,
                             ContentId = 1,
-                            CreatedTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3516),
+                            CreatedTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8081),
                             HeadingContent = "switch case veya if kullanmanın performansa erkileri tam olarak nedir?",
                             HeadingName = "c# üzerinde if kullanmak mı daha performanslı yoksa switch case mi kullanmak daha avantajlıdır farkları nelerdir.",
                             HeadingTag = "c#",
                             HeadingViews = 90,
-                            LastModifyTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3517),
+                            LastModifyTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8082),
                             MemberId = 2,
                             Status = true
                         },
@@ -315,12 +357,12 @@ namespace KahveliKodlama.Persistence.Migrations
                             Id = 7,
                             CategoryId = 1,
                             ContentId = 1,
-                            CreatedTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3523),
+                            CreatedTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8090),
                             HeadingContent = "Yüklerken aniden yarıda kesiliyor ve hata alıyor nasıl çözülmesi gerekiyor bilen var mı ?",
                             HeadingName = "Visual Studio 2022 nasıl yükleniyor ?",
                             HeadingTag = "Visual Studio",
                             HeadingViews = 45,
-                            LastModifyTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3524),
+                            LastModifyTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8090),
                             MemberId = 3,
                             Status = true
                         },
@@ -329,12 +371,12 @@ namespace KahveliKodlama.Persistence.Migrations
                             Id = 8,
                             CategoryId = 2,
                             ContentId = 1,
-                            CreatedTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3530),
+                            CreatedTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8130),
                             HeadingContent = "Bana gelen bir json objesi var ve içinde sadece name alanını almak istiyorum ne yapmam gerekiyor.",
                             HeadingName = "Angular'da json içersinde tek bir alanı almak için ne yapmam gerekiyor?",
                             HeadingTag = "Angular",
                             HeadingViews = 98,
-                            LastModifyTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3531),
+                            LastModifyTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8130),
                             MemberId = 3,
                             Status = true
                         },
@@ -343,12 +385,12 @@ namespace KahveliKodlama.Persistence.Migrations
                             Id = 9,
                             CategoryId = 3,
                             ContentId = 1,
-                            CreatedTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3538),
+                            CreatedTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8139),
                             HeadingContent = "switch case veya if kullanmanın performansa erkileri tam olarak nedir?",
                             HeadingName = "c# üzerinde if kullanmak mı daha performanslı yoksa switch case mi kullanmak daha avantajlıdır farkları nelerdir.",
                             HeadingTag = "c#",
                             HeadingViews = 90,
-                            LastModifyTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3538),
+                            LastModifyTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8139),
                             MemberId = 3,
                             Status = true
                         });
@@ -389,6 +431,15 @@ namespace KahveliKodlama.Persistence.Migrations
                         .HasColumnType("integer");
 
                     b.Property<string>("Email")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Field0")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Field1")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Field2")
                         .HasColumnType("text");
 
                     b.Property<bool>("Gender")
@@ -450,14 +501,14 @@ namespace KahveliKodlama.Persistence.Migrations
                             About = "Konya Teknik Üniversitesi Bilgisayar Mühendisliğinden Mezunum Aktif olarak t-soft e ticaret sistemleri bünyesinde çalışmaktayım. Net core ve angular üzerinde kendimi geliştiriyorum az düzeyde ingilizce biliyorum",
                             Age = (short)23,
                             Authority = true,
-                            CreatedTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3275),
+                            CreatedTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(7719),
                             Dislike = 14,
                             Email = "efekhvci@hotmail.com",
                             Gender = true,
                             Image = "Resim Yok",
                             IsVerifiedEmail = true,
                             IsVerifiedInfo = true,
-                            LastModifyTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3276),
+                            LastModifyTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(7722),
                             Like = 8,
                             Name = "Mehmet Efe",
                             Password = "12345efe",
@@ -473,14 +524,14 @@ namespace KahveliKodlama.Persistence.Migrations
                             About = "Konya Teknik Üniversitesi Bilgisayar Mühendisliğinden Mezunum Aktif olarak iş arayaşım devam etmektedir fronted tarafında react js beckend tarafında ise.net ile çalışmalar yapıyorum.",
                             Age = (short)24,
                             Authority = true,
-                            CreatedTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3301),
+                            CreatedTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(7759),
                             Dislike = 1,
                             Email = "ysfckmk@hotmail.com",
                             Gender = true,
                             Image = "Resim Yok",
                             IsVerifiedEmail = true,
                             IsVerifiedInfo = true,
-                            LastModifyTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3301),
+                            LastModifyTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(7760),
                             Like = 6,
                             Name = "Yusuf",
                             Password = "12345yusuf",
@@ -496,14 +547,14 @@ namespace KahveliKodlama.Persistence.Migrations
                             About = "Konya Teknik Üniversitesi Bilgisayar Mühendisliğinden Mezunum Aktif olarak iş arayaşım devam etmektedir fronted tarafında angular js beckend tarafında ise.net ile çalışmalar yapıyorum. Ayrıca yurtdışında çalışmak ilk tercihim olacaktır.",
                             Age = (short)24,
                             Authority = true,
-                            CreatedTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3309),
+                            CreatedTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(7769),
                             Dislike = 13,
                             Email = "remzican@hotmail.com",
                             Gender = true,
                             Image = "Resim Yok",
                             IsVerifiedEmail = true,
                             IsVerifiedInfo = true,
-                            LastModifyTime = new DateTime(2022, 2, 8, 11, 30, 20, 222, DateTimeKind.Utc).AddTicks(3310),
+                            LastModifyTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(7769),
                             Like = 65,
                             Name = "Remzi Can",
                             Password = "12345remzi",

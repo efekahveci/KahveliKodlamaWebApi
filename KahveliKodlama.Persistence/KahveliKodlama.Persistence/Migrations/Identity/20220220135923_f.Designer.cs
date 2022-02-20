@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace KahveliKodlama.Persistence.Migrations.Identity
 {
     [DbContext(typeof(IdentityContext))]
-    [Migration("20220208113030_first")]
-    partial class first
+    [Migration("20220220135923_f")]
+    partial class f
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

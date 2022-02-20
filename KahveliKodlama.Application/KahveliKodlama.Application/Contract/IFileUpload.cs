@@ -10,6 +10,6 @@ namespace KahveliKodlama.Application.Contract
 {
     public interface IFileUpload
     {
-        Task<bool> Complate(IFormFile file, ClaimsPrincipal user);
+        Task<bool> Complate(IFormFile file, string userName);
     }
 }

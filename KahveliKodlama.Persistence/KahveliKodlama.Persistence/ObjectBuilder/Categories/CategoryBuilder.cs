@@ -18,15 +18,16 @@ namespace KahveliKodlama.Persistence.ObjectBuilder.Categories
             {
                 Id = 1,
                 CategoryName = ".Net Core",
-                Status =  true ,
+                Status = true,
                 LastModifyTime = DateTime.UtcNow,
-                CategoryActive = true ,
+                CategoryActive = true,
                 CreatedTime = DateTime.UtcNow,
-                CategoryClick = 54,
-                CategoryCode ="001",
-               
+                CategoryDesc = "C# | MVC | WEB API | BLAZOR",
+                CategoryImage = "https://okankaradag.com/wp-content/uploads/2021/06/asp.net-core-logo.png",
+                CategoryCode = "001",
 
-            });
+
+            }); ;
             builder.Entity<Category>().HasData(new Category
             {
                 Id = 2,
@@ -35,7 +36,8 @@ namespace KahveliKodlama.Persistence.ObjectBuilder.Categories
                 LastModifyTime = DateTime.UtcNow,
                 CategoryActive = true,
                 CreatedTime = DateTime.UtcNow,
-                CategoryClick = 20,
+                CategoryDesc= "Angular JS | TypeScript | JavaScript | HTML | CSS",
+                CategoryImage= "https://wikiimg.tojsiabtv.com/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png",
                 CategoryCode = "002",
 
 
@@ -48,7 +50,8 @@ namespace KahveliKodlama.Persistence.ObjectBuilder.Categories
                 LastModifyTime = DateTime.UtcNow,
                 CategoryActive = true,
                 CreatedTime = DateTime.UtcNow,
-                CategoryClick = 4,
+                CategoryDesc= "SOLID | OOP | CLEAN CODE",
+                CategoryImage= "https://www.educative.io/v2api/editorpage/4792707659595776/image/5909454286487552",
                 CategoryCode = "003",
 
 

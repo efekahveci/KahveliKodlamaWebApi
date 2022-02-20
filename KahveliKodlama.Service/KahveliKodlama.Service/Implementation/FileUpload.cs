@@ -31,32 +31,35 @@ namespace KahveliKodlama.Service.Implementation
         public static IFormFile files { get; set; }
 
 
-        public async Task<bool> Complate(IFormFile file, ClaimsPrincipal user)
+        public async Task<bool> Complate(IFormFile file, string userName)
         {
             //var currentUserName =  user.FindFirst(ClaimTypes.NameIdentifier).Value;
             //AppUser efe = await _userManager.FindByNameAsync(currentUserName);
 
-            
 
-            var result = await _userManager.FindByNameAsync(user.Identity.Name);
+            string[] _Split = userName.Split("+++");
+            userName = _Split[0];   
+            string email=_Split[1];
 
-            var userid= await _memberService.GetUser(result.Email);
+            //var result = await _userManager.FindByNameAsync(user.Identity.Name);
+
+            //var userid= await _memberService.GetUser(result.Email);
 
             foreach (var item in extension)
             {
                 if (file.ContentType.ToString() == item)
                 {
-                    string path = _environment.ContentRootPath + "\\Images\\" + result.UserName.ToString()+"-p"+"\\";
+                    string path = _environment.ContentRootPath + "\\Images\\" + userName +"\\";
 
 
 
-                    PathControl(result.UserName.ToString());
+                    PathControl(userName);
 
                     using (FileStream stream = File.Create(path + file.FileName))
                     {
 
                  
-                        await _memberService.UpdateMember(new MemberDto { Image = path  }) ;
+                        await _memberService.UpdateMember(new MemberDto { Email=email, Image = path  }) ;
                         await file.CopyToAsync(stream);
                         await stream.FlushAsync();
                         return true;
@@ -71,7 +74,7 @@ namespace KahveliKodlama.Service.Implementation
 
         private void PathControl(string user)
         {
-            string path = _environment.ContentRootPath + "\\Images\\"+ user+"-p"+ "\\";
+            string path = _environment.ContentRootPath + "\\Images\\"+ user+ "\\";
 
 
             if (!Directory.Exists(path))
