@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using KahveliKodlama.Application.Contract;
 using KahveliKodlama.Application.Dto;
+using KahveliKodlama.Core.Extensions;
 using KahveliKodlama.Domain.Entities;
 using KahveliKodlama.Service.Implementation;
 using Microsoft.AspNetCore.Authorization;
@@ -27,13 +28,21 @@ namespace KahveliKodlama.API.Controllers
         }
 
         [HttpGet("getAllDto")]
-        public ActionResult<List<HeadingDto>> getAllDto()
+        public async Task<IActionResult> getAllDto()
         {
-            var result = _headingService.GetAll();
+           
 
-            var retVal = _mapper.Map<Task<List<Heading>>,List<HeadingDto>>(result);
 
-            return Ok(retVal);
+            var result = await _headingService.GetAll();
+
+            if (result.Count > 0)
+            {
+                var retVal = _mapper.Map<List<Heading>, List<HeadingDto>>(result);
+                return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, retVal));
+
+            }
+
+            return NoContent();
         }
    
 
@@ -46,11 +55,18 @@ namespace KahveliKodlama.API.Controllers
         }
 
         [HttpGet("getTop")]
-        public Task<List<Heading>> GetTop()
+        public async Task<IActionResult> GetTop()
         {
-            var result = _headingService.GetTopHeading();
+            var result = await _headingService.GetTopHeading();
 
-            return result;
+            if (result.Count > 0)
+            {
+                var retVal = _mapper.Map<List<Heading>, List<HeadingDto>>(result);
+                return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, retVal));
+
+            }
+
+            return NoContent();
         }
         [HttpGet("getByIdDto/{id}")]
         public async Task<HeadingDto> GetByIdDto(int id)

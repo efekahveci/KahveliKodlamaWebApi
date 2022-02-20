@@ -1,6 +1,5 @@
 G:\Drive'ım\KahveliKodlama\KahveliKodlama.Service\KahveliKodlama.Service\bin\Debug\net6.0\KahveliKodlama.Service.deps.json
 G:\Drive'ım\KahveliKodlama\KahveliKodlama.Service\KahveliKodlama.Service\bin\Debug\net6.0\KahveliKodlama.Service.dll
-G:\Drive'ım\KahveliKodlama\KahveliKodlama.Service\KahveliKodlama.Service\bin\Debug\net6.0\ref\KahveliKodlama.Service.dll
 G:\Drive'ım\KahveliKodlama\KahveliKodlama.Service\KahveliKodlama.Service\bin\Debug\net6.0\KahveliKodlama.Service.pdb
 G:\Drive'ım\KahveliKodlama\KahveliKodlama.Service\KahveliKodlama.Service\bin\Debug\net6.0\KahveliKodlama.Application.dll
 G:\Drive'ım\KahveliKodlama\KahveliKodlama.Service\KahveliKodlama.Service\bin\Debug\net6.0\KahveliKodlama.Core.dll
@@ -19,3 +18,4 @@ G:\Drive'ım\KahveliKodlama\KahveliKodlama.Service\KahveliKodlama.Service\obj\De
 G:\Drive'ım\KahveliKodlama\KahveliKodlama.Service\KahveliKodlama.Service\obj\Debug\net6.0\KahveliKodlama.Service.dll
 G:\Drive'ım\KahveliKodlama\KahveliKodlama.Service\KahveliKodlama.Service\obj\Debug\net6.0\ref\KahveliKodlama.Service.dll
 G:\Drive'ım\KahveliKodlama\KahveliKodlama.Service\KahveliKodlama.Service\obj\Debug\net6.0\KahveliKodlama.Service.pdb
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Service\KahveliKodlama.Service\obj\Debug\net6.0\refint\KahveliKodlama.Service.dll

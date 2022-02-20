@@ -11,7 +11,7 @@ namespace KahveliKodlama.Application.Contract
 {
     public interface IMemberService : IAsyncGenericRepository<Member>
     {
-        Task<ResponseResult> GetTopMembers();
+        Task<List<Member>> GetTopMembers();
         Task<Member> UpdateMember(MemberDto member);
 
         Task<int> AddPointMember(Member member,int point);

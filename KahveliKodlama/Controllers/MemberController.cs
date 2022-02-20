@@ -186,8 +186,6 @@ namespace KahveliKodlama.API.Controllers
         }
 
         [HttpGet("getTop")]
-        
-
         public async Task<IActionResult> GetTopMembers()
         {
 

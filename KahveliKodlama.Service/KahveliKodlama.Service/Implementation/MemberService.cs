@@ -26,13 +26,13 @@ namespace KahveliKodlama.Service.Implementation
             return member.Point;    
         }
 
-        public async Task<ResponseResult>GetTopMembers()
+        public async Task<List<Member>>GetTopMembers()
         {
 
             var orderByDescendingResult = await GetAll();
 
-            return new ResponseResult(Domain.Enum.ResponseCode.OK, "Başarılı", orderByDescendingResult
-               .OrderByDescending(c => c.Point).Take(10));               
+            return orderByDescendingResult
+               .OrderByDescending(c => c.Point).Take(10).ToList();               
         }
 
         public async Task<Member> GetUser(string email)
