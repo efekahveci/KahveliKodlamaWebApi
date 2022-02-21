@@ -9669,7 +9669,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\efekh\\.nuget\\packages\\": {}
+    "C:\\Users\\Legion\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -9677,11 +9677,11 @@
       "projectUniqueName": "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama\\KahveliKodlama.API.csproj",
       "projectName": "KahveliKodlama.API",
       "projectPath": "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama\\KahveliKodlama.API.csproj",
-      "packagesPath": "C:\\Users\\efekh\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Legion\\.nuget\\packages\\",
       "outputPath": "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\efekh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Legion\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
