@@ -49,17 +49,20 @@ namespace KahveliKodlama.Service.Implementation
             {
                 if (file.ContentType.ToString() == item)
                 {
-                    string path = _environment.ContentRootPath + "\\Images\\" + userName +"\\";
 
+                    string path = "C:\\Users\\Legion\\Desktop\\Angular\\Frontend\\src\\assets\\";
 
 
                     PathControl(userName);
 
-                    using (FileStream stream = File.Create(path + file.FileName))
+                    string name = userName + file.FileName.Substring(file.FileName.LastIndexOf('.'));
+
+
+                    using (FileStream stream = File.Create(path + name))
                     {
 
                  
-                        await _memberService.UpdateMember(new MemberDto { Email=email, Image = path  }) ;
+                        await _memberService.UpdateMember(new MemberDto { Email=email, Image = path + name  }) ;
                         await file.CopyToAsync(stream);
                         await stream.FlushAsync();
                         return true;
@@ -74,7 +77,7 @@ namespace KahveliKodlama.Service.Implementation
 
         private void PathControl(string user)
         {
-            string path = _environment.ContentRootPath + "\\Images\\"+ user+ "\\";
+            string path = "C:\\Users\\Legion\\Desktop\\Angular\\Frontend\\src\\assets\\";
 
 
             if (!Directory.Exists(path))

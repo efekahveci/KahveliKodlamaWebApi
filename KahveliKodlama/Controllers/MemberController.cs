@@ -156,6 +156,10 @@ namespace KahveliKodlama.API.Controllers
             {
                 var retVal = _mapper.Map<Member, MemberDto>(result);
 
+                retVal.Image= retVal.Image.Substring(retVal.Image.LastIndexOf('\\') + 1);
+
+
+
                 return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, retVal));
             }
 
