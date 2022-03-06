@@ -18,6 +18,7 @@ namespace KahveliKodlama.Application.Dto
         public string Image { get; set; }
         public string About { get; set; }
         public string Title { get; set; }
+        public string Point { get; set; }
 
         public ICollection<Heading> Headings { get; set; }
     }

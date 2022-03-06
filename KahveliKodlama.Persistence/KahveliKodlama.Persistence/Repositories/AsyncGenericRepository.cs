@@ -56,7 +56,7 @@ namespace KahveliKodlama.Persistence.Repositories
 
         public async Task<List<TEntity>> GetAll(Expression<Func<TEntity, object>> includes)
         {
-            return await _context.Set<TEntity>().Include(includes).ToListAsync();
+            return await _context.Set<TEntity>().Include(includes).OrderByDescending(a=>a.CreatedTime).ToListAsync();
                 
         }
         
