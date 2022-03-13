@@ -10,3 +10,15 @@ G:\Drive'ım\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debu
 G:\Drive'ım\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net6.0\refint\KahveliKodlama.Domain.dll
 G:\Drive'ım\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net6.0\KahveliKodlama.Domain.pdb
 G:\Drive'ım\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net6.0\ref\KahveliKodlama.Domain.dll
+C:\Users\efekh\Desktop\Repo\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\bin\Debug\net6.0\KahveliKodlama.Domain.deps.json
+C:\Users\efekh\Desktop\Repo\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\bin\Debug\net6.0\KahveliKodlama.Domain.dll
+C:\Users\efekh\Desktop\Repo\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\bin\Debug\net6.0\KahveliKodlama.Domain.pdb
+C:\Users\efekh\Desktop\Repo\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net6.0\KahveliKodlama.Domain.csproj.AssemblyReference.cache
+C:\Users\efekh\Desktop\Repo\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net6.0\KahveliKodlama.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\efekh\Desktop\Repo\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net6.0\KahveliKodlama.Domain.AssemblyInfoInputs.cache
+C:\Users\efekh\Desktop\Repo\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net6.0\KahveliKodlama.Domain.AssemblyInfo.cs
+C:\Users\efekh\Desktop\Repo\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net6.0\KahveliKodlama.Domain.csproj.CoreCompileInputs.cache
+C:\Users\efekh\Desktop\Repo\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net6.0\KahveliKodlama.Domain.dll
+C:\Users\efekh\Desktop\Repo\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net6.0\refint\KahveliKodlama.Domain.dll
+C:\Users\efekh\Desktop\Repo\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net6.0\KahveliKodlama.Domain.pdb
+C:\Users\efekh\Desktop\Repo\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net6.0\ref\KahveliKodlama.Domain.dll

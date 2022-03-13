@@ -1,6 +1,6 @@
 using FluentValidation.AspNetCore;
-using KahveliKodlama.API.Filters;
 using KahveliKodlama.Application;
+using KahveliKodlama.Application.Filters;
 using KahveliKodlama.Persistence;
 using KahveliKodlama.Service;
 using KahveliKodlama.Service.Extensions;
@@ -45,7 +45,7 @@ namespace KahveliKodlama
             });
 
 
-            services.AddScoped<ValidationFilterAttribute>();
+            services.AddScoped<ValidationFilterAttribute>(); //ValidFilter
 
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\KahveliKodlama",
+    "\\KahveliKodlama\\Controllers"
   ],
-  "SelectedNode": "\\KahveliKodlama.sln (KahveliKodlama\\KahveliKodlama.sln)",
+  "SelectedNode": "\\KahveliKodlama.sln",
   "PreviewInSolutionExplorer": false
 }

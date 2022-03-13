@@ -13,7 +13,6 @@ namespace KahveliKodlama.Application.Dto
     {
         public string Username { get; set; }
         [StringData(max = 10, min = 3)]
-        [Required]
         public string Name { get; set; }
         public string Surname { get; set; }
         public string Email { get; set; }

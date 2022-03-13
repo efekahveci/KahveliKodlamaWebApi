@@ -9736,19 +9736,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Legion\\.nuget\\packages\\": {}
+    "C:\\Users\\efekh\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama\\KahveliKodlama.API.csproj",
+      "projectUniqueName": "C:\\Users\\efekh\\Desktop\\Repo\\KahveliKodlama\\KahveliKodlama\\KahveliKodlama.API.csproj",
       "projectName": "KahveliKodlama.API",
-      "projectPath": "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama\\KahveliKodlama.API.csproj",
-      "packagesPath": "C:\\Users\\Legion\\.nuget\\packages\\",
-      "outputPath": "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama\\obj\\",
+      "projectPath": "C:\\Users\\efekh\\Desktop\\Repo\\KahveliKodlama\\KahveliKodlama\\KahveliKodlama.API.csproj",
+      "packagesPath": "C:\\Users\\efekh\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\efekh\\Desktop\\Repo\\KahveliKodlama\\KahveliKodlama\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Legion\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\efekh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9762,11 +9762,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama.Persistence\\KahveliKodlama.Persistence\\KahveliKodlama.Persistence.csproj": {
-              "projectPath": "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama.Persistence\\KahveliKodlama.Persistence\\KahveliKodlama.Persistence.csproj"
+            "C:\\Users\\efekh\\Desktop\\Repo\\KahveliKodlama\\KahveliKodlama.Persistence\\KahveliKodlama.Persistence\\KahveliKodlama.Persistence.csproj": {
+              "projectPath": "C:\\Users\\efekh\\Desktop\\Repo\\KahveliKodlama\\KahveliKodlama.Persistence\\KahveliKodlama.Persistence\\KahveliKodlama.Persistence.csproj"
             },
-            "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama.Service\\KahveliKodlama.Service\\KahveliKodlama.Service.csproj": {
-              "projectPath": "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama.Service\\KahveliKodlama.Service\\KahveliKodlama.Service.csproj"
+            "C:\\Users\\efekh\\Desktop\\Repo\\KahveliKodlama\\KahveliKodlama.Service\\KahveliKodlama.Service\\KahveliKodlama.Service.csproj": {
+              "projectPath": "C:\\Users\\efekh\\Desktop\\Repo\\KahveliKodlama\\KahveliKodlama.Service\\KahveliKodlama.Service\\KahveliKodlama.Service.csproj"
             }
           }
         }
