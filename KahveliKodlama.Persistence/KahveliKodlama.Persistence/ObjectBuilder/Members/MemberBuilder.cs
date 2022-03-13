@@ -1,11 +1,6 @@
 ﻿using KahveliKodlama.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KahveliKodlama.Persistence.ObjectBuilder.Members
 {
@@ -29,7 +24,7 @@ namespace KahveliKodlama.Persistence.ObjectBuilder.Members
 
             builder.Entity<Member>().HasData(new Member
             {
-                Id = 1,
+                Id = Guid.Parse("4ebf1452-3bdc-1618-a25a-c31575c89074"),
                 UserName = "efekahveci",
                 Email = "efekhvci@hotmail.com",
                 Password = "12345efe",
@@ -55,7 +50,7 @@ namespace KahveliKodlama.Persistence.ObjectBuilder.Members
 
             builder.Entity<Member>().HasData(new Member
             {
-                Id = 2,
+                Id = Guid.Parse("4ebf1452-3bdc-2618-a25a-c31575c89074"),
                 UserName = "yusufcakmak",
                 Email = "ysfckmk@hotmail.com",
                 Password = "12345yusuf",
@@ -79,7 +74,7 @@ namespace KahveliKodlama.Persistence.ObjectBuilder.Members
             });
             builder.Entity<Member>().HasData(new Member
             {
-                Id = 3,
+                Id = Guid.Parse("4ebf1452-3bdc-3618-a25a-c31575c89074"),
                 UserName = "akmansoy",
                 Email = "remzican@hotmail.com",
                 Password = "12345remzi",

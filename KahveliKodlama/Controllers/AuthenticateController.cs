@@ -1,25 +1,16 @@
-﻿using KahveliKodlama.Domain.Entities;
-using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
-using System.Collections.Generic;
-
-using KahveliKodlama.Domain.Auth;
-
-using Microsoft.AspNetCore.Cors;
-using KahveliKodlama.Application.Contract;
-using KahveliKodlama.Application.Dto;
-
-using MediatR;
-using KahveliKodlama.Application.CQRS.Queries.Authenticate;
-using KahveliKodlama.Application.CQRS.Commands.Authenticate;
+﻿using KahveliKodlama.Application.Contract;
+using KahveliKodlama.Application.CQRS.Commands.Authenticate.AddRole;
 using KahveliKodlama.Application.CQRS.Commands.Authenticate.Login;
 using KahveliKodlama.Application.CQRS.Commands.Authenticate.Register;
 using KahveliKodlama.Application.CQRS.Commands.Authenticate.Register_Admin;
+using KahveliKodlama.Application.CQRS.Queries.Authenticate;
+using KahveliKodlama.Domain.Auth;
+using KahveliKodlama.Domain.Entities;
+using MediatR;
 using Microsoft.AspNetCore.Authorization;
-using KahveliKodlama.Application.CQRS.Commands.Authenticate.AddRole;
-using System.Security.Claims;
-using System.Linq;
-using System;
+using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace KahveliKodlama.API.Controllers
 {

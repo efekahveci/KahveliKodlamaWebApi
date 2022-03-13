@@ -1,16 +1,11 @@
 ﻿using KahveliKodlama.Application.Interfaces.Repositories;
-using KahveliKodlama.Core.Extensions;
 using KahveliKodlama.Domain.Common;
 using KahveliKodlama.Infrastructure.ContextEngine;
 using KahveliKodlama.Persistence.Context;
-using KahveliKodlama.Persistence.Extensions;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 using System.Threading.Tasks;
 
 
@@ -24,64 +19,66 @@ namespace KahveliKodlama.Persistence.Repositories
         {
             _context = EngineContext.Current.Resolve<KahveliContext>();
         }
+        //2400
+        public DbSet<TEntity> Table => _context.Set<TEntity>();
+
+
+
+        public IQueryable<TEntity> GetAllQuery => Table.AsNoTracking().Where(x => x.Status == true).AsQueryable();
+
 
         public async Task Create(TEntity entity)
         {
             entity.CreatedTime = DateTime.UtcNow;
 
-            await _context.Set<TEntity>().AddAsync(entity);
+            await Table.AddAsync(entity);
             await _context.SaveChangesAsync();
         }
 
-        public async Task Delete(int id)
+        public async Task Delete(string id)
         {
 
             var entity = await GetById(id);
-            //  entity.DeleteTime = DateTime.Now;   
-            //_context.Set<TEntity>().Remove(entity);
-            //await _context.SaveChangesAsync();
             entity.DeleteTime = DateTime.UtcNow;
             entity.Status = false;
-            _context.Set<TEntity>().Update(entity);
-
+            Table.Update(entity);
             await _context.SaveChangesAsync();
         }
 
-        public Task<List<TEntity>> GetAll()
-        {
-            return  _context.Set<TEntity>()
-                         .Where(x => x.Status == true).ToListAsync();
-                
+      
+
+        public  IQueryable<TEntity> GetAllQueryInc(Expression<Func<TEntity, object>> includes)
+        {           
+            return Table.Include(includes).AsNoTracking().Where(x => x.Status == true).AsQueryable();
         }
 
-        public async Task<List<TEntity>> GetAll(Expression<Func<TEntity, object>> includes)
-        {
-            return await _context.Set<TEntity>().Include(includes).OrderByDescending(a=>a.CreatedTime).ToListAsync();
-                
+
+        public async Task<TEntity> GetById(string id)
+        { 
+          var result =  await Table.FindAsync(id);
+
+            if (result.Status != true)
+                return null;
+            else return result;
         }
-        
-        public async Task<TEntity> GetById(int id)
-        {
-            return await _context.Set<TEntity>()
-                         .AsNoTracking()
-                         .Where(x => x.Status == true)   
-                         .FirstOrDefaultAsync(e => e.Id == id);
-        }
-        public async Task<TEntity> GetById(int id,Expression<Func<TEntity, object>> includes)
+        public async Task<TEntity> GetByIdInc(string id,Expression<Func<TEntity, object>> includes)
         {
             return await _context.Set<TEntity>()
                          .AsNoTracking()
                          .Include(includes)
                          .Where(x => x.Status == true)
-                         .FirstOrDefaultAsync(e => e.Id == id);
+                         .FirstOrDefaultAsync(e => e.Id == Guid.Parse(id));
         }
+
+       
+
         public async Task UniqueCreate(TEntity entity)
         {
-            var result = await _context.Set<TEntity>().AsNoTracking().FirstOrDefaultAsync(e=>e.Id == entity.Id);
+            var result = await Table.AsNoTracking().FirstOrDefaultAsync(e=>e.Id == entity.Id);
 
             if (result!=null)
             {
-                await _context.Set<TEntity>().AddAsync(entity);
+                await Table.AddAsync(entity);
                 await _context.SaveChangesAsync();
             }
         }
@@ -89,54 +86,12 @@ namespace KahveliKodlama.Persistence.Repositories
         public async Task Update(TEntity entity)
         {
 
-            //var updatedEntity = _context.Set<TEntity>().Entry(entity);
-            //updatedEntity.State = EntityState.Modified;
-            //await _context.SaveChangesAsync();
-
-
-
-            //var result = await GetById(entity.Id);
-
-          
-            //await Update(retVal);
-
-          //  return retVal;
-
-
-
-            _context.Set<TEntity>().Update(entity);
+            Table.Update(entity);
 
             await _context.SaveChangesAsync();
 
 
-            // Here model is model return from form on post
-            //var oldobj = _context.Members.Where(x => x.Id == entity.Id).SingleOrDefault();
-
-
-            //// Newly Inserted Code
-            //var UpdatedObj = CheckUpdateObjectExtensions.CheckUpdateObject(oldobj, entity);
-
-            //_context.Entry(oldobj).CurrentValues.SetValues(UpdatedObj);
-
-            //await _context.SaveChangesAsync();
-            //    var entries =_context.ChangeTracker
-            //.Entries()
-            //.Where(e => e.Entity is BaseEntity && (
-            //        e.State == EntityState.Added
-            //        || e.State == EntityState.Modified));
-
-            //    foreach (var entityEntry in entries)
-            //    {
-            //        ((BaseEntity)entityEntry.Entity).LastModifyTime = DateTime.Now;
-
-            //        if (entityEntry.State == EntityState.Added)
-            //        {
-            //            ((BaseEntity)entityEntry.Entity).CreatedTime = DateTime.Now;
-            //        }
-            //    }
-
         }
-
         
     }
 }

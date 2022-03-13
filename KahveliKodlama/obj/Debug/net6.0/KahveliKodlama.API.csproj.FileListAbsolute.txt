@@ -11,6 +11,8 @@ G:\Drive'ım\KahveliKodlama\KahveliKodlama\bin\Debug\net6.0\AutoMapper.Extension
 G:\Drive'ım\KahveliKodlama\KahveliKodlama\bin\Debug\net6.0\EntityFrameworkCore.Triggered.dll
 G:\Drive'ım\KahveliKodlama\KahveliKodlama\bin\Debug\net6.0\EntityFrameworkCore.Triggered.Abstractions.dll
 G:\Drive'ım\KahveliKodlama\KahveliKodlama\bin\Debug\net6.0\FluentValidation.dll
+G:\Drive'ım\KahveliKodlama\KahveliKodlama\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+G:\Drive'ım\KahveliKodlama\KahveliKodlama\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
 G:\Drive'ım\KahveliKodlama\KahveliKodlama\bin\Debug\net6.0\Humanizer.dll
 G:\Drive'ım\KahveliKodlama\KahveliKodlama\bin\Debug\net6.0\MediatR.dll
 G:\Drive'ım\KahveliKodlama\KahveliKodlama\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
@@ -119,7 +121,7 @@ G:\Drive'ım\KahveliKodlama\KahveliKodlama\obj\Debug\net6.0\staticwebassets.deve
 G:\Drive'ım\KahveliKodlama\KahveliKodlama\obj\Debug\net6.0\scopedcss\bundle\KahveliKodlama.API.styles.css
 G:\Drive'ım\KahveliKodlama\KahveliKodlama\obj\Debug\net6.0\KahveliKodlama.API.csproj.CopyComplete
 G:\Drive'ım\KahveliKodlama\KahveliKodlama\obj\Debug\net6.0\KahveliKodlama.API.dll
-G:\Drive'ım\KahveliKodlama\KahveliKodlama\obj\Debug\net6.0\ref\KahveliKodlama.API.dll
+G:\Drive'ım\KahveliKodlama\KahveliKodlama\obj\Debug\net6.0\refint\KahveliKodlama.API.dll
 G:\Drive'ım\KahveliKodlama\KahveliKodlama\obj\Debug\net6.0\KahveliKodlama.API.pdb
 G:\Drive'ım\KahveliKodlama\KahveliKodlama\obj\Debug\net6.0\KahveliKodlama.API.genruntimeconfig.cache
-G:\Drive'ım\KahveliKodlama\KahveliKodlama\obj\Debug\net6.0\refint\KahveliKodlama.API.dll
+G:\Drive'ım\KahveliKodlama\KahveliKodlama\obj\Debug\net6.0\ref\KahveliKodlama.API.dll

@@ -2,10 +2,6 @@
 using KahveliKodlama.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KahveliKodlama.Persistence.ObjectBuilder.Categories
 {
@@ -16,7 +12,7 @@ namespace KahveliKodlama.Persistence.ObjectBuilder.Categories
 
             builder.Entity<Category>().HasData(new Category
             {
-                Id = 1,
+                Id = Guid.Parse("1ebf1452-3bdc-4618-a25a-c31575c89074"),
                 CategoryName = ".Net Core",
                 Status = true,
                 LastModifyTime = DateTime.UtcNow,
@@ -30,7 +26,7 @@ namespace KahveliKodlama.Persistence.ObjectBuilder.Categories
             }); ;
             builder.Entity<Category>().HasData(new Category
             {
-                Id = 2,
+                Id = Guid.Parse("2ebf1452-3bdc-4618-a25a-c31575c89074"),
                 CategoryName = "Angular",
                 Status = true,
                 LastModifyTime = DateTime.UtcNow,
@@ -44,7 +40,7 @@ namespace KahveliKodlama.Persistence.ObjectBuilder.Categories
             });
             builder.Entity<Category>().HasData(new Category
             {
-                Id = 3,
+                Id = Guid.Parse("3ebf1452-3bdc-4618-a25a-c31575c89074"),
                 CategoryName = "Nesneye Yönelimli Programlama",
                 Status = true,
                 LastModifyTime = DateTime.UtcNow,

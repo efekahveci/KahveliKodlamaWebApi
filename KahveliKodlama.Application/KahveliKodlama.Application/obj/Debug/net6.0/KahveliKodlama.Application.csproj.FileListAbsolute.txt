@@ -12,6 +12,6 @@ G:\Drive'ım\KahveliKodlama\KahveliKodlama.Application\KahveliKodlama.Applicatio
 G:\Drive'ım\KahveliKodlama\KahveliKodlama.Application\KahveliKodlama.Application\obj\Debug\net6.0\KahveliKodlama.Application.csproj.CoreCompileInputs.cache
 G:\Drive'ım\KahveliKodlama\KahveliKodlama.Application\KahveliKodlama.Application\obj\Debug\net6.0\KahveliKodlama.Application.csproj.CopyComplete
 G:\Drive'ım\KahveliKodlama\KahveliKodlama.Application\KahveliKodlama.Application\obj\Debug\net6.0\KahveliKodlama.Application.dll
-G:\Drive'ım\KahveliKodlama\KahveliKodlama.Application\KahveliKodlama.Application\obj\Debug\net6.0\ref\KahveliKodlama.Application.dll
-G:\Drive'ım\KahveliKodlama\KahveliKodlama.Application\KahveliKodlama.Application\obj\Debug\net6.0\KahveliKodlama.Application.pdb
 G:\Drive'ım\KahveliKodlama\KahveliKodlama.Application\KahveliKodlama.Application\obj\Debug\net6.0\refint\KahveliKodlama.Application.dll
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Application\KahveliKodlama.Application\obj\Debug\net6.0\KahveliKodlama.Application.pdb
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Application\KahveliKodlama.Application\obj\Debug\net6.0\ref\KahveliKodlama.Application.dll

@@ -1,12 +1,6 @@
-﻿
-
-
-using KahveliKodlama.Application.Interfaces.Repositories;
-using KahveliKodlama.Application.Mapper;
-using KahveliKodlama.Domain.Entities;
+﻿using KahveliKodlama.Domain.Entities;
 using KahveliKodlama.Infrastructure.ContextEngine;
 using KahveliKodlama.Persistence.Context;
-using KahveliKodlama.Persistence.Repositories;
 using KahveliKodlama.Persistence.Triggers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;

@@ -1,16 +1,12 @@
-﻿using KahveliKodlama.Domain.Entities;
-using KahveliKodlama.Persistence.Context;
-using KahveliKodlama.Persistence.Repositories;
-using KahveliKodlama.Application.Contract;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using KahveliKodlama.Service.Extensions;
+﻿using KahveliKodlama.Application.Contract;
 using KahveliKodlama.Application.Dto;
 using KahveliKodlama.Core.Extensions;
+using KahveliKodlama.Domain.Entities;
+using KahveliKodlama.Persistence.Repositories;
+using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace KahveliKodlama.Service.Implementation
 {
@@ -29,7 +25,7 @@ namespace KahveliKodlama.Service.Implementation
         public async Task<List<Member>>GetTopMembers()
         {
 
-            var orderByDescendingResult = await GetAll();
+            var orderByDescendingResult = await GetAllQuery.ToListAsync();
 
             return orderByDescendingResult
                .OrderByDescending(c => c.Point).Take(10).ToList();               
@@ -37,7 +33,9 @@ namespace KahveliKodlama.Service.Implementation
 
         public async Task<Member> GetUser(string email)
         {
-            var result = await GetAll();
+            var query = GetAllQuery.Where(x => x.Email == email).AsQueryable();
+
+            var result = await query.ToListAsync();
 
             return  result.FirstOrDefault(x => x.Email == email);
                         

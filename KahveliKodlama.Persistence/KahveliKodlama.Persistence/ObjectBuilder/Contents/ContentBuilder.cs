@@ -1,10 +1,6 @@
 ﻿using KahveliKodlama.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KahveliKodlama.Persistence.ObjectBuilder.Contents
 {
@@ -16,10 +12,10 @@ namespace KahveliKodlama.Persistence.ObjectBuilder.Contents
 
             builder.Entity<Content>().HasData(new Content
             {
-                Id = 1,
-                Post="Ef Coreda İlişki kuramıyorum",
-                HeadingId=1
-                
+                Id = Guid.Parse("4ebf1452-3bdc-2618-225a-c31575c89074"),
+                Post ="Ef Coreda İlişki kuramıyorum",
+                HeadingId= Guid.Parse("4ebf1452-3bdc-4618-a25a-c31575c89074"),
+
 
             });
         

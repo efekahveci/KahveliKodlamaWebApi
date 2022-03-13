@@ -1,12 +1,7 @@
 ﻿using AutoMapper;
-using KahveliKodlama.Domain.Entities;
 using KahveliKodlama.Application.Dto;
+using KahveliKodlama.Domain.Entities;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using KahveliKodlama.Application.CQRS.Commands;
 
 namespace KahveliKodlama.Application.Mapper
 {
@@ -21,13 +16,12 @@ namespace KahveliKodlama.Application.Mapper
             CreateMap<Content, ContentDto>().ReverseMap();
         
             CreateMap<Contact, ContactDto>().ReverseMap();
-          
+
             CreateMap<Category, CategoryDto>().ReverseMap();
-    
-            CreateMap<Member, UpdateMember>().ReverseMap();
 
             CreateMap<Member, RegisterDto>().ReverseMap();
             CreateMap<Member, RegisterDto>().ReverseMap();
+            CreateMap<Exception, ExceptionDto>().ReverseMap();
 
        
 

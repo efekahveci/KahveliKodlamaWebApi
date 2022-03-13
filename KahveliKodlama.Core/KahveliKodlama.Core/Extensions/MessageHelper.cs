@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace KahveliKodlama.Core.Extensions
+﻿namespace KahveliKodlama.Core.Extensions
 {
     public static class MessageHelper
     {
@@ -17,8 +11,6 @@ namespace KahveliKodlama.Core.Extensions
        public static string validMax = "En fazla 15 karakter girilmelidir.";
 
        public static string validEmail = "Geçerli bir E-Posta adresi giriniz.";
-
-
 
        public static string validKey = "Admin key boş geçilemez.";
        public static string validPoint = "Puan eklendi.";

@@ -1,14 +1,12 @@
 ﻿using AutoMapper;
+using KahveliKodlama.API.Filters;
 using KahveliKodlama.Application.Contract;
 using KahveliKodlama.Application.Dto;
 using KahveliKodlama.Core.Extensions;
 using KahveliKodlama.Domain.Entities;
-using KahveliKodlama.Service.Implementation;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace KahveliKodlama.API.Controllers
@@ -28,30 +26,38 @@ namespace KahveliKodlama.API.Controllers
         }
 
         [HttpGet("getAllDto")]
-        public async Task<IActionResult> getAllDto()
+        public  async Task<IActionResult> getAllDto()
         {
            
 
 
-            var result = await _headingService.GetAll();
+            var result = await _headingService.GetAllQuery.ToListAsync();
+
+
 
             if (result.Count > 0)
             {
                 var retVal = _mapper.Map<List<Heading>, List<HeadingDto>>(result);
-                return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, retVal));
+                return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk,  retVal));
 
             }
 
             return NoContent();
         }
-   
+
 
         [HttpGet("getAll")]
-        public ActionResult<IQueryable<Heading>> GetAll()
+        public async Task<IActionResult> GetAllHeading()
         {
-            var result = _headingService.GetAll();
+            var result = await _headingService.GetAllQuery.ToListAsync();
 
-            return Ok(result);
+            if (result.Count > 0)
+            {
+
+                return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, result));
+            }
+
+            return NoContent();
         }
 
         [HttpGet("getTop")]
@@ -69,7 +75,7 @@ namespace KahveliKodlama.API.Controllers
             return NoContent();
         }
         [HttpGet("getByIdDto/{id}")]
-        public async Task<HeadingDto> GetByIdDto(int id)
+        public async Task<HeadingDto> GetByIdDto(string id)
         {
             var result = await _headingService.GetById(id);
 
@@ -82,7 +88,7 @@ namespace KahveliKodlama.API.Controllers
       // [Authorize("Admin")]
 
         [HttpGet("getById/{id}")]
-        public Task<Heading> GetById(int id)
+        public Task<Heading> GetById(string id)
         {
             var result = _headingService.GetById(id);
 
@@ -90,13 +96,13 @@ namespace KahveliKodlama.API.Controllers
         }
 
         [HttpPost("addHeading")]
+        [ServiceFilter(typeof(ValidationFilterAttribute))]
         public async Task<Heading> AddHeading([FromBody] HeadingDto heading)
         {
 
             var retval = _mapper.Map<HeadingDto, Heading>(heading);
 
             await _headingService.Create(retval);
-            //return heading;
             return null;
         }
 
@@ -111,7 +117,7 @@ namespace KahveliKodlama.API.Controllers
      
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteHeading(int id)
+        public async Task<IActionResult> DeleteHeading(string id)
         {
 
             await _headingService.Delete(id);

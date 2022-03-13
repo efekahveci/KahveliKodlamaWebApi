@@ -5,9 +5,7 @@ using Serilog;
 using Serilog.Context;
 using System;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace KahveliKodlama.Service.Middleware
@@ -109,7 +107,7 @@ namespace KahveliKodlama.Service.Middleware
             context.Response.ContentType = "application/json";
             context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
             // _logger.Error($"{DateTime.Now.ToString("HH:mm:ss")} : {exception}");
-            await context.Response.WriteAsync(new ResponseResult(Domain.Enum.ResponseCode.OK, exception.Message).ToString());
+            await context.Response.WriteAsync(new ResponseResult(Domain.Enum.ResponseCode.Internal_Server_Error, exception.ToString()).ToString());
         }
 
 

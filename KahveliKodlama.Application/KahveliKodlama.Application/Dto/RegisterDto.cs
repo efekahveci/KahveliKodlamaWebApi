@@ -1,13 +1,6 @@
-﻿using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace KahveliKodlama.Application.Dto
+﻿namespace KahveliKodlama.Application.Dto
 {
-    public class RegisterDto
+    public class RegisterDto : BaseDto
     {
         //[Required(ErrorMessage = "Kullanıcı adı alanı gereklidir.")]
         //[Display(Name = "Kullanıcı Adı")]

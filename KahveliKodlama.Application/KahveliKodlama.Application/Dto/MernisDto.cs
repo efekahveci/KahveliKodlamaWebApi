@@ -1,13 +1,8 @@
 ﻿using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KahveliKodlama.Application.Dto
 {
-    public class MernisDto : IRequest<MernisDto>
+    public class MernisDto : BaseDto, IRequest<MernisDto>
     {
 
 

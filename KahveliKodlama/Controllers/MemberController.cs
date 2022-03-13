@@ -1,26 +1,17 @@
 ﻿using AutoMapper;
+using KahveliKodlama.API.Filters;
 using KahveliKodlama.Application.Contract;
-using KahveliKodlama.Application.CQRS.Commands;
-using KahveliKodlama.Application.CQRS.Commands.Members;
-using KahveliKodlama.Application.CQRS.Queries.Members.GetByIdMember;
 using KahveliKodlama.Application.Dto;
-using KahveliKodlama.Application.Interfaces.Repositories;
+using KahveliKodlama.Application.Validators;
 using KahveliKodlama.Core.Extensions;
 using KahveliKodlama.Domain.Entities;
-
-using KahveliKodlama.Persistence.Context;
-using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Serilog;
-using Serilog.Context;
-//using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace KahveliKodlama.API.Controllers
@@ -28,57 +19,25 @@ namespace KahveliKodlama.API.Controllers
     [Route("api/[controller]")]
     [ApiController]
     public class MemberController : ControllerBase
-    {
-//        [FromQuery], sorgu dizesinden değerler almaktır
-//[FromRoute], rota verilerinden değerler almak içindir
-//[FormForm], gönderilen form alanlarından değerler almak içindir
-//[FromBody], istek gövdesinden değerler almaktır
-//[FromHeader], HTTP başlıklarından değerler almak içindir
-//[FromService], DI (Bağımlılık Enjeksiyonu) çözümleyicisi tarafından enjekte edilen değere sahip olacak
-
-
-        // private readonly ILogger _log = Log.ForContext<MemberController>();
+    { 
+        
         private readonly IMemberService _memberService;
         private readonly IMapper _mapper;
-        private readonly IMediator _mediator;
-        //private readonly ILogger<MemberController> _logger;
-        //  private readonly ILogger _log;//For Context Specifies The Class Which The Log Is Intended For
 
-        //private readonly IUnitOfWork _unitOfWork;
-        //private readonly IAsyncGenericRepository<Member> _repository;
-
-        //servisleri ayıracaz base controller o şekilde yapılacak repo lar unit of work tan çağrılacak
-
-        public MemberController(IMemberService memberService, IMapper mapper, IMediator mediator)
+        public MemberController(IMemberService memberService, IMapper mapper)
         {
-            // _log = logger;
+          
             _mapper = mapper;
             _memberService = memberService;
-            _mediator = mediator;
-            //_unitOfWork = unitOfWork;
 
-            //_repository = _unitOfWork.GetRepository<Member>();
         }
 
         [HttpGet("getAllDto")]
         public async Task<IActionResult> GetAllDtoMember()
         {
 
-           // var query = new GetAllMemberQuery();
 
-          //  return await _mediator.Send(new GetAllMemberDtoQuery());
-
-
-            //int a = 0;
-            //var b = 5 / a;
-            //var result = 
-
-           
-
-            //return retVal;
-
-
-            var result = await _memberService.GetAll();
+            var result = await _memberService.GetAllQuery.ToListAsync();
 
             if (result.Count>0)
             {
@@ -96,20 +55,8 @@ namespace KahveliKodlama.API.Controllers
         [HttpGet("getAll")]
         public async Task<IActionResult> GetAllMember()
         {
-            //IQueryable çekme ile listeye çevirmenin farkı ne olur ?
-            //var test = User.Identity.Name;
 
-            //var resu
-            ////Log.Warning($"Call selam getAll Method");
-            ////Log.ForContext("user_name", User.Identity.Name).Warning($"Call {User.Identity.Name} getAll Method");
-            ////   return await _mediator.Send(new GetAllMemberQuery());
-            //return null;
-            //var result = await _memberService.GetAll().ToListAsync();
-            ////  throw new NotImplementedException();    
-            //return  result;
-
-
-            var result = await _memberService.GetAll();
+            var result = await _memberService.GetAllQuery.ToListAsync();
 
             if (result.Count > 0)
             {
@@ -129,27 +76,9 @@ namespace KahveliKodlama.API.Controllers
 
             IEnumerable<Claim> claims = identity.Claims;
 
-            var test = claims.FirstOrDefault(x => x.Type == "id").Value;
+            var userid = claims.FirstOrDefault(x => x.Type == "id").Value;
 
-
-
-
-            //return await _mediator.Send(new GetByIdMemberDtoQuery() { Id = id });
-
-            ////var result = await _memberService.GetById(id);
-
-            ////var retVal = _mapper.Map<Member, MemberDto>(result);
-
-            ////return retVal;
-
-
-            ////return await _mediator.Send(new GetByIdMemberDtoQuery(id));
-            ///
-
-
-            //var result = await _memberService.GetById(id,x=>x.Headings);
-
-            var result = await _memberService.GetById(Convert.ToInt32(test),x=>x.Headings);
+            var result = await _memberService.GetByIdInc(userid, x=>x.Headings);
 
 
             if (result!=null)
@@ -158,26 +87,18 @@ namespace KahveliKodlama.API.Controllers
 
                 retVal.Image= retVal.Image.Substring(retVal.Image.LastIndexOf('\\') + 1);
 
+                
 
-
-                return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, retVal));
+                return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk,new List<MemberDto>() { retVal }));
             }
 
             return NoContent();
         }
 
         [HttpGet("getById/{id}")]
-      //  
-        public async Task<IActionResult> GetByIdMember(int id)
+       
+        public async Task<IActionResult> GetByIdMember(string id)
         {
-            //var result = _memberService.GetById(id);
-
-            //return result;
-
-            //   var result = new GetByIdMemberQuery();
-
-            //return await _mediator.Send(new GetByIdMemberQuery() { Id = id });
-
             var result = await _memberService.GetById(id);
 
             if (result != null)
@@ -192,17 +113,6 @@ namespace KahveliKodlama.API.Controllers
         [HttpGet("getTop")]
         public async Task<IActionResult> GetTopMembers()
         {
-
-            //return await _memberService.GetTopMembers();
-
-            ////var result = await _memberService.GetById(id);
-
-            ////var retVal = _mapper.Map<Member, MemberDto>(result);
-
-            ////return retVal;
-
-
-            ////return await _mediator.Send(new GetByIdMemberDtoQuery(id));
             var result = await _memberService.GetTopMembers();
 
             if (result != null)
@@ -217,28 +127,29 @@ namespace KahveliKodlama.API.Controllers
         
 
         [HttpPost("add")]
-        [Authorize("SuperAdmin")]
+        [ServiceFilter(typeof(ValidationFilterAttribute))]
 
-        public async Task<IActionResult> AddMember([FromBody] MemberDto member)
+
+        public async Task<IActionResult> AddMember([FromBody]  MemberDto member)
         {
-
-            ////return await _mediator.Send(new GetByIdMemberDtoQuery(id));
-            ///
+         
 
             var result = await _memberService.GetUser(member.Email);
 
-            
-            if (ModelState.IsValid && result==null)
+
+            if (result==null)
             {
 
                 result = _mapper.Map<MemberDto, Member>(member);
 
                 await _memberService.Create(result);
 
-                return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, result));
+                return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, new List<Member>() { result }));
 
             }
-            return NoContent();
+
+
+            return NotFound(new ResponseResult(Domain.Enum.ResponseCode.Not_Found, MessageHelper.validError,new List<string> { "efe"}));
 
 
         }
@@ -247,26 +158,15 @@ namespace KahveliKodlama.API.Controllers
         public async Task<IActionResult> CheckMember([FromBody] MernisDto member)
         {
 
-
-
             var client = new MernisTC.KPSPublicSoapClient(MernisTC.KPSPublicSoapClient.EndpointConfiguration.KPSPublicSoap);
 
-            var response = await client.TCKimlikNoDogrulaAsync(Convert.ToInt64(member.TCKNO), member.Name, member.Surname, member.Year);
-
-
-           // return response.Body.TCKimlikNoDogrulaResult;
-
-            
+            var response = await client.TCKimlikNoDogrulaAsync(Convert.ToInt64(member.TCKNO), member.Name, member.Surname, member.Year);            
 
             var result = await _memberService.GetUser(member.Email);
 
 
             if (ModelState.IsValid && response.Body.TCKimlikNoDogrulaResult && result!=null)
             {
-
-                //result = _mapper.Map<MemberDto, Member>(member);
-
-                //await _memberService.Create(result);
 
                 await _memberService.AddPointMember(result, 50);
 
@@ -279,24 +179,6 @@ namespace KahveliKodlama.API.Controllers
         [HttpPatch("update")]
         public async Task<IActionResult> UpdateMember([FromBody] MemberDto member)
         {
-            //memberdtoya dönüşecek
-            //id point gibi bilgiler hacklenebilir mi ?
-            // var retVal = await _memberService.GetById(member.Id);
-            //var newValue = retVal.Merge(member);
-
-            ////var result = _mapper.Map<MemberDto, Member>(member);
-
-
-            //newValue.Point = retVal.Point;
-
-            //await _memberService.Update(newValue);
-
-            //_memberService.
-            //await _memberService.UpdateMember(member);
-
-            //return Ok(member);
-
-
 
             var result = await _memberService.GetUser(member.Email);
 
@@ -312,10 +194,8 @@ namespace KahveliKodlama.API.Controllers
             return NoContent();
         }
 
-
-
         [HttpDelete("delete/{id}")]
-        public async Task<IActionResult> DeleteMember(int id)
+        public async Task<IActionResult> DeleteMember(string id)
         {
 
 

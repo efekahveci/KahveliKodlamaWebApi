@@ -2,11 +2,9 @@
 using KahveliKodlama.Application.Contract;
 using KahveliKodlama.Application.Dto;
 using KahveliKodlama.Domain.Entities;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace KahveliKodlama.API.Controllers
@@ -27,7 +25,7 @@ namespace KahveliKodlama.API.Controllers
         [HttpGet("getAllDto")]
         public List<ContactDto> GetAllDto()
         {
-            var result = _contactService.GetAll();
+            var result = _contactService.GetAllQuery.ToListAsync();
 
 
             var retVal = _mapper.Map<Task<List<Contact>>, List<ContactDto>>(result);
@@ -37,13 +35,13 @@ namespace KahveliKodlama.API.Controllers
         [HttpGet("getAll")]
         public Task<List<Contact>> GetAll()
         {
-            var result = _contactService.GetAll();
+            var result = _contactService.GetAllQuery.ToListAsync();
 
             return result;
         }
 
         [HttpGet("getByIdDto/{id}")]
-        public async Task<ContactDto> GetByIdDto(int id)
+        public async Task<ContactDto> GetByIdDto(string id)
         {
             var result = await _contactService.GetById(id);
 
@@ -52,7 +50,7 @@ namespace KahveliKodlama.API.Controllers
             return retVal;
         }
         [HttpGet("getById/{id}")]
-        public Task<Contact> GetById(int id)
+        public Task<Contact> GetById(string id)
         {
             var result = _contactService.GetById(id);
 
@@ -76,7 +74,7 @@ namespace KahveliKodlama.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteContact(int id)
+        public async Task<IActionResult> DeleteContact(string id)
         {
 
             await _contactService.Delete(id);

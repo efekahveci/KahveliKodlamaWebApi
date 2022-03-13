@@ -1,17 +1,19 @@
-﻿using KahveliKodlama.Domain.Entities;
+﻿using KahveliKodlama.Application.Attributes;
+using KahveliKodlama.Domain.Entities;
 using MediatR;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 
 namespace KahveliKodlama.Application.Dto
 {
-    public class MemberDto:IRequest<MemberDto>
+    //[ModelBinder(typeof(DefaultModelBinder<MemberDto>))]
+    public class MemberDto : BaseDto, IRequest<MemberDto>
     {
         public string Username { get; set; }
-
+        [StringData(max = 10, min = 3)]
+        [Required]
         public string Name { get; set; }
         public string Surname { get; set; }
         public string Email { get; set; }

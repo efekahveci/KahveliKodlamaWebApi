@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace KahveliKodlama.Application.Dto
+﻿namespace KahveliKodlama.Application.Dto
 {
 
-    public class HeadingDto
+    public class HeadingDto : BaseDto
     {
         public string HeadingName    { get; set; }
         public string HeadingContent  { get; set; }

@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace KahveliKodlama.Persistence.Migrations
 {
     [DbContext(typeof(KahveliContext))]
-    [Migration("20220220135910_f")]
+    [Migration("20220309064740_f")]
     partial class f
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,11 +26,9 @@ namespace KahveliKodlama.Persistence.Migrations
 
             modelBuilder.Entity("KahveliKodlama.Domain.Entities.Category", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                        .HasColumnType("uuid");
 
                     b.Property<bool>("CategoryActive")
                         .HasColumnType("boolean");
@@ -75,49 +73,47 @@ namespace KahveliKodlama.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 1,
+                            Id = new Guid("1ebf1452-3bdc-4618-a25a-c31575c89074"),
                             CategoryActive = true,
                             CategoryCode = "001",
                             CategoryDesc = "C# | MVC | WEB API | BLAZOR",
                             CategoryImage = "https://okankaradag.com/wp-content/uploads/2021/06/asp.net-core-logo.png",
                             CategoryName = ".Net Core",
-                            CreatedTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8290),
-                            LastModifyTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8290),
+                            CreatedTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(418),
+                            LastModifyTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(417),
                             Status = true
                         },
                         new
                         {
-                            Id = 2,
+                            Id = new Guid("2ebf1452-3bdc-4618-a25a-c31575c89074"),
                             CategoryActive = true,
                             CategoryCode = "002",
                             CategoryDesc = "Angular JS | TypeScript | JavaScript | HTML | CSS",
                             CategoryImage = "https://wikiimg.tojsiabtv.com/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png",
                             CategoryName = "Angular",
-                            CreatedTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8301),
-                            LastModifyTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8300),
+                            CreatedTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(428),
+                            LastModifyTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(427),
                             Status = true
                         },
                         new
                         {
-                            Id = 3,
+                            Id = new Guid("3ebf1452-3bdc-4618-a25a-c31575c89074"),
                             CategoryActive = true,
                             CategoryCode = "003",
                             CategoryDesc = "SOLID | OOP | CLEAN CODE",
                             CategoryImage = "https://www.educative.io/v2api/editorpage/4792707659595776/image/5909454286487552",
                             CategoryName = "Nesneye Yönelimli Programlama",
-                            CreatedTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8309),
-                            LastModifyTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8308),
+                            CreatedTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(435),
+                            LastModifyTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(434),
                             Status = true
                         });
                 });
 
             modelBuilder.Entity("KahveliKodlama.Domain.Entities.Contact", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                        .HasColumnType("uuid");
 
                     b.Property<string>("Content")
                         .IsRequired()
@@ -142,8 +138,8 @@ namespace KahveliKodlama.Persistence.Migrations
                     b.Property<DateTime?>("LastModifyTime")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<int>("MemberId")
-                        .HasColumnType("integer");
+                    b.Property<Guid>("MemberId")
+                        .HasColumnType("uuid");
 
                     b.Property<bool>("Status")
                         .HasColumnType("boolean");
@@ -160,11 +156,9 @@ namespace KahveliKodlama.Persistence.Migrations
 
             modelBuilder.Entity("KahveliKodlama.Domain.Entities.Content", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                        .HasColumnType("uuid");
 
                     b.Property<DateTime>("CreatedTime")
                         .HasColumnType("timestamp with time zone");
@@ -181,8 +175,8 @@ namespace KahveliKodlama.Persistence.Migrations
                     b.Property<string>("Field2")
                         .HasColumnType("text");
 
-                    b.Property<int>("HeadingId")
-                        .HasColumnType("integer");
+                    b.Property<Guid>("HeadingId")
+                        .HasColumnType("uuid");
 
                     b.Property<DateTime?>("LastModifyTime")
                         .HasColumnType("timestamp with time zone");
@@ -201,9 +195,9 @@ namespace KahveliKodlama.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 1,
+                            Id = new Guid("4ebf1452-3bdc-2618-225a-c31575c89074"),
                             CreatedTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            HeadingId = 1,
+                            HeadingId = new Guid("4ebf1452-3bdc-4618-a25a-c31575c89074"),
                             Post = "Ef Coreda İlişki kuramıyorum",
                             Status = true
                         });
@@ -211,17 +205,15 @@ namespace KahveliKodlama.Persistence.Migrations
 
             modelBuilder.Entity("KahveliKodlama.Domain.Entities.Heading", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
+                        .HasColumnType("uuid");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                    b.Property<Guid>("CategoryId")
+                        .HasColumnType("uuid");
 
-                    b.Property<int>("CategoryId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("ContentId")
-                        .HasColumnType("integer");
+                    b.Property<Guid>("ContentId")
+                        .HasColumnType("uuid");
 
                     b.Property<DateTime>("CreatedTime")
                         .HasColumnType("timestamp with time zone");
@@ -253,8 +245,8 @@ namespace KahveliKodlama.Persistence.Migrations
                     b.Property<DateTime?>("LastModifyTime")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<int>("MemberId")
-                        .HasColumnType("integer");
+                    b.Property<Guid>("MemberId")
+                        .HasColumnType("uuid");
 
                     b.Property<bool>("Status")
                         .HasColumnType("boolean");
@@ -270,139 +262,137 @@ namespace KahveliKodlama.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 1,
-                            CategoryId = 1,
-                            ContentId = 1,
-                            CreatedTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8033),
+                            Id = new Guid("4ebf1452-3bdc-4618-a25a-c31575c89074"),
+                            CategoryId = new Guid("1ebf1452-3bdc-4618-a25a-c31575c89074"),
+                            ContentId = new Guid("4ebf1452-3bdc-2618-225a-c31575c89074"),
+                            CreatedTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(200),
                             HeadingContent = "Yüklerken aniden yarıda kesiliyor ve hata alıyor nasıl çözülmesi gerekiyor bilen var mı ?",
                             HeadingName = "Visual Studio 2022 nasıl yükleniyor ?",
                             HeadingTag = "Visual Studio",
                             HeadingViews = 45,
-                            LastModifyTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8033),
-                            MemberId = 1,
+                            LastModifyTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(200),
+                            MemberId = new Guid("4ebf1452-3bdc-3618-a25a-c31575c89074"),
                             Status = true
                         },
                         new
                         {
-                            Id = 2,
-                            CategoryId = 2,
-                            ContentId = 1,
-                            CreatedTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8045),
+                            Id = new Guid("5ebf1452-3bdc-4618-a25a-c31575c89074"),
+                            CategoryId = new Guid("2ebf1452-3bdc-4618-a25a-c31575c89074"),
+                            ContentId = new Guid("4ebf1452-3bdc-2618-225a-c31575c89074"),
+                            CreatedTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(213),
                             HeadingContent = "Bana gelen bir json objesi var ve içinde sadece name alanını almak istiyorum ne yapmam gerekiyor.",
                             HeadingName = "Angular'da json içersinde tek bir alanı almak için ne yapmam gerekiyor?",
                             HeadingTag = "Angular",
                             HeadingViews = 98,
-                            LastModifyTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8046),
-                            MemberId = 1,
+                            LastModifyTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(213),
+                            MemberId = new Guid("4ebf1452-3bdc-3618-a25a-c31575c89074"),
                             Status = true
                         },
                         new
                         {
-                            Id = 3,
-                            CategoryId = 3,
-                            ContentId = 1,
-                            CreatedTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8054),
+                            Id = new Guid("6ebf1452-3bdc-4618-a25a-c31575c89074"),
+                            CategoryId = new Guid("3ebf1452-3bdc-4618-a25a-c31575c89074"),
+                            ContentId = new Guid("4ebf1452-3bdc-2618-225a-c31575c89074"),
+                            CreatedTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(222),
                             HeadingContent = "switch case veya if kullanmanın performansa erkileri tam olarak nedir?",
                             HeadingName = "c# üzerinde if kullanmak mı daha performanslı yoksa switch case mi kullanmak daha avantajlıdır farkları nelerdir.",
                             HeadingTag = "c#",
                             HeadingViews = 90,
-                            LastModifyTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8054),
-                            MemberId = 1,
+                            LastModifyTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(222),
+                            MemberId = new Guid("4ebf1452-3bdc-3618-a25a-c31575c89074"),
                             Status = true
                         },
                         new
                         {
-                            Id = 4,
-                            CategoryId = 1,
-                            ContentId = 1,
-                            CreatedTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8063),
+                            Id = new Guid("7ebf1452-3bdc-4618-a25a-c31575c89074"),
+                            CategoryId = new Guid("1ebf1452-3bdc-4618-a25a-c31575c89074"),
+                            ContentId = new Guid("4ebf1452-3bdc-2618-225a-c31575c89074"),
+                            CreatedTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(231),
                             HeadingContent = "Yüklerken aniden yarıda kesiliyor ve hata alıyor nasıl çözülmesi gerekiyor bilen var mı ?",
                             HeadingName = "Visual Studio 2022 nasıl yükleniyor ?",
                             HeadingTag = "Visual Studio",
                             HeadingViews = 45,
-                            LastModifyTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8063),
-                            MemberId = 2,
+                            LastModifyTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(232),
+                            MemberId = new Guid("4ebf1452-3bdc-1618-a25a-c31575c89074"),
                             Status = true
                         },
                         new
                         {
-                            Id = 5,
-                            CategoryId = 2,
-                            ContentId = 1,
-                            CreatedTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8072),
+                            Id = new Guid("8ebf1452-3bdc-4618-a25a-c31575c89074"),
+                            CategoryId = new Guid("2ebf1452-3bdc-4618-a25a-c31575c89074"),
+                            ContentId = new Guid("4ebf1452-3bdc-2618-225a-c31575c89074"),
+                            CreatedTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(266),
                             HeadingContent = "Bana gelen bir json objesi var ve içinde sadece name alanını almak istiyorum ne yapmam gerekiyor.",
                             HeadingName = "Angular'da json içersinde tek bir alanı almak için ne yapmam gerekiyor?",
                             HeadingTag = "Angular",
                             HeadingViews = 98,
-                            LastModifyTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8072),
-                            MemberId = 2,
+                            LastModifyTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(266),
+                            MemberId = new Guid("4ebf1452-3bdc-1618-a25a-c31575c89074"),
                             Status = true
                         },
                         new
                         {
-                            Id = 6,
-                            CategoryId = 3,
-                            ContentId = 1,
-                            CreatedTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8081),
+                            Id = new Guid("9ebf1452-3bdc-4618-a25a-c31575c89074"),
+                            CategoryId = new Guid("3ebf1452-3bdc-4618-a25a-c31575c89074"),
+                            ContentId = new Guid("4ebf1452-3bdc-2618-225a-c31575c89074"),
+                            CreatedTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(277),
                             HeadingContent = "switch case veya if kullanmanın performansa erkileri tam olarak nedir?",
                             HeadingName = "c# üzerinde if kullanmak mı daha performanslı yoksa switch case mi kullanmak daha avantajlıdır farkları nelerdir.",
                             HeadingTag = "c#",
                             HeadingViews = 90,
-                            LastModifyTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8082),
-                            MemberId = 2,
+                            LastModifyTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(278),
+                            MemberId = new Guid("4ebf1452-3bdc-1618-a25a-c31575c89074"),
                             Status = true
                         },
                         new
                         {
-                            Id = 7,
-                            CategoryId = 1,
-                            ContentId = 1,
-                            CreatedTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8090),
+                            Id = new Guid("aebf1452-3bdc-4618-a25a-c31575c89074"),
+                            CategoryId = new Guid("1ebf1452-3bdc-4618-a25a-c31575c89074"),
+                            ContentId = new Guid("4ebf1452-3bdc-2618-225a-c31575c89074"),
+                            CreatedTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(286),
                             HeadingContent = "Yüklerken aniden yarıda kesiliyor ve hata alıyor nasıl çözülmesi gerekiyor bilen var mı ?",
                             HeadingName = "Visual Studio 2022 nasıl yükleniyor ?",
                             HeadingTag = "Visual Studio",
                             HeadingViews = 45,
-                            LastModifyTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8090),
-                            MemberId = 3,
+                            LastModifyTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(286),
+                            MemberId = new Guid("4ebf1452-3bdc-2618-a25a-c31575c89074"),
                             Status = true
                         },
                         new
                         {
-                            Id = 8,
-                            CategoryId = 2,
-                            ContentId = 1,
-                            CreatedTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8130),
+                            Id = new Guid("bebf1452-3bdc-4618-a25a-c31575c89074"),
+                            CategoryId = new Guid("2ebf1452-3bdc-4618-a25a-c31575c89074"),
+                            ContentId = new Guid("4ebf1452-3bdc-2618-225a-c31575c89074"),
+                            CreatedTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(295),
                             HeadingContent = "Bana gelen bir json objesi var ve içinde sadece name alanını almak istiyorum ne yapmam gerekiyor.",
                             HeadingName = "Angular'da json içersinde tek bir alanı almak için ne yapmam gerekiyor?",
                             HeadingTag = "Angular",
                             HeadingViews = 98,
-                            LastModifyTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8130),
-                            MemberId = 3,
+                            LastModifyTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(295),
+                            MemberId = new Guid("4ebf1452-3bdc-2618-a25a-c31575c89074"),
                             Status = true
                         },
                         new
                         {
-                            Id = 9,
-                            CategoryId = 3,
-                            ContentId = 1,
-                            CreatedTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8139),
+                            Id = new Guid("cebf1452-3bdc-4618-a25a-c31575c89074"),
+                            CategoryId = new Guid("3ebf1452-3bdc-4618-a25a-c31575c89074"),
+                            ContentId = new Guid("4ebf1452-3bdc-2618-225a-c31575c89074"),
+                            CreatedTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(304),
                             HeadingContent = "switch case veya if kullanmanın performansa erkileri tam olarak nedir?",
                             HeadingName = "c# üzerinde if kullanmak mı daha performanslı yoksa switch case mi kullanmak daha avantajlıdır farkları nelerdir.",
                             HeadingTag = "c#",
                             HeadingViews = 90,
-                            LastModifyTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(8139),
-                            MemberId = 3,
+                            LastModifyTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(304),
+                            MemberId = new Guid("4ebf1452-3bdc-2618-a25a-c31575c89074"),
                             Status = true
                         });
                 });
 
             modelBuilder.Entity("KahveliKodlama.Domain.Entities.Member", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                        .HasColumnType("uuid");
 
                     b.Property<string>("About")
                         .ValueGeneratedOnAdd()
@@ -497,18 +487,18 @@ namespace KahveliKodlama.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 1,
+                            Id = new Guid("4ebf1452-3bdc-1618-a25a-c31575c89074"),
                             About = "Konya Teknik Üniversitesi Bilgisayar Mühendisliğinden Mezunum Aktif olarak t-soft e ticaret sistemleri bünyesinde çalışmaktayım. Net core ve angular üzerinde kendimi geliştiriyorum az düzeyde ingilizce biliyorum",
                             Age = (short)23,
                             Authority = true,
-                            CreatedTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(7719),
+                            CreatedTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(62),
                             Dislike = 14,
                             Email = "efekhvci@hotmail.com",
                             Gender = true,
                             Image = "Resim Yok",
                             IsVerifiedEmail = true,
                             IsVerifiedInfo = true,
-                            LastModifyTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(7722),
+                            LastModifyTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(63),
                             Like = 8,
                             Name = "Mehmet Efe",
                             Password = "12345efe",
@@ -520,18 +510,18 @@ namespace KahveliKodlama.Persistence.Migrations
                         },
                         new
                         {
-                            Id = 2,
+                            Id = new Guid("4ebf1452-3bdc-2618-a25a-c31575c89074"),
                             About = "Konya Teknik Üniversitesi Bilgisayar Mühendisliğinden Mezunum Aktif olarak iş arayaşım devam etmektedir fronted tarafında react js beckend tarafında ise.net ile çalışmalar yapıyorum.",
                             Age = (short)24,
                             Authority = true,
-                            CreatedTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(7759),
+                            CreatedTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(91),
                             Dislike = 1,
                             Email = "ysfckmk@hotmail.com",
                             Gender = true,
                             Image = "Resim Yok",
                             IsVerifiedEmail = true,
                             IsVerifiedInfo = true,
-                            LastModifyTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(7760),
+                            LastModifyTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(91),
                             Like = 6,
                             Name = "Yusuf",
                             Password = "12345yusuf",
@@ -543,18 +533,18 @@ namespace KahveliKodlama.Persistence.Migrations
                         },
                         new
                         {
-                            Id = 3,
+                            Id = new Guid("4ebf1452-3bdc-3618-a25a-c31575c89074"),
                             About = "Konya Teknik Üniversitesi Bilgisayar Mühendisliğinden Mezunum Aktif olarak iş arayaşım devam etmektedir fronted tarafında angular js beckend tarafında ise.net ile çalışmalar yapıyorum. Ayrıca yurtdışında çalışmak ilk tercihim olacaktır.",
                             Age = (short)24,
                             Authority = true,
-                            CreatedTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(7769),
+                            CreatedTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(101),
                             Dislike = 13,
                             Email = "remzican@hotmail.com",
                             Gender = true,
                             Image = "Resim Yok",
                             IsVerifiedEmail = true,
                             IsVerifiedInfo = true,
-                            LastModifyTime = new DateTime(2022, 2, 20, 13, 59, 10, 703, DateTimeKind.Utc).AddTicks(7769),
+                            LastModifyTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(101),
                             Like = 65,
                             Name = "Remzi Can",
                             Password = "12345remzi",

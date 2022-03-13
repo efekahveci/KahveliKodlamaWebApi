@@ -1,11 +1,7 @@
 ﻿using KahveliKodlama.Domain.Common;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KahveliKodlama.Domain.Entities
 {
@@ -31,12 +27,12 @@ namespace KahveliKodlama.Domain.Entities
 
 
         [ForeignKey("MemberId")]
-        public virtual int MemberId { get; set; }
+        public virtual Guid MemberId { get; set; }
 
         [ForeignKey("CategoryId")]
-        public virtual int CategoryId { get; set; }
+        public virtual Guid CategoryId { get; set; }
 
         [ForeignKey("ContentId")]
-        public virtual int ContentId { get; set; }
+        public virtual Guid ContentId { get; set; }
     }
 }

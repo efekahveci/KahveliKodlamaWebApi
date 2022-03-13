@@ -1,14 +1,7 @@
 ﻿using EntityFrameworkCore.Triggered;
-using KahveliKodlama.Application.Interfaces.Repositories;
 using KahveliKodlama.Domain.Entities;
 using KahveliKodlama.Infrastructure.ContextEngine;
 using KahveliKodlama.Persistence.Context;
-
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 

@@ -7,6 +7,6 @@ G:\Drive'ım\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debu
 G:\Drive'ım\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net6.0\KahveliKodlama.Domain.AssemblyInfo.cs
 G:\Drive'ım\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net6.0\KahveliKodlama.Domain.csproj.CoreCompileInputs.cache
 G:\Drive'ım\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net6.0\KahveliKodlama.Domain.dll
-G:\Drive'ım\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net6.0\ref\KahveliKodlama.Domain.dll
-G:\Drive'ım\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net6.0\KahveliKodlama.Domain.pdb
 G:\Drive'ım\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net6.0\refint\KahveliKodlama.Domain.dll
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net6.0\KahveliKodlama.Domain.pdb
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Domain\KahveliKodlama.Domain\obj\Debug\net6.0\ref\KahveliKodlama.Domain.dll

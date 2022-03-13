@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "37tDgfuXo+n/aC+st+TrGWLhY/8mzx/g+DfNRmvnLu/C3gqGgDDf2/NB6/hsw+mQ2Smmr/89e18Xfd76NoO4jg==",
+  "dgSpecHash": "zmhAB2E/DAmm/wHZiqws2f4SB10aJiBQOrCuZnJ7nqz9Wq2/1I035NHJ7j8xtbZ5eaYs0zTbvdc/cojmJICiuA==",
   "success": true,
   "projectFilePath": "G:\\Drive'ım\\KahveliKodlama\\KahveliKodlama\\KahveliKodlama.API.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,8 @@
     "C:\\Users\\Legion\\.nuget\\packages\\entityframeworkcore.triggered\\3.0.0\\entityframeworkcore.triggered.3.0.0.nupkg.sha512",
     "C:\\Users\\Legion\\.nuget\\packages\\entityframeworkcore.triggered.abstractions\\3.0.0\\entityframeworkcore.triggered.abstractions.3.0.0.nupkg.sha512",
     "C:\\Users\\Legion\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",
+    "C:\\Users\\Legion\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.3.6\\fluentvalidation.aspnetcore.10.3.6.nupkg.sha512",
+    "C:\\Users\\Legion\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.3.6\\fluentvalidation.dependencyinjectionextensions.10.3.6.nupkg.sha512",
     "C:\\Users\\Legion\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Legion\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
     "C:\\Users\\Legion\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\9.0.0\\mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",

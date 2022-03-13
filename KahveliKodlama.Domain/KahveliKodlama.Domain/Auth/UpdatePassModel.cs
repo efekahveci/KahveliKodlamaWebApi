@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace KahveliKodlama.Domain.Auth
 {
-public class UpdatePassViewModel
+    public class UpdatePassViewModel
     {
         [Display(Name = "Yeni Şifre")]
         [Required(ErrorMessage = "Lütfen şifreyi boş geçmeyiniz.")]

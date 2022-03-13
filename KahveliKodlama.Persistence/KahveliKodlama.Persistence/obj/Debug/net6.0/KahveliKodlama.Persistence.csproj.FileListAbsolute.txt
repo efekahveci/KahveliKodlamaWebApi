@@ -15,7 +15,7 @@ G:\Drive'ım\KahveliKodlama\KahveliKodlama.Persistence\KahveliKodlama.Persistenc
 G:\Drive'ım\KahveliKodlama\KahveliKodlama.Persistence\KahveliKodlama.Persistence\obj\Debug\net6.0\KahveliKodlama.Persistence.csproj.CoreCompileInputs.cache
 G:\Drive'ım\KahveliKodlama\KahveliKodlama.Persistence\KahveliKodlama.Persistence\obj\Debug\net6.0\KahveliKodlama.Persistence.csproj.CopyComplete
 G:\Drive'ım\KahveliKodlama\KahveliKodlama.Persistence\KahveliKodlama.Persistence\obj\Debug\net6.0\KahveliKodlama.Persistence.dll
-G:\Drive'ım\KahveliKodlama\KahveliKodlama.Persistence\KahveliKodlama.Persistence\obj\Debug\net6.0\ref\KahveliKodlama.Persistence.dll
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Persistence\KahveliKodlama.Persistence\obj\Debug\net6.0\refint\KahveliKodlama.Persistence.dll
 G:\Drive'ım\KahveliKodlama\KahveliKodlama.Persistence\KahveliKodlama.Persistence\obj\Debug\net6.0\KahveliKodlama.Persistence.pdb
 G:\Drive'ım\KahveliKodlama\KahveliKodlama.Persistence\KahveliKodlama.Persistence\obj\Debug\net6.0\KahveliKodlama.Persistence.genruntimeconfig.cache
-G:\Drive'ım\KahveliKodlama\KahveliKodlama.Persistence\KahveliKodlama.Persistence\obj\Debug\net6.0\refint\KahveliKodlama.Persistence.dll
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Persistence\KahveliKodlama.Persistence\obj\Debug\net6.0\ref\KahveliKodlama.Persistence.dll

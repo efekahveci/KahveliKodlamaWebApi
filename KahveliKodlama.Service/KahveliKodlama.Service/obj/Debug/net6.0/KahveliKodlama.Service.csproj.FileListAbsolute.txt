@@ -16,6 +16,6 @@ G:\Drive'ım\KahveliKodlama\KahveliKodlama.Service\KahveliKodlama.Service\obj\De
 G:\Drive'ım\KahveliKodlama\KahveliKodlama.Service\KahveliKodlama.Service\obj\Debug\net6.0\KahveliKodlama.Service.csproj.CoreCompileInputs.cache
 G:\Drive'ım\KahveliKodlama\KahveliKodlama.Service\KahveliKodlama.Service\obj\Debug\net6.0\KahveliKodlama.Service.csproj.CopyComplete
 G:\Drive'ım\KahveliKodlama\KahveliKodlama.Service\KahveliKodlama.Service\obj\Debug\net6.0\KahveliKodlama.Service.dll
-G:\Drive'ım\KahveliKodlama\KahveliKodlama.Service\KahveliKodlama.Service\obj\Debug\net6.0\ref\KahveliKodlama.Service.dll
-G:\Drive'ım\KahveliKodlama\KahveliKodlama.Service\KahveliKodlama.Service\obj\Debug\net6.0\KahveliKodlama.Service.pdb
 G:\Drive'ım\KahveliKodlama\KahveliKodlama.Service\KahveliKodlama.Service\obj\Debug\net6.0\refint\KahveliKodlama.Service.dll
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Service\KahveliKodlama.Service\obj\Debug\net6.0\KahveliKodlama.Service.pdb
+G:\Drive'ım\KahveliKodlama\KahveliKodlama.Service\KahveliKodlama.Service\obj\Debug\net6.0\ref\KahveliKodlama.Service.dll

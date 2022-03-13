@@ -3,8 +3,8 @@ using KahveliKodlama.Application.Contract;
 using KahveliKodlama.Application.Dto;
 using KahveliKodlama.Core.Extensions;
 using KahveliKodlama.Domain.Entities;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -26,9 +26,9 @@ namespace KahveliKodlama.API.Controllers
         }
 
         [HttpGet("getAllData")]
-        public async Task<List<Category>> GetAllData()
+        public  IQueryable<Category> GetAllData()
         {
-            var result = await _categoryService.GetAll(x => x.Headings);
+            var result =  _categoryService.GetAllQueryInc(x => x.Headings);
 
             return result;
         }
@@ -37,9 +37,9 @@ namespace KahveliKodlama.API.Controllers
         public async Task<IActionResult> GetAllDto()
         {
 
-            var result = await _categoryService.GetAll();
+            var result = await _categoryService.GetAllQuery.ToListAsync();
 
-            if (result.Count > 0)
+            if (result.Count() > 0)
             {
                 var retVal = _mapper.Map<List<Category>, List<CategoryDto>>(result);
                 return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, retVal));
@@ -50,15 +50,24 @@ namespace KahveliKodlama.API.Controllers
         }
 
         [HttpGet("getAll")]
-        public Task<List<Category>> GetAll()
+        public async Task<IActionResult> GetAll()
         {
-            var result = _categoryService.GetAll();
+            
 
-            return result;
+            var result = await _categoryService.GetAllQuery.ToListAsync();
+
+            if (result.Count > 0)
+            {
+                
+                return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, result));
+
+            }
+
+            return NoContent();
         }
 
         [HttpGet("getByIdDto/{id}")]
-        public async Task<CategoryDto> GetByIdDto(int id)
+        public async Task<CategoryDto> GetByIdDto(string id)
         {
             var result = await _categoryService.GetById(id);
 
@@ -67,7 +76,7 @@ namespace KahveliKodlama.API.Controllers
             return retVal;
         }
         [HttpGet("getById/{id}")]
-        public Task<Category> GetById(int id)
+        public Task<Category> GetById(string id)
         {
             var result = _categoryService.GetById(id);
 
@@ -91,7 +100,7 @@ namespace KahveliKodlama.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteCategory(int id)
+        public async Task<IActionResult> DeleteCategory(string id)
         {
 
             await _categoryService.Delete(id);

@@ -2,11 +2,9 @@
 using KahveliKodlama.Application.Contract;
 using KahveliKodlama.Application.Dto;
 using KahveliKodlama.Domain.Entities;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace KahveliKodlama.API.Controllers
@@ -27,7 +25,7 @@ namespace KahveliKodlama.API.Controllers
         [HttpGet("getAllDto")]
         public List<ContentDto> GetAllDto()
         {
-            var result = _contentService.GetAll();
+            var result = _contentService.GetAllQuery.ToListAsync();
 
             var retVal = _mapper.Map<Task<List<Content>>, List<ContentDto>>(result);
 
@@ -37,13 +35,13 @@ namespace KahveliKodlama.API.Controllers
         [HttpGet("getAll")]
         public Task<List<Content>> GetAll()
         {
-            var result = _contentService.GetAll();
+            var result = _contentService.GetAllQuery.ToListAsync();
 
             return result;
         }
 
         [HttpGet("getByIdDto/{id}")]
-        public async Task<ContentDto> GetByIdDto(int id)
+        public async Task<ContentDto> GetByIdDto(string id)
         {
             var result = await _contentService.GetById(id);
 
@@ -53,7 +51,7 @@ namespace KahveliKodlama.API.Controllers
         }
 
         [HttpGet("getById/{id}")]
-        public Task<Content> GetById(int id)
+        public Task<Content> GetById(string id)
         {
             var result = _contentService.GetById(id);
 
@@ -77,7 +75,7 @@ namespace KahveliKodlama.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteContent(int id)
+        public async Task<IActionResult> DeleteContent(string id)
         {
 
             await _contentService.Delete(id);
