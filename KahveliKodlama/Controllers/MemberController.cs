@@ -133,6 +133,7 @@ namespace KahveliKodlama.API.Controllers
         public async Task<IActionResult> AddMember([FromBody]  MemberDto member)
         {
          
+            //yeni
 
             var result = await _memberService.GetUser(member.Email);
 
