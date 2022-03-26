@@ -1,13 +1,12 @@
 ﻿using KahveliKodlama.Service.Middleware;
 using Microsoft.AspNetCore.Builder;
 
-namespace KahveliKodlama.Service.Extensions
+namespace KahveliKodlama.Service.Extensions;
+
+public static class ExceptionMiddlewareExtensions
 {
-    public static class ExceptionMiddlewareExtensions
+    public static IApplicationBuilder UseExceptionMiddleware(this IApplicationBuilder builder)
     {
-        public static IApplicationBuilder UseExceptionMiddleware(this IApplicationBuilder builder)
-        {
-            return builder.UseMiddleware<ExceptionMiddleware>();
-        }
+        return builder.UseMiddleware<ExceptionMiddleware>();
     }
 }

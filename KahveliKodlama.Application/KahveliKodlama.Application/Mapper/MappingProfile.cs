@@ -3,28 +3,31 @@ using KahveliKodlama.Application.Dto;
 using KahveliKodlama.Domain.Entities;
 using System;
 
-namespace KahveliKodlama.Application.Mapper
+namespace KahveliKodlama.Application.Mapper;
+
+public class MappingProfile : Profile
 {
-    public class MappingProfile : Profile
+    public MappingProfile()
     {
-        public MappingProfile()
-        {
-            CreateMap<Member, MemberDto>().ReverseMap();
+        CreateMap<Mail, MailDto>()
+           .ReverseMap();
 
-            CreateMap<Heading, HeadingDto>().ReverseMap();
-        
-            CreateMap<Content, ContentDto>().ReverseMap();
-        
-            CreateMap<Contact, ContactDto>().ReverseMap();
+        CreateMap<Member, MemberDto>()
+            .ReverseMap();
 
-            CreateMap<Category, CategoryDto>().ReverseMap();
+        CreateMap<Heading, HeadingDto>()
+            .ReverseMap();
+    
+        CreateMap<Content, ContentDto>().ReverseMap();
+    
+        CreateMap<Contact, ContactDto>().ReverseMap();
 
-            CreateMap<Member, RegisterDto>().ReverseMap();
-            CreateMap<Member, RegisterDto>().ReverseMap();
-            CreateMap<Exception, ExceptionDto>().ReverseMap();
+        CreateMap<Category, CategoryDto>().ReverseMap();
 
-       
+        CreateMap<Member, RegisterDto>().ReverseMap();
+        CreateMap<Member, RegisterDto>().ReverseMap();
+        CreateMap<Exception, ExceptionDto>().ReverseMap();
 
-        }
+
     }
 }

@@ -32,6 +32,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure.csproj" />
     <ProjectReference Include="..\KahveliKodlama.Persistence\KahveliKodlama.Persistence\KahveliKodlama.Persistence.csproj" />
     <ProjectReference Include="..\KahveliKodlama.Service\KahveliKodlama.Service\KahveliKodlama.Service.csproj" />
   </ItemGroup>

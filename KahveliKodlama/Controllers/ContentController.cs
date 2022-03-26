@@ -1,85 +1,183 @@
 ﻿using AutoMapper;
 using KahveliKodlama.Application.Contract;
 using KahveliKodlama.Application.Dto;
+using KahveliKodlama.Core.Extensions;
 using KahveliKodlama.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace KahveliKodlama.API.Controllers
+namespace KahveliKodlama.API.Controllers;
+
+[Route("api/[controller]")]
+[ApiController]
+public class ContentController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class ContentController : ControllerBase
+    private readonly IContentService _contentService;
+    private readonly IMapper _mapper;
+
+    public ContentController(IContentService contentService, IMapper mapper)
     {
-        private readonly IContentService _contentService;
-        private readonly IMapper _mapper;
+        _contentService = contentService;
+        _mapper = mapper;
+    }
 
-        public ContentController(IContentService contentService, IMapper mapper)
+    [HttpGet("getAllDto")]
+    public async Task<IActionResult> GetAllDtoContent()
+    {
+        var result = await _contentService.GetAllQuery.ToListAsync();
+
+
+
+        if (result.Count > 0)
         {
-            _contentService = contentService;
-            _mapper = mapper;
+            var retVal = _mapper.Map<List<Content>, List<ContentDto>>(result);
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, retVal));
+
         }
 
-        [HttpGet("getAllDto")]
-        public List<ContentDto> GetAllDto()
+        return NoContent();
+    }
+
+    [HttpGet("getAll")]
+    public async Task<IActionResult> GetAllContent()
+    {
+        var result = await _contentService.GetAllQuery.ToListAsync();
+
+        if (result.Count > 0)
         {
-            var result = _contentService.GetAllQuery.ToListAsync();
 
-            var retVal = _mapper.Map<Task<List<Content>>, List<ContentDto>>(result);
-
-            return retVal;
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, result));
         }
 
-        [HttpGet("getAll")]
-        public Task<List<Content>> GetAll()
+        return NoContent();
+    }
+
+    [HttpGet("getByIdDto/{id}")]
+    public async Task<IActionResult> GetByIdDtoContent(string id)
+    {
+
+
+
+        var result = await _contentService.GetById(id);
+
+
+        if (result != null)
         {
-            var result = _contentService.GetAllQuery.ToListAsync();
-
-            return result;
-        }
-
-        [HttpGet("getByIdDto/{id}")]
-        public async Task<ContentDto> GetByIdDto(string id)
-        {
-            var result = await _contentService.GetById(id);
-
             var retVal = _mapper.Map<Content, ContentDto>(result);
 
-            return retVal;
+
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, new List<ContentDto>() { retVal }));
         }
 
-        [HttpGet("getById/{id}")]
-        public Task<Content> GetById(string id)
+        return NoContent();
+    }
+
+    [HttpGet("getByIdHeadingContent/{id}")]
+    public async Task<IActionResult> GetByIdHeadingContent(string id)
+    {
+
+
+
+        var result = await _contentService.GetByIdHeadingContent(id);
+
+
+        if (result != null)
         {
-            var result = _contentService.GetById(id);
+            var retVal = _mapper.Map<List<Content>, List<ContentDto>>(result);
 
-            return result;
+
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, retVal));
         }
 
-        [HttpPost]
-        public async Task<Content> AddContent([FromBody] Content content)
+        return NoContent();
+    }
+
+    [HttpGet("getById/{id}")]
+    public async Task<IActionResult> GetByIdContent(string id)
+    {
+        var result = await _contentService.GetById(id);
+
+        if (result != null)
         {
-            await _contentService.Create(content);
-            return content;
+
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, result));
         }
 
-        [HttpPut]
-        public async Task<ActionResult<Content>> UpdateContent([FromBody] Content content)
+        return NoContent();
+    }
+    [HttpPost("add")]
+
+    [HttpPost]
+    public async Task<IActionResult> AddContent([FromBody] ContentDto content)
+    {
+
+        var result  = _mapper.Map<ContentDto, Content>(content);
+
+
+        if (result != null)
+        {
+
+           
+
+            await _contentService.Create(result);
+
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, new List<Content>() { result }));
+
+        }
+
+
+        return NotFound(new ResponseResult(Domain.Enum.ResponseCode.Not_Found, MessageHelper.validError, new List<string> { "Kayıt Daha önce eklenmiş" }));
+
+
+    }
+
+    [HttpPut("Update")]
+    public async Task<IActionResult> UpdateContent([FromBody] Content content)
+    {
+
+
+        if (ModelState.IsValid)
         {
 
             await _contentService.Update(content);
-            return Ok(content);
+
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, new List<Content>() { content}));
 
         }
+        return NoContent();
 
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteContent(string id)
+    }
+    [HttpPatch("Update")]
+    public async Task<IActionResult> UpdateContent([FromBody] ContentDto content)
+    {
+
+        if (ModelState.IsValid)
+        {   
+
+            await _contentService.UpdateContent(content);
+
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, new List<ContentDto>() { content}));
+
+        }
+        return NoContent();
+
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteContent(string id)
+    {
+
+
+        if (ModelState.IsValid)
         {
 
             await _contentService.Delete(id);
-            return Ok();
+
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, new List<string>() { "Kullanıcı sistemden silindi." }));
+
         }
+        return NoContent();
     }
 }

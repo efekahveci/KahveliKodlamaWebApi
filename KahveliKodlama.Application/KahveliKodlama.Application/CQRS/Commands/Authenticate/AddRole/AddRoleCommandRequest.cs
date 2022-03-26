@@ -1,10 +1,9 @@
 ﻿using KahveliKodlama.Domain.Entities;
 using MediatR;
 
-namespace KahveliKodlama.Application.CQRS.Commands.Authenticate.AddRole
+namespace KahveliKodlama.Application.CQRS.Commands.Authenticate.AddRole;
+
+public class AddRoleCommandRequest:IRequest<ResponseResult>
 {
-    public class AddRoleCommandRequest:IRequest<ResponseResult>
-    {
-        public string Rolename { get; set; }
-    }
+    public string Rolename { get; set; }
 }

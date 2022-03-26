@@ -77,8 +77,8 @@ namespace KahveliKodlama.Persistence.Migrations
                             CategoryDesc = "C# | MVC | WEB API | BLAZOR",
                             CategoryImage = "https://okankaradag.com/wp-content/uploads/2021/06/asp.net-core-logo.png",
                             CategoryName = ".Net Core",
-                            CreatedTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(418),
-                            LastModifyTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(417),
+                            CreatedTime = new DateTime(2022, 3, 25, 14, 54, 56, 273, DateTimeKind.Utc).AddTicks(6561),
+                            LastModifyTime = new DateTime(2022, 3, 25, 14, 54, 56, 273, DateTimeKind.Utc).AddTicks(6557),
                             Status = true
                         },
                         new
@@ -89,8 +89,8 @@ namespace KahveliKodlama.Persistence.Migrations
                             CategoryDesc = "Angular JS | TypeScript | JavaScript | HTML | CSS",
                             CategoryImage = "https://wikiimg.tojsiabtv.com/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png",
                             CategoryName = "Angular",
-                            CreatedTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(428),
-                            LastModifyTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(427),
+                            CreatedTime = new DateTime(2022, 3, 25, 14, 54, 56, 273, DateTimeKind.Utc).AddTicks(6588),
+                            LastModifyTime = new DateTime(2022, 3, 25, 14, 54, 56, 273, DateTimeKind.Utc).AddTicks(6587),
                             Status = true
                         },
                         new
@@ -101,8 +101,20 @@ namespace KahveliKodlama.Persistence.Migrations
                             CategoryDesc = "SOLID | OOP | CLEAN CODE",
                             CategoryImage = "https://www.educative.io/v2api/editorpage/4792707659595776/image/5909454286487552",
                             CategoryName = "Nesneye Yönelimli Programlama",
-                            CreatedTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(435),
-                            LastModifyTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(434),
+                            CreatedTime = new DateTime(2022, 3, 25, 14, 54, 56, 273, DateTimeKind.Utc).AddTicks(6603),
+                            LastModifyTime = new DateTime(2022, 3, 25, 14, 54, 56, 273, DateTimeKind.Utc).AddTicks(6603),
+                            Status = true
+                        },
+                        new
+                        {
+                            Id = new Guid("d5d89327-8e72-4c06-bea3-bc47ebcd05a7"),
+                            CategoryActive = true,
+                            CategoryCode = "004",
+                            CategoryDesc = "ARCHITECTURE | DESIGN PATTERN",
+                            CategoryImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhkxtBPjz_cFRYFHzR6XmfCIVFPEAZwpOlaA&usqp=CAU",
+                            CategoryName = "Software Engineering",
+                            CreatedTime = new DateTime(2022, 3, 25, 14, 54, 56, 273, DateTimeKind.Utc).AddTicks(6616),
+                            LastModifyTime = new DateTime(2022, 3, 25, 14, 54, 56, 273, DateTimeKind.Utc).AddTicks(6615),
                             Status = true
                         });
                 });
@@ -179,8 +191,17 @@ namespace KahveliKodlama.Persistence.Migrations
                     b.Property<DateTime?>("LastModifyTime")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<string>("Post")
+                    b.Property<string>("Post1")
                         .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Post2")
+                        .HasColumnType("text");
+
+                    b.Property<string>("PostCode")
+                        .HasColumnType("text");
+
+                    b.Property<string>("PostH1")
                         .HasColumnType("text");
 
                     b.Property<bool>("Status")
@@ -189,16 +210,6 @@ namespace KahveliKodlama.Persistence.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Contents");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("4ebf1452-3bdc-2618-225a-c31575c89074"),
-                            CreatedTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            HeadingId = new Guid("4ebf1452-3bdc-4618-a25a-c31575c89074"),
-                            Post = "Ef Coreda İlişki kuramıyorum",
-                            Status = true
-                        });
                 });
 
             modelBuilder.Entity("KahveliKodlama.Domain.Entities.Heading", b =>
@@ -208,9 +219,6 @@ namespace KahveliKodlama.Persistence.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<Guid>("CategoryId")
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("ContentId")
                         .HasColumnType("uuid");
 
                     b.Property<DateTime>("CreatedTime")
@@ -256,134 +264,41 @@ namespace KahveliKodlama.Persistence.Migrations
                     b.HasIndex("MemberId");
 
                     b.ToTable("Headings");
+                });
 
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("4ebf1452-3bdc-4618-a25a-c31575c89074"),
-                            CategoryId = new Guid("1ebf1452-3bdc-4618-a25a-c31575c89074"),
-                            ContentId = new Guid("4ebf1452-3bdc-2618-225a-c31575c89074"),
-                            CreatedTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(200),
-                            HeadingContent = "Yüklerken aniden yarıda kesiliyor ve hata alıyor nasıl çözülmesi gerekiyor bilen var mı ?",
-                            HeadingName = "Visual Studio 2022 nasıl yükleniyor ?",
-                            HeadingTag = "Visual Studio",
-                            HeadingViews = 45,
-                            LastModifyTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(200),
-                            MemberId = new Guid("4ebf1452-3bdc-3618-a25a-c31575c89074"),
-                            Status = true
-                        },
-                        new
-                        {
-                            Id = new Guid("5ebf1452-3bdc-4618-a25a-c31575c89074"),
-                            CategoryId = new Guid("2ebf1452-3bdc-4618-a25a-c31575c89074"),
-                            ContentId = new Guid("4ebf1452-3bdc-2618-225a-c31575c89074"),
-                            CreatedTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(213),
-                            HeadingContent = "Bana gelen bir json objesi var ve içinde sadece name alanını almak istiyorum ne yapmam gerekiyor.",
-                            HeadingName = "Angular'da json içersinde tek bir alanı almak için ne yapmam gerekiyor?",
-                            HeadingTag = "Angular",
-                            HeadingViews = 98,
-                            LastModifyTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(213),
-                            MemberId = new Guid("4ebf1452-3bdc-3618-a25a-c31575c89074"),
-                            Status = true
-                        },
-                        new
-                        {
-                            Id = new Guid("6ebf1452-3bdc-4618-a25a-c31575c89074"),
-                            CategoryId = new Guid("3ebf1452-3bdc-4618-a25a-c31575c89074"),
-                            ContentId = new Guid("4ebf1452-3bdc-2618-225a-c31575c89074"),
-                            CreatedTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(222),
-                            HeadingContent = "switch case veya if kullanmanın performansa erkileri tam olarak nedir?",
-                            HeadingName = "c# üzerinde if kullanmak mı daha performanslı yoksa switch case mi kullanmak daha avantajlıdır farkları nelerdir.",
-                            HeadingTag = "c#",
-                            HeadingViews = 90,
-                            LastModifyTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(222),
-                            MemberId = new Guid("4ebf1452-3bdc-3618-a25a-c31575c89074"),
-                            Status = true
-                        },
-                        new
-                        {
-                            Id = new Guid("7ebf1452-3bdc-4618-a25a-c31575c89074"),
-                            CategoryId = new Guid("1ebf1452-3bdc-4618-a25a-c31575c89074"),
-                            ContentId = new Guid("4ebf1452-3bdc-2618-225a-c31575c89074"),
-                            CreatedTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(231),
-                            HeadingContent = "Yüklerken aniden yarıda kesiliyor ve hata alıyor nasıl çözülmesi gerekiyor bilen var mı ?",
-                            HeadingName = "Visual Studio 2022 nasıl yükleniyor ?",
-                            HeadingTag = "Visual Studio",
-                            HeadingViews = 45,
-                            LastModifyTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(232),
-                            MemberId = new Guid("4ebf1452-3bdc-1618-a25a-c31575c89074"),
-                            Status = true
-                        },
-                        new
-                        {
-                            Id = new Guid("8ebf1452-3bdc-4618-a25a-c31575c89074"),
-                            CategoryId = new Guid("2ebf1452-3bdc-4618-a25a-c31575c89074"),
-                            ContentId = new Guid("4ebf1452-3bdc-2618-225a-c31575c89074"),
-                            CreatedTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(266),
-                            HeadingContent = "Bana gelen bir json objesi var ve içinde sadece name alanını almak istiyorum ne yapmam gerekiyor.",
-                            HeadingName = "Angular'da json içersinde tek bir alanı almak için ne yapmam gerekiyor?",
-                            HeadingTag = "Angular",
-                            HeadingViews = 98,
-                            LastModifyTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(266),
-                            MemberId = new Guid("4ebf1452-3bdc-1618-a25a-c31575c89074"),
-                            Status = true
-                        },
-                        new
-                        {
-                            Id = new Guid("9ebf1452-3bdc-4618-a25a-c31575c89074"),
-                            CategoryId = new Guid("3ebf1452-3bdc-4618-a25a-c31575c89074"),
-                            ContentId = new Guid("4ebf1452-3bdc-2618-225a-c31575c89074"),
-                            CreatedTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(277),
-                            HeadingContent = "switch case veya if kullanmanın performansa erkileri tam olarak nedir?",
-                            HeadingName = "c# üzerinde if kullanmak mı daha performanslı yoksa switch case mi kullanmak daha avantajlıdır farkları nelerdir.",
-                            HeadingTag = "c#",
-                            HeadingViews = 90,
-                            LastModifyTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(278),
-                            MemberId = new Guid("4ebf1452-3bdc-1618-a25a-c31575c89074"),
-                            Status = true
-                        },
-                        new
-                        {
-                            Id = new Guid("aebf1452-3bdc-4618-a25a-c31575c89074"),
-                            CategoryId = new Guid("1ebf1452-3bdc-4618-a25a-c31575c89074"),
-                            ContentId = new Guid("4ebf1452-3bdc-2618-225a-c31575c89074"),
-                            CreatedTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(286),
-                            HeadingContent = "Yüklerken aniden yarıda kesiliyor ve hata alıyor nasıl çözülmesi gerekiyor bilen var mı ?",
-                            HeadingName = "Visual Studio 2022 nasıl yükleniyor ?",
-                            HeadingTag = "Visual Studio",
-                            HeadingViews = 45,
-                            LastModifyTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(286),
-                            MemberId = new Guid("4ebf1452-3bdc-2618-a25a-c31575c89074"),
-                            Status = true
-                        },
-                        new
-                        {
-                            Id = new Guid("bebf1452-3bdc-4618-a25a-c31575c89074"),
-                            CategoryId = new Guid("2ebf1452-3bdc-4618-a25a-c31575c89074"),
-                            ContentId = new Guid("4ebf1452-3bdc-2618-225a-c31575c89074"),
-                            CreatedTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(295),
-                            HeadingContent = "Bana gelen bir json objesi var ve içinde sadece name alanını almak istiyorum ne yapmam gerekiyor.",
-                            HeadingName = "Angular'da json içersinde tek bir alanı almak için ne yapmam gerekiyor?",
-                            HeadingTag = "Angular",
-                            HeadingViews = 98,
-                            LastModifyTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(295),
-                            MemberId = new Guid("4ebf1452-3bdc-2618-a25a-c31575c89074"),
-                            Status = true
-                        },
-                        new
-                        {
-                            Id = new Guid("cebf1452-3bdc-4618-a25a-c31575c89074"),
-                            CategoryId = new Guid("3ebf1452-3bdc-4618-a25a-c31575c89074"),
-                            ContentId = new Guid("4ebf1452-3bdc-2618-225a-c31575c89074"),
-                            CreatedTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(304),
-                            HeadingContent = "switch case veya if kullanmanın performansa erkileri tam olarak nedir?",
-                            HeadingName = "c# üzerinde if kullanmak mı daha performanslı yoksa switch case mi kullanmak daha avantajlıdır farkları nelerdir.",
-                            HeadingTag = "c#",
-                            HeadingViews = 90,
-                            LastModifyTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(304),
-                            MemberId = new Guid("4ebf1452-3bdc-2618-a25a-c31575c89074"),
-                            Status = true
-                        });
+            modelBuilder.Entity("KahveliKodlama.Domain.Entities.Mail", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreatedTime")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime?>("DeleteTime")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Field0")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Field1")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Field2")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("LastModifyTime")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("eMail")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Mails");
                 });
 
             modelBuilder.Entity("KahveliKodlama.Domain.Entities.Member", b =>
@@ -481,77 +396,6 @@ namespace KahveliKodlama.Persistence.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Members");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("4ebf1452-3bdc-1618-a25a-c31575c89074"),
-                            About = "Konya Teknik Üniversitesi Bilgisayar Mühendisliğinden Mezunum Aktif olarak t-soft e ticaret sistemleri bünyesinde çalışmaktayım. Net core ve angular üzerinde kendimi geliştiriyorum az düzeyde ingilizce biliyorum",
-                            Age = (short)23,
-                            Authority = true,
-                            CreatedTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(62),
-                            Dislike = 14,
-                            Email = "efekhvci@hotmail.com",
-                            Gender = true,
-                            Image = "Resim Yok",
-                            IsVerifiedEmail = true,
-                            IsVerifiedInfo = true,
-                            LastModifyTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(63),
-                            Like = 8,
-                            Name = "Mehmet Efe",
-                            Password = "12345efe",
-                            Point = 98,
-                            Status = true,
-                            Surname = "Kahveci",
-                            Title = "Software Engineer",
-                            UserName = "efekahveci"
-                        },
-                        new
-                        {
-                            Id = new Guid("4ebf1452-3bdc-2618-a25a-c31575c89074"),
-                            About = "Konya Teknik Üniversitesi Bilgisayar Mühendisliğinden Mezunum Aktif olarak iş arayaşım devam etmektedir fronted tarafında react js beckend tarafında ise.net ile çalışmalar yapıyorum.",
-                            Age = (short)24,
-                            Authority = true,
-                            CreatedTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(91),
-                            Dislike = 1,
-                            Email = "ysfckmk@hotmail.com",
-                            Gender = true,
-                            Image = "Resim Yok",
-                            IsVerifiedEmail = true,
-                            IsVerifiedInfo = true,
-                            LastModifyTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(91),
-                            Like = 6,
-                            Name = "Yusuf",
-                            Password = "12345yusuf",
-                            Point = 657,
-                            Status = true,
-                            Surname = "Çakmak",
-                            Title = "Student",
-                            UserName = "yusufcakmak"
-                        },
-                        new
-                        {
-                            Id = new Guid("4ebf1452-3bdc-3618-a25a-c31575c89074"),
-                            About = "Konya Teknik Üniversitesi Bilgisayar Mühendisliğinden Mezunum Aktif olarak iş arayaşım devam etmektedir fronted tarafında angular js beckend tarafında ise.net ile çalışmalar yapıyorum. Ayrıca yurtdışında çalışmak ilk tercihim olacaktır.",
-                            Age = (short)24,
-                            Authority = true,
-                            CreatedTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(101),
-                            Dislike = 13,
-                            Email = "remzican@hotmail.com",
-                            Gender = true,
-                            Image = "Resim Yok",
-                            IsVerifiedEmail = true,
-                            IsVerifiedInfo = true,
-                            LastModifyTime = new DateTime(2022, 3, 9, 6, 47, 40, 357, DateTimeKind.Utc).AddTicks(101),
-                            Like = 65,
-                            Name = "Remzi Can",
-                            Password = "12345remzi",
-                            Point = 12,
-                            Status = true,
-                            Surname = "Akmansoy",
-                            Title = "Student",
-                            UserName = "akmansoy"
-                        });
                 });
 
             modelBuilder.Entity("KahveliKodlama.Domain.Entities.Heading", b =>

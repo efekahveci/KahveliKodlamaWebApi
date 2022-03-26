@@ -1,9 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace KahveliKodlama.Persistence.ObjectBuilder
+namespace KahveliKodlama.Persistence.ObjectBuilder;
+
+public interface IEntityBuilder
 {
-    public interface IEntityBuilder
-    {
-        void MapEntity(ModelBuilder builder);
-    }
+    void MapEntity(ModelBuilder builder);
 }

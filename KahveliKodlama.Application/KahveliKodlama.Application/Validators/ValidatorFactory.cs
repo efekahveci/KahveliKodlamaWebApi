@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace KahveliKodlama.Application.Validators
-{
+namespace KahveliKodlama.Application.Validators;
+
     public static class ValidatorFactory<T>
     {
         //attribute.Name
-        static Dictionary<string, IValidator<T>> validatorList = new();
+       private readonly static Dictionary<string, IValidator<T>> validatorList = new();
         public static IValidator<T> GetValidator(Type attribute)
         {            
             if (validatorList.Count == 0)
             {
                 validatorList.Add("DateData", new DateValidator<T>());
                 validatorList.Add("EmailData", new EmailValidator<T>());
-                validatorList.Add("EncryptData", new EncryptValidator<T>());            
-                validatorList.Add("HashData", new HashValidator<T>());
                 validatorList.Add("StringData", new StringValidator<T>());
                 validatorList.Add("Default", new DefaultValidator<T>());
             }
@@ -62,4 +60,4 @@ namespace KahveliKodlama.Application.Validators
             */
         }
     }
-}
+

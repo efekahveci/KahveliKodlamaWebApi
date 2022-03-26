@@ -9,89 +9,88 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 
-namespace KahveliKodlama.Persistence.Repositories
+namespace KahveliKodlama.Persistence.Repositories;
+
+public class AsyncGenericRepository<TEntity> : IAsyncGenericRepository<TEntity> where TEntity : BaseEntity, new()
 {
-    public class AsyncGenericRepository<TEntity> : IAsyncGenericRepository<TEntity> where TEntity : BaseEntity, new()
+    private readonly KahveliContext _context;    
+
+    public AsyncGenericRepository()
     {
-        private readonly KahveliContext _context;    
+        _context = EngineContext.Current.Resolve<KahveliContext>();
+    }
+    //2400
+    public DbSet<TEntity> Table => _context.Set<TEntity>();
 
-        public AsyncGenericRepository()
+
+
+    public IQueryable<TEntity> GetAllQuery => Table.AsNoTracking().Where(x => x.Status == true).OrderByDescending(x=>x.CreatedTime).AsQueryable();
+
+
+    public async Task Create(TEntity entity)
+    {
+        entity.CreatedTime = DateTime.UtcNow;
+
+        await Table.AddAsync(entity);
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task Delete(string id)
+    {
+
+        var entity = await GetById(id);
+        entity.DeleteTime = DateTime.UtcNow;
+        entity.Status = false;
+        Table.Update(entity);
+        await _context.SaveChangesAsync();
+    }
+
+  
+
+    public  IQueryable<TEntity> GetAllQueryInc(Expression<Func<TEntity, object>> includes)
+    {           
+        return Table.Include(includes).AsNoTracking().Where(x => x.Status == true).AsQueryable();
+    }
+
+
+    public async Task<TEntity> GetById(string id)
+    { 
+      var result =  await Table.FindAsync(Guid.Parse(id));
+
+        if (result.Status != true)
+            return null;
+        else return result;
+    }
+    public async Task<TEntity> GetByIdInc(string id,Expression<Func<TEntity, object>> includes)
+    {
+        return await _context.Set<TEntity>()
+                     .AsNoTracking()
+                     .Include(includes)
+                     .Where(x => x.Status == true)
+                     .FirstOrDefaultAsync(e => e.Id == Guid.Parse(id));
+    }
+
+   
+
+    public async Task UniqueCreate(TEntity entity)
+    {
+        var result = await Table.AsNoTracking().FirstOrDefaultAsync(e=>e.Id == entity.Id);
+
+        if (result!=null)
         {
-            _context = EngineContext.Current.Resolve<KahveliContext>();
-        }
-        //2400
-        public DbSet<TEntity> Table => _context.Set<TEntity>();
-
-
-
-        public IQueryable<TEntity> GetAllQuery => Table.AsNoTracking().Where(x => x.Status == true).AsQueryable();
-
-
-        public async Task Create(TEntity entity)
-        {
-            entity.CreatedTime = DateTime.UtcNow;
-
             await Table.AddAsync(entity);
             await _context.SaveChangesAsync();
         }
-
-        public async Task Delete(string id)
-        {
-
-            var entity = await GetById(id);
-            entity.DeleteTime = DateTime.UtcNow;
-            entity.Status = false;
-            Table.Update(entity);
-            await _context.SaveChangesAsync();
-        }
-
-      
-
-        public  IQueryable<TEntity> GetAllQueryInc(Expression<Func<TEntity, object>> includes)
-        {           
-            return Table.Include(includes).AsNoTracking().Where(x => x.Status == true).AsQueryable();
-        }
-
-
-        public async Task<TEntity> GetById(string id)
-        { 
-          var result =  await Table.FindAsync(id);
-
-            if (result.Status != true)
-                return null;
-            else return result;
-        }
-        public async Task<TEntity> GetByIdInc(string id,Expression<Func<TEntity, object>> includes)
-        {
-            return await _context.Set<TEntity>()
-                         .AsNoTracking()
-                         .Include(includes)
-                         .Where(x => x.Status == true)
-                         .FirstOrDefaultAsync(e => e.Id == Guid.Parse(id));
-        }
-
-       
-
-        public async Task UniqueCreate(TEntity entity)
-        {
-            var result = await Table.AsNoTracking().FirstOrDefaultAsync(e=>e.Id == entity.Id);
-
-            if (result!=null)
-            {
-                await Table.AddAsync(entity);
-                await _context.SaveChangesAsync();
-            }
-        }
-
-        public async Task Update(TEntity entity)
-        {
-
-            Table.Update(entity);
-
-            await _context.SaveChangesAsync();
-
-
-        }
-        
     }
+
+    public async Task Update(TEntity entity)
+    {
+
+        Table.Update(entity);
+
+        await _context.SaveChangesAsync();
+
+
+    }
+    
 }

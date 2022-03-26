@@ -1,25 +1,26 @@
 ﻿
 
 
+using KahveliKodlama.Application.Contract;
 using KahveliKodlama.Application.Mapper;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
-namespace KahveliKodlama.Application
+namespace KahveliKodlama.Application;
+
+public static class ServiceRegistration
 {
-    public static class ServiceRegistration
+    public static void AddApplicationLayer(this IServiceCollection serviceCollection)
     {
-        public static void AddApplicationLayer(this IServiceCollection serviceCollection)
-        {
-            var assm = Assembly.GetExecutingAssembly();
+        var assm = Assembly.GetExecutingAssembly();
 
 
-            serviceCollection.AddAutoMapper(typeof(MappingProfile));
-            serviceCollection.AddMediatR(assm);
-       
-        }
+        serviceCollection.AddAutoMapper(typeof(MappingProfile));
+        serviceCollection.AddMediatR(assm);
+     
 
-    
     }
+
+
 }

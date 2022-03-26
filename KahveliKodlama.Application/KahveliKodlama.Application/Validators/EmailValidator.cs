@@ -3,8 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace KahveliKodlama.Application.Validators
-{
+namespace KahveliKodlama.Application.Validators;
+
     public record EmailValidator<T>() : Validator, IValidator<T>
     {
         public List<Exception> Validate(T value, int? validateType, int? param2, string source, System.Reflection.PropertyInfo pi, object model)
@@ -73,4 +73,3 @@ namespace KahveliKodlama.Application.Validators
             return errorList;
         }
     }
-}

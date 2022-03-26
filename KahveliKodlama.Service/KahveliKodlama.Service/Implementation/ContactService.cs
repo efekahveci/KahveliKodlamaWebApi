@@ -2,10 +2,9 @@
 using KahveliKodlama.Domain.Entities;
 using KahveliKodlama.Persistence.Repositories;
 
-namespace KahveliKodlama.Service.Implementation
+namespace KahveliKodlama.Service.Implementation;
+
+public class ContactService : AsyncGenericRepository<Contact>,IContactService
 {
-    public class ContactService : AsyncGenericRepository<Contact>,IContactService
-    {
-     
-    }
+ 
 }

@@ -5,6 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Entities\**" />
+    <Compile Remove="ObjectBuilder\Contacts\**" />
+    <EmbeddedResource Remove="Entities\**" />
+    <EmbeddedResource Remove="ObjectBuilder\Contacts\**" />
+    <None Remove="Entities\**" />
+    <None Remove="ObjectBuilder\Contacts\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="10.1.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
     <PackageReference Include="EntityFrameworkCore.Triggered" Version="3.0.0" />
@@ -30,11 +39,6 @@
     <ProjectReference Include="..\..\KahveliKodlama.Application\KahveliKodlama.Application\KahveliKodlama.Application.csproj" />
     <ProjectReference Include="..\..\KahveliKodlama.Core\KahveliKodlama.Core\KahveliKodlama.Core.csproj" />
     <ProjectReference Include="..\..\KahveliKodlama.Domain\KahveliKodlama.Domain\KahveliKodlama.Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Entities\" />
-    <Folder Include="ObjectBuilder\Contacts\" />
   </ItemGroup>
 
 </Project>

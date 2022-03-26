@@ -3124,6 +3124,21 @@
           "bin/placeholder/KahveliKodlama.Domain.dll": {}
         }
       },
+      "KahveliKodlama.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "KahveliKodlama.Persistence": "1.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+        },
+        "compile": {
+          "bin/placeholder/KahveliKodlama.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/KahveliKodlama.Infrastructure.dll": {}
+        }
+      },
       "KahveliKodlama.Persistence/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -9706,6 +9721,11 @@
       "path": "../KahveliKodlama.Domain/KahveliKodlama.Domain/KahveliKodlama.Domain.csproj",
       "msbuildProject": "../KahveliKodlama.Domain/KahveliKodlama.Domain/KahveliKodlama.Domain.csproj"
     },
+    "KahveliKodlama.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../KahveliKodlama.Infrastructure/KahveliKodlama.Infrastructure/KahveliKodlama.Infrastructure.csproj",
+      "msbuildProject": "../KahveliKodlama.Infrastructure/KahveliKodlama.Infrastructure/KahveliKodlama.Infrastructure.csproj"
+    },
     "KahveliKodlama.Persistence/1.0.0": {
       "type": "project",
       "path": "../KahveliKodlama.Persistence/KahveliKodlama.Persistence/KahveliKodlama.Persistence.csproj",
@@ -9721,6 +9741,7 @@
     "net6.0": [
       "FluentValidation >= 10.3.6",
       "FluentValidation.AspNetCore >= 10.3.6",
+      "KahveliKodlama.Infrastructure >= 1.0.0",
       "KahveliKodlama.Persistence >= 1.0.0",
       "KahveliKodlama.Service >= 1.0.0",
       "Microsoft.AspNetCore.Cors >= 2.2.0",
@@ -9736,19 +9757,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\efekh\\.nuget\\packages\\": {}
+    "C:\\Users\\Legion\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\efekh\\Desktop\\Repo\\KahveliKodlama\\KahveliKodlama\\KahveliKodlama.API.csproj",
+      "projectUniqueName": "C:\\Users\\Legion\\source\\repos\\kahvelikodlama\\KahveliKodlama\\KahveliKodlama\\KahveliKodlama.API.csproj",
       "projectName": "KahveliKodlama.API",
-      "projectPath": "C:\\Users\\efekh\\Desktop\\Repo\\KahveliKodlama\\KahveliKodlama\\KahveliKodlama.API.csproj",
-      "packagesPath": "C:\\Users\\efekh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\efekh\\Desktop\\Repo\\KahveliKodlama\\KahveliKodlama\\obj\\",
+      "projectPath": "C:\\Users\\Legion\\source\\repos\\kahvelikodlama\\KahveliKodlama\\KahveliKodlama\\KahveliKodlama.API.csproj",
+      "packagesPath": "C:\\Users\\Legion\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Legion\\source\\repos\\kahvelikodlama\\KahveliKodlama\\KahveliKodlama\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\efekh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Legion\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9762,11 +9783,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\efekh\\Desktop\\Repo\\KahveliKodlama\\KahveliKodlama.Persistence\\KahveliKodlama.Persistence\\KahveliKodlama.Persistence.csproj": {
-              "projectPath": "C:\\Users\\efekh\\Desktop\\Repo\\KahveliKodlama\\KahveliKodlama.Persistence\\KahveliKodlama.Persistence\\KahveliKodlama.Persistence.csproj"
+            "C:\\Users\\Legion\\source\\repos\\kahvelikodlama\\KahveliKodlama\\KahveliKodlama.Infrastructure\\KahveliKodlama.Infrastructure\\KahveliKodlama.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Legion\\source\\repos\\kahvelikodlama\\KahveliKodlama\\KahveliKodlama.Infrastructure\\KahveliKodlama.Infrastructure\\KahveliKodlama.Infrastructure.csproj"
             },
-            "C:\\Users\\efekh\\Desktop\\Repo\\KahveliKodlama\\KahveliKodlama.Service\\KahveliKodlama.Service\\KahveliKodlama.Service.csproj": {
-              "projectPath": "C:\\Users\\efekh\\Desktop\\Repo\\KahveliKodlama\\KahveliKodlama.Service\\KahveliKodlama.Service\\KahveliKodlama.Service.csproj"
+            "C:\\Users\\Legion\\source\\repos\\kahvelikodlama\\KahveliKodlama\\KahveliKodlama.Persistence\\KahveliKodlama.Persistence\\KahveliKodlama.Persistence.csproj": {
+              "projectPath": "C:\\Users\\Legion\\source\\repos\\kahvelikodlama\\KahveliKodlama\\KahveliKodlama.Persistence\\KahveliKodlama.Persistence\\KahveliKodlama.Persistence.csproj"
+            },
+            "C:\\Users\\Legion\\source\\repos\\kahvelikodlama\\KahveliKodlama\\KahveliKodlama.Service\\KahveliKodlama.Service\\KahveliKodlama.Service.csproj": {
+              "projectPath": "C:\\Users\\Legion\\source\\repos\\kahvelikodlama\\KahveliKodlama\\KahveliKodlama.Service\\KahveliKodlama.Service\\KahveliKodlama.Service.csproj"
             }
           }
         }

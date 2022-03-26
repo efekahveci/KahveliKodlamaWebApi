@@ -10,6 +10,7 @@
         "dependencies": {
           "FluentValidation": "10.3.6",
           "FluentValidation.AspNetCore": "10.3.6",
+          "KahveliKodlama.Infrastructure": "1.0.0",
           "KahveliKodlama.Persistence": "1.0.0",
           "KahveliKodlama.Service": "1.0.0",
           "Microsoft.AspNetCore.Cors": "2.2.0",
@@ -2011,6 +2012,16 @@
           "KahveliKodlama.Domain.dll": {}
         }
       },
+      "KahveliKodlama.Infrastructure/1.0.0": {
+        "dependencies": {
+          "KahveliKodlama.Persistence": "1.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+        },
+        "runtime": {
+          "KahveliKodlama.Infrastructure.dll": {}
+        }
+      },
       "KahveliKodlama.Persistence/1.0.0": {
         "dependencies": {
           "AutoMapper": "10.1.1",
@@ -3520,6 +3531,11 @@
       "sha512": ""
     },
     "KahveliKodlama.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KahveliKodlama.Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

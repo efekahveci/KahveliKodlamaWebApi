@@ -1,534 +1,547 @@
 ﻿++Solution 'KahveliKodlama' ‎(6 of 6 projects)
-i:{00000000-0000-0000-0000-000000000000}:KahveliKodlama.sln
-++KahveliKodlama.API
-i:{00000000-0000-0000-0000-000000000000}:KahveliKodlama.API
-++Connected Services 
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:>2081
+++KahveliKodlama.Service
+i:{00000000-0000-0000-0000-000000000000}:KahveliKodlama.Service
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\bin\debug\net6.0\kahvelikodlama.service.dll
 ++Dependencies
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:>2080
-i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:>1174
-i:{d334c0e3-128b-4744-9f0b-f941969bee93}:>911
-i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:>631
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:>630
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:>1560
-++Properties
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:g:\drive'ım\kahvelikodlama\kahvelikodlama\properties\
-++Connected Services
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:g:\drive'ım\kahvelikodlama\kahvelikodlama\connected services\
-++Controllers
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:g:\drive'ım\kahvelikodlama\kahvelikodlama\controllers\
-++AuthenticateController.cs
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:g:\drive'ım\kahvelikodlama\kahvelikodlama\controllers\authenticatecontroller.cs
-++CategoryController.cs
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:g:\drive'ım\kahvelikodlama\kahvelikodlama\controllers\categorycontroller.cs
-++ContactController.cs
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:g:\drive'ım\kahvelikodlama\kahvelikodlama\controllers\contactcontroller.cs
-++ContentController.cs
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:g:\drive'ım\kahvelikodlama\kahvelikodlama\controllers\contentcontroller.cs
-++HeadingController.cs
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:g:\drive'ım\kahvelikodlama\kahvelikodlama\controllers\headingcontroller.cs
-++ImageController.cs
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:g:\drive'ım\kahvelikodlama\kahvelikodlama\controllers\imagecontroller.cs
-++MemberController.cs
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:g:\drive'ım\kahvelikodlama\kahvelikodlama\controllers\membercontroller.cs
-++Images
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:g:\drive'ım\kahvelikodlama\kahvelikodlama\images\
-++appsettings.json
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:g:\drive'ım\kahvelikodlama\kahvelikodlama\appsettings.json
-++Dockerfile
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:g:\drive'ım\kahvelikodlama\kahvelikodlama\dockerfile
-++Program.cs
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:g:\drive'ım\kahvelikodlama\kahvelikodlama\program.cs
-++Startup.cs
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:g:\drive'ım\kahvelikodlama\kahvelikodlama\startup.cs
-++No service dependencies discovered
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:>2082
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:>1143
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:>1979
+i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:>1144
+i:{d334c0e3-128b-4744-9f0b-f941969bee93}:>1535
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:>1154
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:>1430
+i:{a945c4b6-da57-42b5-a33a-4dd961d3980f}:>2433
+++Events
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\events\
+++EventConsumer.cs
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\events\eventconsumer.cs
+++EventPublisher.cs
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\events\eventpublisher.cs
+++Extensions
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\extensions\
+i:{d334c0e3-128b-4744-9f0b-f941969bee93}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.core\kahvelikodlama.core\extensions\
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\extensions\
+++ExceptionMiddlewareExtensions.cs
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\extensions\exceptionmiddlewareextensions.cs
+++HealthCheckConfigureExtension.cs
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\extensions\healthcheckconfigureextension.cs
+++Implementation
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\implementation\
+++AuthService.cs
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\implementation\authservice.cs
+++CategoryService.cs
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\implementation\categoryservice.cs
+++ContactService.cs
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\implementation\contactservice.cs
+++ContentService.cs
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\implementation\contentservice.cs
+++FileUpload.cs
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\implementation\fileupload.cs
+++HeadingService.cs
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\implementation\headingservice.cs
+++MemberService.cs
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\implementation\memberservice.cs
+++Middleware
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\middleware\
+++ServiceRegistration.cs
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\serviceregistration.cs
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\serviceregistration.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\serviceregistration.cs
+i:{a945c4b6-da57-42b5-a33a-4dd961d3980f}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.infrastructure\kahvelikodlama.infrastructure\serviceregistration.cs
 ++Analyzers
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:analyzers
 i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:analyzers
-i:{d334c0e3-128b-4744-9f0b-f941969bee93}:analyzers
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:analyzers
 i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:analyzers
+i:{d334c0e3-128b-4744-9f0b-f941969bee93}:analyzers
 i:{babf8009-e68f-4a1f-a356-57c2488696bf}:analyzers
 i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:analyzers
+i:{a945c4b6-da57-42b5-a33a-4dd961d3980f}:analyzers
 ++Frameworks
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:frameworks
 i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:frameworks
-i:{d334c0e3-128b-4744-9f0b-f941969bee93}:frameworks
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:frameworks
 i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:frameworks
+i:{d334c0e3-128b-4744-9f0b-f941969bee93}:frameworks
 i:{babf8009-e68f-4a1f-a356-57c2488696bf}:frameworks
 i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:frameworks
+i:{a945c4b6-da57-42b5-a33a-4dd961d3980f}:frameworks
 ++Packages
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:packages
 i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:packages
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:packages
 i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:packages
 i:{babf8009-e68f-4a1f-a356-57c2488696bf}:packages
 i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:packages
+i:{a945c4b6-da57-42b5-a33a-4dd961d3980f}:packages
 ++Projects
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:projects
 i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:projects
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:projects
 i:{d334c0e3-128b-4744-9f0b-f941969bee93}:projects
 i:{babf8009-e68f-4a1f-a356-57c2488696bf}:projects
 i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:projects
-++launchSettings.json
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:g:\drive'ım\kahvelikodlama\kahvelikodlama\properties\launchsettings.json
-++MernisTC
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:g:\drive'ım\kahvelikodlama\kahvelikodlama\connected services\mernistc\
-++efekhvci
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:g:\drive'ım\kahvelikodlama\kahvelikodlama\images\efekhvci\
-++appsettings.Development.json
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:g:\drive'ım\kahvelikodlama\kahvelikodlama\appsettings.development.json
-++.dockerignore
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:g:\drive'ım\kahvelikodlama\.dockerignore
-++Microsoft.AspNetCore.Analyzers
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
+++ExceptionMiddleware.cs
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\middleware\exceptionmiddleware.cs
 ++Microsoft.AspNetCore.App.Analyzers
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.3\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
 i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.3\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.3\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
 i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.3\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
 ++Microsoft.AspNetCore.App.CodeFixes
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.3\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
 i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.3\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.3\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
 i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.3\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{d334c0e3-128b-4744-9f0b-f941969bee93}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{a945c4b6-da57-42b5-a33a-4dd961d3980f}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+++Microsoft.CodeAnalysis.NetAnalyzers
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{d334c0e3-128b-4744-9f0b-f941969bee93}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{a945c4b6-da57-42b5-a33a-4dd961d3980f}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+++Microsoft.EntityFrameworkCore.Analyzers
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:c:\users\legion\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.0\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\users\legion\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.0\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.0\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.0\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+++Microsoft.Extensions.Logging.Generators
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.3\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.3\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:c:\users\legion\.nuget\packages\microsoft.extensions.logging.abstractions\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{d334c0e3-128b-4744-9f0b-f941969bee93}:c:\users\legion\.nuget\packages\microsoft.extensions.logging.abstractions\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.3\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\.nuget\packages\microsoft.extensions.logging.abstractions\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+++System.Text.Json.SourceGeneration
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{d334c0e3-128b-4744-9f0b-f941969bee93}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{a945c4b6-da57-42b5-a33a-4dd961d3980f}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+++Microsoft.AspNetCore.App
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\microsoft.aspnetcore.app
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama\microsoft.aspnetcore.app
+++Microsoft.NETCore.App
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\microsoft.netcore.app
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama\microsoft.netcore.app
+i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\microsoft.netcore.app
+i:{d334c0e3-128b-4744-9f0b-f941969bee93}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.core\kahvelikodlama.core\microsoft.netcore.app
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\microsoft.netcore.app
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\microsoft.netcore.app
+i:{a945c4b6-da57-42b5-a33a-4dd961d3980f}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.infrastructure\kahvelikodlama.infrastructure\microsoft.netcore.app
+++MediatR (9.0.0)
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:>2008
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:>2012
+++Microsoft.AspNetCore.Authentication.JwtBearer (6.0.0)
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:>2011
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:>2053
+++Microsoft.AspNetCore.Hosting (2.2.7)
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:>2015
+++Microsoft.AspNetCore.Hosting.Abstractions (2.2.0)
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:>2004
+++Microsoft.AspNetCore.Identity.EntityFrameworkCore (6.0.0)
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:>2009
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:>2048
+++Serilog.AspNetCore (4.1.0)
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:>2002
+++Serilog.Enrichers.Environment (2.2.0)
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:>2013
+++Serilog.Extensions.Hosting (4.2.0)
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:>2006
+++Serilog.Sinks.PostgreSQL (2.3.0)
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:>2019
+++Serilog.Sinks.PostgreSQL.Configuration (1.0.1)
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:>2017
+++KahveliKodlama.Application
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\kahvelikodlama.application.csproj
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\kahvelikodlama.application.csproj
+i:{00000000-0000-0000-0000-000000000000}:KahveliKodlama.Application
+++KahveliKodlama.Core
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.core\kahvelikodlama.core\kahvelikodlama.core.csproj
+i:{00000000-0000-0000-0000-000000000000}:KahveliKodlama.Core
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.core\kahvelikodlama.core\kahvelikodlama.core.csproj
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.core\kahvelikodlama.core\kahvelikodlama.core.csproj
+++KahveliKodlama.Persistence
+i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\kahvelikodlama.persistence.csproj
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\bin\debug\net6.0\kahvelikodlama.persistence.dll
+i:{00000000-0000-0000-0000-000000000000}:KahveliKodlama.Persistence
+++KahveliKodlama.API
+i:{00000000-0000-0000-0000-000000000000}:KahveliKodlama.API
+++Connected Services 
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:>1980
+++Properties
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama\properties\
+++Connected Services
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama\connected services\
+++Controllers
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama\controllers\
+++Images
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama\images\
+++appsettings.json
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama\appsettings.json
+++Dockerfile
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama\dockerfile
+++Program.cs
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama\program.cs
+++Startup.cs
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama\startup.cs
+++No service dependencies discovered
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:>1981
+++launchSettings.json
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama\properties\launchsettings.json
+++MernisTC
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama\connected services\mernistc\
+++AuthenticateController.cs
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama\controllers\authenticatecontroller.cs
+++CategoryController.cs
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama\controllers\categorycontroller.cs
+++ContactController.cs
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama\controllers\contactcontroller.cs
+++ContentController.cs
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama\controllers\contentcontroller.cs
+++HeadingController.cs
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama\controllers\headingcontroller.cs
+++ImageController.cs
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama\controllers\imagecontroller.cs
+++MemberController.cs
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama\controllers\membercontroller.cs
+++efekhvci
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama\images\efekhvci\
+++appsettings.Development.json
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama\appsettings.development.json
+++.dockerignore
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\.dockerignore
+++Microsoft.AspNetCore.Analyzers
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
 ++Microsoft.AspNetCore.Components.Analyzers
 i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.components.analyzers.dll
 ++Microsoft.AspNetCore.Mvc.Analyzers
 i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.mvc.analyzers.dll
 ++Microsoft.AspNetCore.Razor.SourceGenerator.Tooling.Internal
 i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\source-generators\microsoft.aspnetcore.razor.sourcegenerator.tooling.internal.dll
-++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
-i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
-i:{d334c0e3-128b-4744-9f0b-f941969bee93}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
-i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
-++Microsoft.CodeAnalysis.NetAnalyzers
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
-i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
-i:{d334c0e3-128b-4744-9f0b-f941969bee93}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
-i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
-++Microsoft.EntityFrameworkCore.Analyzers
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\users\legion\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.0\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
-i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:c:\users\legion\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.0\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.0\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.0\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
-++Microsoft.Extensions.Logging.Generators
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.3\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
-i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.3\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
-i:{d334c0e3-128b-4744-9f0b-f941969bee93}:c:\users\legion\.nuget\packages\microsoft.extensions.logging.abstractions\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
-i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:c:\users\legion\.nuget\packages\microsoft.extensions.logging.abstractions\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.3\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\.nuget\packages\microsoft.extensions.logging.abstractions\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
 ++Microsoft.NET.Sdk.Razor.SourceGenerators
 i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\source-generators\microsoft.net.sdk.razor.sourcegenerators.dll
-++System.Text.Json.SourceGeneration
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
-i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
-i:{d334c0e3-128b-4744-9f0b-f941969bee93}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
-i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
-++Microsoft.AspNetCore.App
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:g:\drive'ım\kahvelikodlama\kahvelikodlama\microsoft.aspnetcore.app
-i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:g:\drive'ım\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\microsoft.aspnetcore.app
-++Microsoft.NETCore.App
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:g:\drive'ım\kahvelikodlama\kahvelikodlama\microsoft.netcore.app
-i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:g:\drive'ım\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\microsoft.netcore.app
-i:{d334c0e3-128b-4744-9f0b-f941969bee93}:g:\drive'ım\kahvelikodlama\kahvelikodlama.core\kahvelikodlama.core\microsoft.netcore.app
-i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:g:\drive'ım\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\microsoft.netcore.app
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\microsoft.netcore.app
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\microsoft.netcore.app
 ++FluentValidation (10.3.6)
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:>2099
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:>2153
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:>2110
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:>2014
 ++FluentValidation.AspNetCore (10.3.6)
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:>2096
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:>2107
 ++Microsoft.AspNetCore.Cors (2.2.0)
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:>2098
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:>2109
 ++Microsoft.EntityFrameworkCore.Design (6.0.0)
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:>2094
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:>2155
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:>2105
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:>2046
 ++Microsoft.EntityFrameworkCore.Tools (6.0.0)
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:>2101
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:>2171
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:>2112
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:>2054
 ++Microsoft.VisualStudio.Azure.Containers.Tools.Targets (1.14.0)
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:>2102
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:>2113
 ++Npgsql.EntityFrameworkCore.PostgreSQL (6.0.1)
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:>2100
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:>2167
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:>2111
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:>2052
 ++Swashbuckle.AspNetCore (6.2.3)
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:>2095
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:>2106
 ++System.ServiceModel.Duplex (4.9.0)
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:>2104
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:>2115
 ++System.ServiceModel.Http (4.9.0)
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:>2103
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:>2114
 ++System.ServiceModel.NetTcp (4.9.0)
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:>2097
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:>2108
 ++System.ServiceModel.Security (4.9.0)
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:>2093
-++KahveliKodlama.Persistence
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\kahvelikodlama.persistence.csproj
-i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\bin\debug\net6.0\kahvelikodlama.persistence.dll
-i:{00000000-0000-0000-0000-000000000000}:KahveliKodlama.Persistence
-++KahveliKodlama.Service
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:g:\drive'ım\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\kahvelikodlama.service.csproj
-i:{00000000-0000-0000-0000-000000000000}:KahveliKodlama.Service
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:>2104
 ++ConnectedService.json
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:g:\drive'ım\kahvelikodlama\kahvelikodlama\connected services\mernistc\connectedservice.json
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama\connected services\mernistc\connectedservice.json
 ++Reference.cs
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:g:\drive'ım\kahvelikodlama\kahvelikodlama\connected services\mernistc\reference.cs
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama\connected services\mernistc\reference.cs
 ++resim.png
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:g:\drive'ım\kahvelikodlama\kahvelikodlama\images\efekhvci\resim.png
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama\images\efekhvci\resim.png
 ++siparisler.png
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:g:\drive'ım\kahvelikodlama\kahvelikodlama\images\efekhvci\siparisler.png
-++Extensions
-i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:g:\drive'ım\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\extensions\
-i:{d334c0e3-128b-4744-9f0b-f941969bee93}:g:\drive'ım\kahvelikodlama\kahvelikodlama.core\kahvelikodlama.core\extensions\
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\extensions\
-++Implementation
-i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:g:\drive'ım\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\implementation\
-++AuthService.cs
-i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:g:\drive'ım\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\implementation\authservice.cs
-++CategoryService.cs
-i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:g:\drive'ım\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\implementation\categoryservice.cs
-++ContactService.cs
-i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:g:\drive'ım\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\implementation\contactservice.cs
-++ContentService.cs
-i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:g:\drive'ım\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\implementation\contentservice.cs
-++FileUpload.cs
-i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:g:\drive'ım\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\implementation\fileupload.cs
-++HeadingService.cs
-i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:g:\drive'ım\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\implementation\headingservice.cs
-++MemberService.cs
-i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:g:\drive'ım\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\implementation\memberservice.cs
-++Middleware
-i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:g:\drive'ım\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\middleware\
-++ServiceRegistration.cs
-i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:g:\drive'ım\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\serviceregistration.cs
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\serviceregistration.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\serviceregistration.cs
-++ExceptionMiddlewareExtensions.cs
-i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:g:\drive'ım\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\extensions\exceptionmiddlewareextensions.cs
-++HealthCheckConfigureExtension.cs
-i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:g:\drive'ım\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\extensions\healthcheckconfigureextension.cs
-++ExceptionMiddleware.cs
-i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:g:\drive'ım\kahvelikodlama\kahvelikodlama.service\kahvelikodlama.service\middleware\exceptionmiddleware.cs
-++MediatR (9.0.0)
-i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:>2192
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:>2151
-++Microsoft.AspNetCore.Authentication.JwtBearer (6.0.0)
-i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:>2194
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:>2169
-++Microsoft.AspNetCore.Hosting (2.2.7)
-i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:>2196
-++Microsoft.AspNetCore.Hosting.Abstractions (2.2.0)
-i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:>2190
-++Microsoft.AspNetCore.Identity.EntityFrameworkCore (6.0.0)
-i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:>2193
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:>2159
-++Serilog.AspNetCore (4.1.0)
-i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:>2189
-++Serilog.Enrichers.Environment (2.2.0)
-i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:>2195
-++Serilog.Extensions.Hosting (4.2.0)
-i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:>2191
-++Serilog.Sinks.PostgreSQL (2.3.0)
-i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:>2198
-++Serilog.Sinks.PostgreSQL.Configuration (1.0.1)
-i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:>2197
-++KahveliKodlama.Application
-i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\bin\debug\net6.0\kahvelikodlama.application.dll
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\bin\debug\net6.0\kahvelikodlama.application.dll
-i:{00000000-0000-0000-0000-000000000000}:KahveliKodlama.Application
-++KahveliKodlama.Core
-i:{5be4d7cc-4e83-4d4a-848a-22436f2a521c}:g:\drive'ım\kahvelikodlama\kahvelikodlama.core\kahvelikodlama.core\bin\debug\net6.0\kahvelikodlama.core.dll
-i:{00000000-0000-0000-0000-000000000000}:KahveliKodlama.Core
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.core\kahvelikodlama.core\bin\debug\net6.0\kahvelikodlama.core.dll
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.core\kahvelikodlama.core\bin\debug\net6.0\kahvelikodlama.core.dll
-++MapExtension.cs
-i:{d334c0e3-128b-4744-9f0b-f941969bee93}:g:\drive'ım\kahvelikodlama\kahvelikodlama.core\kahvelikodlama.core\extensions\mapextension.cs
-++MessageHelper.cs
-i:{d334c0e3-128b-4744-9f0b-f941969bee93}:g:\drive'ım\kahvelikodlama\kahvelikodlama.core\kahvelikodlama.core\extensions\messagehelper.cs
-++Utilities
-i:{d334c0e3-128b-4744-9f0b-f941969bee93}:g:\drive'ım\kahvelikodlama\kahvelikodlama.core\kahvelikodlama.core\utilities\
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama\images\efekhvci\siparisler.png
 ++KahveliKodlama.Domain
-i:{d334c0e3-128b-4744-9f0b-f941969bee93}:g:\drive'ım\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\bin\debug\net6.0\kahvelikodlama.domain.dll
 i:{00000000-0000-0000-0000-000000000000}:KahveliKodlama.Domain
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\bin\debug\net6.0\kahvelikodlama.domain.dll
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\bin\debug\net6.0\kahvelikodlama.domain.dll
+i:{d334c0e3-128b-4744-9f0b-f941969bee93}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\kahvelikodlama.domain.csproj
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\kahvelikodlama.domain.csproj
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\kahvelikodlama.domain.csproj
 ++Auth
-i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:g:\drive'ım\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\auth\
+i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\auth\
 ++Common
-i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:g:\drive'ım\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\common\
+i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\common\
 ++Entities
-i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:g:\drive'ım\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\entities\
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\entities\
+i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\entities\
 ++Enum
-i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:g:\drive'ım\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\enum\
+i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\enum\
 ++AppUser.cs
-i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:g:\drive'ım\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\auth\appuser.cs
+i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\auth\appuser.cs
 ++LoginModel.cs
-i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:g:\drive'ım\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\auth\loginmodel.cs
+i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\auth\loginmodel.cs
 ++RegisterModel.cs
-i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:g:\drive'ım\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\auth\registermodel.cs
+i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\auth\registermodel.cs
 ++ResetPassModel.cs
-i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:g:\drive'ım\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\auth\resetpassmodel.cs
+i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\auth\resetpassmodel.cs
 ++UpdatePassModel.cs
-i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:g:\drive'ım\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\auth\updatepassmodel.cs
+i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\auth\updatepassmodel.cs
 ++BaseEntity.cs
-i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:g:\drive'ım\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\common\baseentity.cs
+i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\common\baseentity.cs
 ++Category.cs
-i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:g:\drive'ım\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\entities\category.cs
+i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\entities\category.cs
 ++Contact.cs
-i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:g:\drive'ım\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\entities\contact.cs
+i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\entities\contact.cs
 ++Content.cs
-i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:g:\drive'ım\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\entities\content.cs
+i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\entities\content.cs
 ++Heading.cs
-i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:g:\drive'ım\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\entities\heading.cs
+i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\entities\heading.cs
 ++Member.cs
-i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:g:\drive'ım\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\entities\member.cs
+i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\entities\member.cs
 ++ResponseResult.cs
-i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:g:\drive'ım\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\entities\responseresult.cs
+i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\entities\responseresult.cs
 ++ResponseCode.cs
-i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:g:\drive'ım\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\enum\responsecode.cs
+i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.domain\kahvelikodlama.domain\enum\responsecode.cs
 ++Microsoft.Extensions.Identity.Stores (6.0.1)
-i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:>2116
+i:{8961c33b-dd6d-493c-9c9b-df44779a0e30}:>2042
+++MapExtension.cs
+i:{d334c0e3-128b-4744-9f0b-f941969bee93}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.core\kahvelikodlama.core\extensions\mapextension.cs
+++MessageHelper.cs
+i:{d334c0e3-128b-4744-9f0b-f941969bee93}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.core\kahvelikodlama.core\extensions\messagehelper.cs
 ++Context
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\context\
-++ContextEngine
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\contextengine\
-++Migrations
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\migrations\
-++ObjectBuilder
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\objectbuilder\
-++Repositories
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\repositories\
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\interfaces\repositories\
-++Triggers
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\triggers\
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\context\
 ++IdentityContext.cs
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\context\identitycontext.cs
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\context\identitycontext.cs
 ++KahveliContext.cs
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\context\kahvelicontext.cs
-++BaseSingleton.cs
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\contextengine\basesingleton.cs
-++EngineContext.cs
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\contextengine\enginecontext.cs
-++IEngine.cs
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\contextengine\iengine.cs
-++KahveliContextEngine.cs
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\contextengine\kahvelicontextengine.cs
-++Singleton.cs
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\contextengine\singleton.cs
-++CheckUpdateObjectExtensions.cs
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\extensions\checkupdateobjectextensions.cs
-++Identity
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\migrations\identity\
-++20220309064740_f.cs
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\migrations\20220309064740_f.cs
-++KahveliContextModelSnapshot.cs
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\migrations\kahvelicontextmodelsnapshot.cs
-++Categories
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\objectbuilder\categories\
-++Contacts
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\objectbuilder\contacts\
-++Contents
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\objectbuilder\contents\
-++Headings
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\objectbuilder\headings\
-++Members
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\objectbuilder\members\
-++EntityBuilder.cs
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\objectbuilder\entitybuilder.cs
-++IEntityBuilder.cs
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\objectbuilder\ientitybuilder.cs
-++AsyncGenericRepository.cs
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\repositories\asyncgenericrepository.cs
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\context\kahvelicontext.cs
+++ContextEngine
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\contextengine\
+++Migrations
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\migrations\
+++ObjectBuilder
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\objectbuilder\
+++Repositories
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\repositories\
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\interfaces\repositories\
+++Triggers
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\triggers\
 ++CloneUser.cs
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\triggers\cloneuser.cs
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\triggers\cloneuser.cs
+++BaseSingleton.cs
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\contextengine\basesingleton.cs
+++EngineContext.cs
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\contextengine\enginecontext.cs
+++IEngine.cs
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\contextengine\iengine.cs
+++KahveliContextEngine.cs
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\contextengine\kahvelicontextengine.cs
+++Singleton.cs
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\contextengine\singleton.cs
+++CheckUpdateObjectExtensions.cs
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\extensions\checkupdateobjectextensions.cs
+++Identity
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\migrations\identity\
+++20220309064740_f.cs
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\migrations\20220309064740_f.cs
+++KahveliContextModelSnapshot.cs
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\migrations\kahvelicontextmodelsnapshot.cs
+++Categories
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\objectbuilder\categories\
+++Contacts
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\objectbuilder\contacts\
+++Contents
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\objectbuilder\contents\
+++Headings
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\objectbuilder\headings\
+++Members
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\objectbuilder\members\
+++EntityBuilder.cs
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\objectbuilder\entitybuilder.cs
+++IEntityBuilder.cs
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\objectbuilder\ientitybuilder.cs
+++AsyncGenericRepository.cs
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\repositories\asyncgenericrepository.cs
 ++AutoMapper (10.1.1)
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:>2165
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:>2158
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:>2051
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:>2018
 ++AutoMapper.Extensions.Microsoft.DependencyInjection (8.1.1)
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:>2154
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:>2147
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:>2045
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:>2007
 ++EntityFrameworkCore.Triggered (3.0.0)
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:>2172
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:>2055
 ++Microsoft.AspNetCore.Identity (2.2.0)
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:>2157
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:>2047
 ++Microsoft.EntityFrameworkCore (6.0.0)
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:>2150
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:>2145
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:>2043
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:>2005
 ++Microsoft.EntityFrameworkCore.Relational (6.0.0)
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:>2161
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:>2049
 ++Microsoft.EntityFrameworkCore.SqlServer (6.0.0)
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:>2152
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:>2044
 ++Npgsql.EntityFrameworkCore.PostgreSQL.Design (1.1.0)
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:>2163
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:>2050
 ++20220309064759_f.cs
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\migrations\identity\20220309064759_f.cs
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\migrations\identity\20220309064759_f.cs
 ++IdentityContextModelSnapshot.cs
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\migrations\identity\identitycontextmodelsnapshot.cs
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\migrations\identity\identitycontextmodelsnapshot.cs
 ++20220309064740_f.Designer.cs
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\migrations\20220309064740_f.designer.cs
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\migrations\20220309064740_f.designer.cs
 ++CategoryBuilder.cs
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\objectbuilder\categories\categorybuilder.cs
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\objectbuilder\categories\categorybuilder.cs
 ++ContentBuilder.cs
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\objectbuilder\contents\contentbuilder.cs
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\objectbuilder\contents\contentbuilder.cs
 ++HeadingBuilder.cs
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\objectbuilder\headings\headingbuilder.cs
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\objectbuilder\headings\headingbuilder.cs
 ++MemberBuilder.cs
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\objectbuilder\members\memberbuilder.cs
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\objectbuilder\members\memberbuilder.cs
 ++20220309064759_f.Designer.cs
-i:{babf8009-e68f-4a1f-a356-57c2488696bf}:g:\drive'ım\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\migrations\identity\20220309064759_f.designer.cs
+i:{babf8009-e68f-4a1f-a356-57c2488696bf}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.persistence\kahvelikodlama.persistence\migrations\identity\20220309064759_f.designer.cs
 ++Attributes
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\attributes\
-++DateData.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\attributes\datedata.cs
-++EmailData.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\attributes\emaildata.cs
-++EncryptData.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\attributes\encryptdata.cs
-++HashData.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\attributes\hashdata.cs
-++StringData.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\attributes\stringdata.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\attributes\
 ++Contract
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\contract\
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\contract\
 ++IAuthService.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\contract\iauthservice.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\contract\iauthservice.cs
 ++ICategoryService.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\contract\icategoryservice.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\contract\icategoryservice.cs
+++IConsumer.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\contract\iconsumer.cs
 ++IContactService.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\contract\icontactservice.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\contract\icontactservice.cs
 ++IContentService.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\contract\icontentservice.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\contract\icontentservice.cs
+++IEventPublisher.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\contract\ieventpublisher.cs
 ++IFileUpload.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\contract\ifileupload.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\contract\ifileupload.cs
 ++IHeadingService.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\contract\iheadingservice.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\contract\iheadingservice.cs
 ++IMemberService.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\contract\imemberservice.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\contract\imemberservice.cs
 ++CQRS
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\
 ++Dto
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\dto\
-++CategoryDto.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\dto\categorydto.cs
-++ContactDto.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\dto\contactdto.cs
-++ContentDto.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\dto\contentdto.cs
-++ExceptionDto.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\dto\exceptiondto.cs
-++HeadingDto.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\dto\headingdto.cs
-++MemberDto.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\dto\memberdto.cs
-++MernisDto.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\dto\mernisdto.cs
-++RegisterDto.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\dto\registerdto.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\dto\
+++Filters
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\filters\
 ++Interfaces
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\interfaces\
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\interfaces\
 ++Mapper
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\mapper\
-++MappingProfile.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\mapper\mappingprofile.cs
-++Security
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\security\
-++Encryption.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\security\encryption.cs
-++IEncryption.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\security\iencryption.cs
-++InvalidEncryptException.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\security\invalidencryptexception.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\mapper\
 ++Validators
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\validators\
-++DateValidator.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\validators\datevalidator.cs
-++DefaultValidator.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\validators\defaultvalidator.cs
-++EmailValidator.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\validators\emailvalidator.cs
-++EncryptValidator.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\validators\encryptvalidator.cs
-++HashValidator.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\validators\hashvalidator.cs
-++IValidator.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\validators\ivalidator.cs
-++StringValidator.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\validators\stringvalidator.cs
-++ValidateClassProperties.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\validators\validateclassproperties.cs
-++Validator.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\validators\validator.cs
-++ValidatorFactory.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\validators\validatorfactory.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\validators\
+++DateData.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\attributes\datedata.cs
+++EmailData.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\attributes\emaildata.cs
+++StringData.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\attributes\stringdata.cs
 ++Commands
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\commands\
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\commands\
 ++Queries
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\queries\
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\queries\
+++BaseDto.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\dto\basedto.cs
+++CategoryDto.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\dto\categorydto.cs
+++ContactDto.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\dto\contactdto.cs
+++ContentDto.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\dto\contentdto.cs
+++ExceptionDto.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\dto\exceptiondto.cs
+++HeadingDto.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\dto\headingdto.cs
+++MemberDto.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\dto\memberdto.cs
+++MernisDto.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\dto\mernisdto.cs
+++RegisterDto.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\dto\registerdto.cs
+++CustomValidAttribute.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\filters\customvalidattribute.cs
+++ValidationFilterAttribute.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\filters\validationfilterattribute.cs
+++MappingProfile.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\mapper\mappingprofile.cs
+++DateValidator.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\validators\datevalidator.cs
+++DefaultValidator.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\validators\defaultvalidator.cs
+++EmailValidator.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\validators\emailvalidator.cs
+++IValidator.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\validators\ivalidator.cs
+++StringValidator.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\validators\stringvalidator.cs
+++ValidateClassProperties.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\validators\validateclassproperties.cs
+++Validator.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\validators\validator.cs
+++ValidatorFactory.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\validators\validatorfactory.cs
 ++MediatR.Extensions.Microsoft.DependencyInjection (9.0.0)
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:>2162
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:>2021
 ++Microsoft.AspNetCore.Http.Abstractions (2.2.0)
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:>2164
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:>2022
 ++Microsoft.AspNetCore.Http.Features (5.0.13)
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:>2142
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:>2003
 ++Microsoft.AspNetCore.Mvc.Abstractions (2.2.0)
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:>2156
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:>2016
 ++Microsoft.AspNetCore.Mvc.Core (2.2.5)
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:>2160
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:>2020
 ++Microsoft.Extensions.DependencyInjection.Abstractions (6.0.0)
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:>2149
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:>2010
+i:{a945c4b6-da57-42b5-a33a-4dd961d3980f}:>2490
 ++Authenticate
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\commands\authenticate\
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\queries\authenticate\
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\commands\authenticate\
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\queries\authenticate\
 ++IAsyncGenericRepository.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\interfaces\repositories\iasyncgenericrepository.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\interfaces\repositories\iasyncgenericrepository.cs
 ++AddRole
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\commands\authenticate\addrole\
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\commands\authenticate\addrole\
 ++Login
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\commands\authenticate\login\
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\commands\authenticate\login\
 ++Register
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\commands\authenticate\register\
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\commands\authenticate\register\
 ++Register-Admin
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\commands\authenticate\register-admin\
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\commands\authenticate\register-admin\
 ++GetUsersQueryHandler.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\queries\authenticate\getusersqueryhandler.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\queries\authenticate\getusersqueryhandler.cs
 ++GetUsersQueryRequest.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\queries\authenticate\getusersqueryrequest.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\queries\authenticate\getusersqueryrequest.cs
 ++AddRoleCommandHandler.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\commands\authenticate\addrole\addrolecommandhandler.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\commands\authenticate\addrole\addrolecommandhandler.cs
 ++AddRoleCommandRequest.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\commands\authenticate\addrole\addrolecommandrequest.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\commands\authenticate\addrole\addrolecommandrequest.cs
 ++AddRoleCommandValidator.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\commands\authenticate\addrole\addrolecommandvalidator.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\commands\authenticate\addrole\addrolecommandvalidator.cs
 ++LoginCommandHandler.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\commands\authenticate\login\logincommandhandler.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\commands\authenticate\login\logincommandhandler.cs
 ++LoginCommandRequest.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\commands\authenticate\login\logincommandrequest.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\commands\authenticate\login\logincommandrequest.cs
 ++LoginCommandValidator.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\commands\authenticate\login\logincommandvalidator.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\commands\authenticate\login\logincommandvalidator.cs
 ++RegisterCommandHandler.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\commands\authenticate\register\registercommandhandler.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\commands\authenticate\register\registercommandhandler.cs
 ++RegisterCommandRequest.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\commands\authenticate\register\registercommandrequest.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\commands\authenticate\register\registercommandrequest.cs
 ++RegisterCommandValidator.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\commands\authenticate\register\registercommandvalidator.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\commands\authenticate\register\registercommandvalidator.cs
 ++RegisterAdminCommandHandler.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\commands\authenticate\register-admin\registeradmincommandhandler.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\commands\authenticate\register-admin\registeradmincommandhandler.cs
 ++RegisterAdminCommandRequest.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\commands\authenticate\register-admin\registeradmincommandrequest.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\commands\authenticate\register-admin\registeradmincommandrequest.cs
 ++RegisterAdminCommandValidator.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\commands\authenticate\register-admin\registeradmincommandvalidator.cs
-++Class.cs
-++DefaultModelBinder.cs
-i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:g:\drive'ım\kahvelikodlama\kahvelikodlama\controllers\defaultmodelbinder.cs
+i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\cqrs\commands\authenticate\register-admin\registeradmincommandvalidator.cs
+++Solution 'KahveliKodlama' ‎(7 of 7 projects)
+i:{00000000-0000-0000-0000-000000000000}:KahveliKodlama.sln
+++KahveliKodlama.Infrastructure
+i:{00000000-0000-0000-0000-000000000000}:KahveliKodlama.Infrastructure
+i:{65d1576a-cd2f-49db-aa25-3c25bf4f6914}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.infrastructure\kahvelikodlama.infrastructure\kahvelikodlama.infrastructure.csproj
+++Class1.cs
+++C:\Program Files\dotnet\sdk\6.0.201\Sdks\Microsoft.NET.Sdk\targets\..\analyzers\Microsoft.CodeAnalysis.CSharp.NetAnalyzers.dll
+++C:\Program Files\dotnet\sdk\6.0.201\Sdks\Microsoft.NET.Sdk\targets\..\analyzers\Microsoft.CodeAnalysis.NetAnalyzers.dll
 ++NewFolder
-++Extension
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\extension\
-++RequestErrorInterceptorActionFilter.cs
-i:{db1245d4-6e4b-4cd3-adee-88fe87e93751}:g:\drive'ım\kahvelikodlama\kahvelikodlama.application\kahvelikodlama.application\extension\requesterrorinterceptoractionfilter.cs
+++Services
+i:{a945c4b6-da57-42b5-a33a-4dd961d3980f}:c:\users\legion\source\repos\kahvelikodlama\kahvelikodlama\kahvelikodlama.infrastructure\kahvelikodlama.infrastructure\services\
+++Microsoft.Extensions.Configuration.Abstractions (6.0.0)
+i:{a945c4b6-da57-42b5-a33a-4dd961d3980f}:>2491

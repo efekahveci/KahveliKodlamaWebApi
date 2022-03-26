@@ -4,20 +4,19 @@ using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace KahveliKodlama.Application.CQRS.Queries.Authenticate
+namespace KahveliKodlama.Application.CQRS.Queries.Authenticate;
+
+public class GetUsersHandler : IRequestHandler<GetUsersQueryRequest, ResponseResult>
 {
-    public class GetUsersHandler : IRequestHandler<GetUsersQueryRequest, ResponseResult>
+    private readonly IAuthService _authService;
+
+    public GetUsersHandler(IAuthService authService)
     {
-        private readonly IAuthService _authService;
+        _authService = authService;
+    }
 
-        public GetUsersHandler(IAuthService authService)
-        {
-            _authService = authService;
-        }
-
-        public async Task<ResponseResult> Handle(GetUsersQueryRequest request, CancellationToken cancellationToken)
-        {
-            return  await _authService.GetUsersAsync();
-        }
+    public async Task<ResponseResult> Handle(GetUsersQueryRequest request, CancellationToken cancellationToken)
+    {
+        return  await _authService.GetUsersAsync();
     }
 }

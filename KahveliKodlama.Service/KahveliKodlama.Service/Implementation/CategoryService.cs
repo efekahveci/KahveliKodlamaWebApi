@@ -2,10 +2,9 @@
 using KahveliKodlama.Domain.Entities;
 using KahveliKodlama.Persistence.Repositories;
 
-namespace KahveliKodlama.Service.Implementation
+namespace KahveliKodlama.Service.Implementation;
+
+public class CategoryService : AsyncGenericRepository<Category>, ICategoryService
 {
-    public class CategoryService : AsyncGenericRepository<Category>, ICategoryService
-    {
-    
-    }
+
 }

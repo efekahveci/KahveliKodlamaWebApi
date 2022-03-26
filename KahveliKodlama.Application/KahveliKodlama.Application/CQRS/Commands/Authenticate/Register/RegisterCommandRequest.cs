@@ -1,14 +1,15 @@
-﻿using KahveliKodlama.Domain.Entities;
+﻿using KahveliKodlama.Application.Attributes;
+using KahveliKodlama.Domain.Entities;
 using MediatR;
 
-namespace KahveliKodlama.Application.CQRS.Commands.Authenticate.Register
-{
-    public class RegisterCommandRequest:IRequest<ResponseResult>
-    {
-    
-        public string Username { get; set; }
+namespace KahveliKodlama.Application.CQRS.Commands.Authenticate.Register;
 
-        public string Email { get; set; }
-        public string Password { get; set; }
-    }
+public class RegisterCommandRequest:IRequest<ResponseResult>
+{
+    [Username]
+    public string Username { get; set; }
+    [Email]
+    public string Email { get; set; }
+    [Password]
+    public string Password { get; set; }
 }

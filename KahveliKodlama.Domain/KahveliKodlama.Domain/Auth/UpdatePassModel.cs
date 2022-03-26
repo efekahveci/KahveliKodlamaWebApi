@@ -1,12 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace KahveliKodlama.Domain.Auth
+namespace KahveliKodlama.Domain.Auth;
+
+public class UpdatePassViewModel
 {
-    public class UpdatePassViewModel
-    {
-        [Display(Name = "Yeni Şifre")]
-        [Required(ErrorMessage = "Lütfen şifreyi boş geçmeyiniz.")]
-        [DataType(DataType.Password)]
-        public string Password { get; set; }
-    }
+    [Display(Name = "Yeni Şifre")]
+    [Required(ErrorMessage = "Lütfen şifreyi boş geçmeyiniz.")]
+    [DataType(DataType.Password)]
+    public string Password { get; set; }
 }
