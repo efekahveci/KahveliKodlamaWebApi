@@ -1,5 +1,6 @@
 ﻿using KahveliKodlama.Application.Contract;
 using KahveliKodlama.Domain.Entities;
+using KahveliKodlama.Infrastructure.Contract;
 using KahveliKodlama.Persistence.Context;
 
 
@@ -8,9 +9,11 @@ namespace KahveliKodlama.Service.Events;
 public class EventConsumer : IConsumer<AppUser>
 {
     private readonly KahveliContext _context;
+    private readonly IEmailService _service;
 
-    public EventConsumer(KahveliContext context)
+    public EventConsumer(KahveliContext context,IEmailService service)
     {
+        _service = service;
         _context = context;
     }
 
@@ -22,4 +25,6 @@ public class EventConsumer : IConsumer<AppUser>
         _context.SaveChanges();
 
     }
+
+    
 }

@@ -35,8 +35,8 @@ public class MailPushController : ControllerBase
 
         if (retVal==true)
         {
-
-            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, new List<bool>() { retVal }));
+            _service.EmailSendNotify();
+            return Ok();
 
         }
 

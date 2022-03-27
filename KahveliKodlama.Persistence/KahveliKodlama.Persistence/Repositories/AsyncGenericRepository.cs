@@ -63,7 +63,7 @@ public class AsyncGenericRepository<TEntity> : IAsyncGenericRepository<TEntity> 
     }
     public async Task<TEntity> GetByIdInc(string id,Expression<Func<TEntity, object>> includes)
     {
-        return await _context.Set<TEntity>()
+        return await  Table
                      .AsNoTracking()
                      .Include(includes)
                      .Where(x => x.Status == true)

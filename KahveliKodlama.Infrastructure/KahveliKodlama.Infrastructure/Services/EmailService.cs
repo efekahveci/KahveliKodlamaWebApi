@@ -6,6 +6,8 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -20,27 +22,67 @@ public class EmailService : IEmailService
 
     public DbSet<Mail> Table => _context.Set<Mail>();
 
+    public void EmailSendNotify()
+    {
+
+        foreach (var item in Table)
+        {
+            try
+            {
+                MailMessage mail = new MailMessage();
+                mail.IsBodyHtml = true;
+                mail.To.Add(item.eMail);
+                mail.From = new MailAddress("kahvelikodlama@gmail.com", "Şifre Güncelleme", System.Text.Encoding.UTF8);
+                mail.Subject = "Şifre Güncelleme Talebi";
+                mail.Body = $"<a target=\"_blank\" href=\"https://localhost:5001\">Yeni şifre talebi için tıklayınız</a>";
+                mail.IsBodyHtml = true;
+                SmtpClient smp = new SmtpClient();
+                smp.Credentials = new NetworkCredential("kahvelikodlama@gmail.com", "KahveKodla123");
+                smp.Port = 587;
+                smp.Host = "smtp.gmail.com";
+                smp.EnableSsl = true;
+                smp.Send(mail);
+            }
+            catch (Exception )
+            {
+
+                throw ;
+            }
+        }
+
+      
+
+    }
 
     public async Task<bool> SendPushEmail(Mail email)
     {
 
-        try
+        var result = await Table.FirstOrDefaultAsync(x => x.eMail == email.eMail);
+
+        if (result==null)
         {
-            Mail mail = new Mail();
+            try
+            {
+                Mail mail = new Mail();
 
-            mail.eMail = email.eMail;
+                mail.eMail = email.eMail;
+                mail.CreatedTime = DateTime.UtcNow;
+                mail.LastModifyTime = DateTime.UtcNow;
 
-            await Table.AddAsync(mail);
-            await _context.SaveChangesAsync();
+                await Table.AddAsync(mail);
+                await _context.SaveChangesAsync();
 
-            return true;
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+
+            }
         }
-        catch (Exception )
-        {
-            return false;
 
-        }
-     
+
+        return false;
 
       
     }

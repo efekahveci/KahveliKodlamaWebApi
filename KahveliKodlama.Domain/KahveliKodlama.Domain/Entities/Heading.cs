@@ -17,7 +17,9 @@ public class Heading : BaseEntity
     //[StringLength(500, ErrorMessage = "En fazla 500 karakter en az 2 karakter uzunluğunda olmalıdır.", MinimumLength = 2)]
     //[Display(Name = "Başlık Açıklaması")]
     public string HeadingContent { get; set; }
-    
+    public string HeadingImage { get; set; }
+
+
     [Display(Name ="Etiket")]
     public string HeadingTag { get; set; }
 

@@ -118,12 +118,21 @@ public class HeadingController : ControllerBase
     [HttpGet("getSubHeading/{id}")]
     public async Task<IActionResult> GetSubHeading(string id)
     {
+       
+
+
         var result = await _headingService.GetSubHeadings(id);
 
-        if (result != null)
-        {
 
-            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, result));
+
+        if (result.Count > 0)
+        {
+            var retVal = _mapper.Map<List<Heading>, List<HeadingDto>>(result);
+
+
+
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, retVal));
+
         }
 
         return NoContent();

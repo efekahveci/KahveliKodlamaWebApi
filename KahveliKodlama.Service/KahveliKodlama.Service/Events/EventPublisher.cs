@@ -27,6 +27,7 @@ public partial class EventPublisher:IEventPublisher {
 
                 //try to handle published event
                  consumer.HandleEventAsync(@event);
+            
             }
             catch (Exception exception)
             {

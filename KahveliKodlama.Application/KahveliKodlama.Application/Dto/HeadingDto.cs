@@ -11,8 +11,10 @@ public class HeadingDto : BaseDto
     [StringLength(30)]
 
     public string HeadingName    { get; set; }
-    [StringLength(250)]
+   
+    public string HeadingImage { get; set; }
 
+    [StringLength(250)]
     public string HeadingContent  { get; set; }
    
 

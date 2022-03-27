@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace KahveliKodlama.Persistence.Migrations
 {
     [DbContext(typeof(KahveliContext))]
-    [Migration("20220325145456_f")]
+    [Migration("20220327192101_f")]
     partial class f
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -79,8 +79,8 @@ namespace KahveliKodlama.Persistence.Migrations
                             CategoryDesc = "C# | MVC | WEB API | BLAZOR",
                             CategoryImage = "https://okankaradag.com/wp-content/uploads/2021/06/asp.net-core-logo.png",
                             CategoryName = ".Net Core",
-                            CreatedTime = new DateTime(2022, 3, 25, 14, 54, 56, 273, DateTimeKind.Utc).AddTicks(6561),
-                            LastModifyTime = new DateTime(2022, 3, 25, 14, 54, 56, 273, DateTimeKind.Utc).AddTicks(6557),
+                            CreatedTime = new DateTime(2022, 3, 27, 19, 21, 1, 823, DateTimeKind.Utc).AddTicks(6879),
+                            LastModifyTime = new DateTime(2022, 3, 27, 19, 21, 1, 823, DateTimeKind.Utc).AddTicks(6876),
                             Status = true
                         },
                         new
@@ -91,8 +91,8 @@ namespace KahveliKodlama.Persistence.Migrations
                             CategoryDesc = "Angular JS | TypeScript | JavaScript | HTML | CSS",
                             CategoryImage = "https://wikiimg.tojsiabtv.com/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png",
                             CategoryName = "Angular",
-                            CreatedTime = new DateTime(2022, 3, 25, 14, 54, 56, 273, DateTimeKind.Utc).AddTicks(6588),
-                            LastModifyTime = new DateTime(2022, 3, 25, 14, 54, 56, 273, DateTimeKind.Utc).AddTicks(6587),
+                            CreatedTime = new DateTime(2022, 3, 27, 19, 21, 1, 823, DateTimeKind.Utc).AddTicks(6898),
+                            LastModifyTime = new DateTime(2022, 3, 27, 19, 21, 1, 823, DateTimeKind.Utc).AddTicks(6897),
                             Status = true
                         },
                         new
@@ -103,8 +103,8 @@ namespace KahveliKodlama.Persistence.Migrations
                             CategoryDesc = "SOLID | OOP | CLEAN CODE",
                             CategoryImage = "https://www.educative.io/v2api/editorpage/4792707659595776/image/5909454286487552",
                             CategoryName = "Nesneye Yönelimli Programlama",
-                            CreatedTime = new DateTime(2022, 3, 25, 14, 54, 56, 273, DateTimeKind.Utc).AddTicks(6603),
-                            LastModifyTime = new DateTime(2022, 3, 25, 14, 54, 56, 273, DateTimeKind.Utc).AddTicks(6603),
+                            CreatedTime = new DateTime(2022, 3, 27, 19, 21, 1, 823, DateTimeKind.Utc).AddTicks(6908),
+                            LastModifyTime = new DateTime(2022, 3, 27, 19, 21, 1, 823, DateTimeKind.Utc).AddTicks(6908),
                             Status = true
                         },
                         new
@@ -115,8 +115,8 @@ namespace KahveliKodlama.Persistence.Migrations
                             CategoryDesc = "ARCHITECTURE | DESIGN PATTERN",
                             CategoryImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhkxtBPjz_cFRYFHzR6XmfCIVFPEAZwpOlaA&usqp=CAU",
                             CategoryName = "Software Engineering",
-                            CreatedTime = new DateTime(2022, 3, 25, 14, 54, 56, 273, DateTimeKind.Utc).AddTicks(6616),
-                            LastModifyTime = new DateTime(2022, 3, 25, 14, 54, 56, 273, DateTimeKind.Utc).AddTicks(6615),
+                            CreatedTime = new DateTime(2022, 3, 27, 19, 21, 1, 823, DateTimeKind.Utc).AddTicks(6919),
+                            LastModifyTime = new DateTime(2022, 3, 27, 19, 21, 1, 823, DateTimeKind.Utc).AddTicks(6918),
                             Status = true
                         });
                 });
@@ -239,6 +239,9 @@ namespace KahveliKodlama.Persistence.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("HeadingContent")
+                        .HasColumnType("text");
+
+                    b.Property<string>("HeadingImage")
                         .HasColumnType("text");
 
                     b.Property<string>("HeadingName")

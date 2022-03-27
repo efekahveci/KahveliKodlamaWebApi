@@ -21,6 +21,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\KahveliKodlama.Application\KahveliKodlama.Application\KahveliKodlama.Application.csproj" />
     <ProjectReference Include="..\..\KahveliKodlama.Core\KahveliKodlama.Core\KahveliKodlama.Core.csproj" />
+    <ProjectReference Include="..\..\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure\KahveliKodlama.Infrastructure.csproj" />
     <ProjectReference Include="..\..\KahveliKodlama.Persistence\KahveliKodlama.Persistence\KahveliKodlama.Persistence.csproj" />
   </ItemGroup>
 

@@ -498,19 +498,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Legion\\.nuget\\packages\\": {}
+    "C:\\Users\\efekh\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Legion\\Source\\Repos\\kahvelikodlama\\KahveliKodlama\\KahveliKodlama.Domain\\KahveliKodlama.Domain\\KahveliKodlama.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\efekh\\Desktop\\Repo\\kahvelikodlama\\KahveliKodlama\\KahveliKodlama.Domain\\KahveliKodlama.Domain\\KahveliKodlama.Domain.csproj",
       "projectName": "KahveliKodlama.Domain",
-      "projectPath": "C:\\Users\\Legion\\Source\\Repos\\kahvelikodlama\\KahveliKodlama\\KahveliKodlama.Domain\\KahveliKodlama.Domain\\KahveliKodlama.Domain.csproj",
-      "packagesPath": "C:\\Users\\Legion\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Legion\\Source\\Repos\\kahvelikodlama\\KahveliKodlama\\KahveliKodlama.Domain\\KahveliKodlama.Domain\\obj\\",
+      "projectPath": "C:\\Users\\efekh\\Desktop\\Repo\\kahvelikodlama\\KahveliKodlama\\KahveliKodlama.Domain\\KahveliKodlama.Domain\\KahveliKodlama.Domain.csproj",
+      "packagesPath": "C:\\Users\\efekh\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\efekh\\Desktop\\Repo\\kahvelikodlama\\KahveliKodlama\\KahveliKodlama.Domain\\KahveliKodlama.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Legion\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\efekh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -10,4 +10,6 @@ public interface IEmailService {
 
     Task<bool> SendPushEmail(Mail email);
 
+    void EmailSendNotify();
+
 }

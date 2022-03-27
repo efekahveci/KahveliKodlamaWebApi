@@ -12,4 +12,7 @@ public interface IHeadingService : IAsyncGenericRepository<Heading>
 
     Task<List<Heading>> GetSubHeadings(string categoryId);
 
+ //   Task<List<Heading>> GetSubCategoryHeadings(string categoryId);
+
+
 }
