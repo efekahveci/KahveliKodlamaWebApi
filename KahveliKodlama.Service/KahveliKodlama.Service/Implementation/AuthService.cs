@@ -4,7 +4,6 @@ using KahveliKodlama.Application.CQRS.Commands.Authenticate.Login;
 using KahveliKodlama.Application.CQRS.Commands.Authenticate.Register;
 using KahveliKodlama.Application.CQRS.Commands.Authenticate.RegisterAdmin;
 using KahveliKodlama.Core.Extensions;
-using KahveliKodlama.Domain.Auth;
 using KahveliKodlama.Domain.Entities;
 using KahveliKodlama.Infrastructure.ContextEngine;
 using KahveliKodlama.Persistence.Context;
@@ -140,37 +139,6 @@ public class AuthService : IAuthService
         return new ResponseResult(Domain.Enum.ResponseCode.OK, "Çıkış Yapıldı.");
     }
 
-    public async Task<ResponseResult> PasswordReset(ResetPassViewModel model)
-    {
-        AppUser user = await _userManager.FindByEmailAsync(model.Email);
-        if (user != null)
-        {
-            string resetToken = await _userManager.GeneratePasswordResetTokenAsync(user);
-
-            MailMessage mail = new MailMessage();
-            mail.IsBodyHtml = true;
-            mail.To.Add(user.Email);
-            mail.From = new MailAddress("kahvelikodlama@gmail.com", "Şifre Güncelleme", System.Text.Encoding.UTF8);
-            mail.Subject = "Şifre Güncelleme Talebi";
-            mail.Body = $"<a target=\"_blank\" href=\"https://localhost:5001{resetToken}\">Yeni şifre talebi için tıklayınız</a>";
-            mail.IsBodyHtml = true;
-            SmtpClient smp = new SmtpClient();
-            smp.Credentials = new NetworkCredential("kahvelikodlama@gmail.com", "KahveKodla123");
-            smp.Port = 587;
-            smp.Host = "smtp.gmail.com";
-            smp.EnableSsl = true;
-            smp.Send(mail);
-
-
-            return new ResponseResult(Domain.Enum.ResponseCode.OK, "Başarılı");
-        }
-        else
-
-            return new ResponseResult(Domain.Enum.ResponseCode.OK, "Hata");
-
-
-    }
-
     public async Task<ResponseResult> Register(RegisterCommandRequest model)
     {
 
@@ -244,20 +212,5 @@ public class AuthService : IAuthService
             return new ResponseResult(Domain.Enum.ResponseCode.No_Content, "Yetkisiz istek");
     }
 
-    public async Task<ResponseResult> UpdatePassword(UpdatePassViewModel model, string userId, string token)
-    {
-        AppUser user = await _userManager.FindByIdAsync(userId);
-        IdentityResult result = await _userManager.ResetPasswordAsync(user, HttpUtility.UrlDecode(token), model.Password);
-        if (result.Succeeded)
-        {
-            await _userManager.UpdateSecurityStampAsync(user);
-
-            return new ResponseResult(Domain.Enum.ResponseCode.OK, "Başarılı");
-        }
-        else
-
-            return new ResponseResult(Domain.Enum.ResponseCode.OK, "Hata");
-
-
-    }
+   
 }

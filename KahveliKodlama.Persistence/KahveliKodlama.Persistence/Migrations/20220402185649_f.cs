@@ -23,9 +23,8 @@ namespace KahveliKodlama.Persistence.Migrations
                     CreatedTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     LastModifyTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
                     DeleteTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    Field0 = table.Column<string>(type: "text", nullable: true),
-                    Field1 = table.Column<string>(type: "text", nullable: true),
-                    Field2 = table.Column<string>(type: "text", nullable: true)
+                    Field1 = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    Field2 = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -37,16 +36,15 @@ namespace KahveliKodlama.Persistence.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    Title = table.Column<string>(type: "character varying(30)", maxLength: 30, nullable: false),
-                    Content = table.Column<string>(type: "character varying(1000)", maxLength: 1000, nullable: false),
-                    MemberId = table.Column<Guid>(type: "uuid", nullable: false),
+                    Title = table.Column<string>(type: "text", nullable: true),
+                    Content = table.Column<string>(type: "text", nullable: true),
+                    Email = table.Column<string>(type: "text", nullable: true),
                     Status = table.Column<bool>(type: "boolean", nullable: false),
                     CreatedTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     LastModifyTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
                     DeleteTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    Field0 = table.Column<string>(type: "text", nullable: true),
-                    Field1 = table.Column<string>(type: "text", nullable: true),
-                    Field2 = table.Column<string>(type: "text", nullable: true)
+                    Field1 = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    Field2 = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -58,18 +56,20 @@ namespace KahveliKodlama.Persistence.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    Post1 = table.Column<string>(type: "text", nullable: false),
-                    PostH1 = table.Column<string>(type: "text", nullable: true),
-                    Post2 = table.Column<string>(type: "text", nullable: true),
-                    PostCode = table.Column<string>(type: "text", nullable: true),
+                    ContentImage1url = table.Column<string>(type: "text", nullable: true),
+                    Content1 = table.Column<string>(type: "text", nullable: true),
+                    ContentHeading2 = table.Column<string>(type: "text", nullable: true),
+                    Content2 = table.Column<string>(type: "text", nullable: true),
+                    CodeBlock1 = table.Column<string>(type: "text", nullable: true),
+                    ContentHeading3 = table.Column<string>(type: "text", nullable: true),
+                    Content3 = table.Column<string>(type: "text", nullable: true),
                     HeadingId = table.Column<Guid>(type: "uuid", nullable: false),
                     Status = table.Column<bool>(type: "boolean", nullable: false),
                     CreatedTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     LastModifyTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
                     DeleteTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    Field0 = table.Column<string>(type: "text", nullable: true),
-                    Field1 = table.Column<string>(type: "text", nullable: true),
-                    Field2 = table.Column<string>(type: "text", nullable: true)
+                    Field1 = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    Field2 = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -86,9 +86,8 @@ namespace KahveliKodlama.Persistence.Migrations
                     CreatedTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     LastModifyTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
                     DeleteTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    Field0 = table.Column<string>(type: "text", nullable: true),
-                    Field1 = table.Column<string>(type: "text", nullable: true),
-                    Field2 = table.Column<string>(type: "text", nullable: true)
+                    Field1 = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    Field2 = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -120,9 +119,8 @@ namespace KahveliKodlama.Persistence.Migrations
                     CreatedTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false, defaultValueSql: "now()"),
                     LastModifyTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: true, defaultValueSql: "now()"),
                     DeleteTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    Field0 = table.Column<string>(type: "text", nullable: true),
-                    Field1 = table.Column<string>(type: "text", nullable: true),
-                    Field2 = table.Column<string>(type: "text", nullable: true)
+                    Field1 = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    Field2 = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -134,20 +132,19 @@ namespace KahveliKodlama.Persistence.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    HeadingName = table.Column<string>(type: "text", nullable: true),
-                    HeadingContent = table.Column<string>(type: "text", nullable: true),
-                    HeadingImage = table.Column<string>(type: "text", nullable: true),
-                    HeadingTag = table.Column<string>(type: "text", nullable: true),
-                    HeadingViews = table.Column<int>(type: "integer", nullable: false),
+                    HeadingName = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: true),
+                    HeadingContent = table.Column<string>(type: "character varying(300)", maxLength: 300, nullable: true),
+                    HeadingImage = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: true),
+                    HeadingTag = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: true),
+                    HeadingViews = table.Column<short>(type: "smallint", nullable: false),
                     MemberId = table.Column<Guid>(type: "uuid", nullable: false),
                     CategoryId = table.Column<Guid>(type: "uuid", nullable: false),
                     Status = table.Column<bool>(type: "boolean", nullable: false),
                     CreatedTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     LastModifyTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
                     DeleteTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    Field0 = table.Column<string>(type: "text", nullable: true),
-                    Field1 = table.Column<string>(type: "text", nullable: true),
-                    Field2 = table.Column<string>(type: "text", nullable: true)
+                    Field1 = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    Field2 = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -168,13 +165,13 @@ namespace KahveliKodlama.Persistence.Migrations
 
             migrationBuilder.InsertData(
                 table: "Categories",
-                columns: new[] { "Id", "CategoryActive", "CategoryCode", "CategoryDesc", "CategoryImage", "CategoryName", "CreatedTime", "DeleteTime", "Field0", "Field1", "Field2", "LastModifyTime", "Status" },
+                columns: new[] { "Id", "CategoryActive", "CategoryCode", "CategoryDesc", "CategoryImage", "CategoryName", "CreatedTime", "DeleteTime", "Field1", "Field2", "LastModifyTime", "Status" },
                 values: new object[,]
                 {
-                    { new Guid("1ebf1452-3bdc-4618-a25a-c31575c89074"), true, "001", "C# | MVC | WEB API | BLAZOR", "https://okankaradag.com/wp-content/uploads/2021/06/asp.net-core-logo.png", ".Net Core", new DateTime(2022, 3, 27, 19, 21, 1, 823, DateTimeKind.Utc).AddTicks(6879), null, null, null, null, new DateTime(2022, 3, 27, 19, 21, 1, 823, DateTimeKind.Utc).AddTicks(6876), true },
-                    { new Guid("2ebf1452-3bdc-4618-a25a-c31575c89074"), true, "002", "Angular JS | TypeScript | JavaScript | HTML | CSS", "https://wikiimg.tojsiabtv.com/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png", "Angular", new DateTime(2022, 3, 27, 19, 21, 1, 823, DateTimeKind.Utc).AddTicks(6898), null, null, null, null, new DateTime(2022, 3, 27, 19, 21, 1, 823, DateTimeKind.Utc).AddTicks(6897), true },
-                    { new Guid("3ebf1452-3bdc-4618-a25a-c31575c89074"), true, "003", "SOLID | OOP | CLEAN CODE", "https://www.educative.io/v2api/editorpage/4792707659595776/image/5909454286487552", "Nesneye Yönelimli Programlama", new DateTime(2022, 3, 27, 19, 21, 1, 823, DateTimeKind.Utc).AddTicks(6908), null, null, null, null, new DateTime(2022, 3, 27, 19, 21, 1, 823, DateTimeKind.Utc).AddTicks(6908), true },
-                    { new Guid("d5d89327-8e72-4c06-bea3-bc47ebcd05a7"), true, "004", "ARCHITECTURE | DESIGN PATTERN", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhkxtBPjz_cFRYFHzR6XmfCIVFPEAZwpOlaA&usqp=CAU", "Software Engineering", new DateTime(2022, 3, 27, 19, 21, 1, 823, DateTimeKind.Utc).AddTicks(6919), null, null, null, null, new DateTime(2022, 3, 27, 19, 21, 1, 823, DateTimeKind.Utc).AddTicks(6918), true }
+                    { new Guid("1ebf1452-3bdc-4618-a25a-c31575c89074"), true, "001", "C# | MVC | WEB API | BLAZOR", "https://okankaradag.com/wp-content/uploads/2021/06/asp.net-core-logo.png", ".Net Core", new DateTime(2022, 4, 2, 18, 56, 49, 342, DateTimeKind.Utc).AddTicks(6561), null, null, null, new DateTime(2022, 4, 2, 18, 56, 49, 342, DateTimeKind.Utc).AddTicks(6557), true },
+                    { new Guid("2ebf1452-3bdc-4618-a25a-c31575c89074"), true, "002", "Angular JS | TypeScript | JavaScript | HTML | CSS", "https://wikiimg.tojsiabtv.com/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png", "Angular", new DateTime(2022, 4, 2, 18, 56, 49, 342, DateTimeKind.Utc).AddTicks(6589), null, null, null, new DateTime(2022, 4, 2, 18, 56, 49, 342, DateTimeKind.Utc).AddTicks(6589), true },
+                    { new Guid("3ebf1452-3bdc-4618-a25a-c31575c89074"), true, "003", "SOLID | OOP | CLEAN CODE", "https://www.educative.io/v2api/editorpage/4792707659595776/image/5909454286487552", "Nesneye Yönelimli Programlama", new DateTime(2022, 4, 2, 18, 56, 49, 342, DateTimeKind.Utc).AddTicks(6631), null, null, null, new DateTime(2022, 4, 2, 18, 56, 49, 342, DateTimeKind.Utc).AddTicks(6631), true },
+                    { new Guid("d5d89327-8e72-4c06-bea3-bc47ebcd05a7"), true, "004", "ARCHITECTURE | DESIGN PATTERN", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhkxtBPjz_cFRYFHzR6XmfCIVFPEAZwpOlaA&usqp=CAU", "Software Engineering", new DateTime(2022, 4, 2, 18, 56, 49, 342, DateTimeKind.Utc).AddTicks(6641), null, null, null, new DateTime(2022, 4, 2, 18, 56, 49, 342, DateTimeKind.Utc).AddTicks(6641), true }
                 });
 
             migrationBuilder.CreateIndex(

@@ -7,18 +7,22 @@ public class HeadingDto : BaseDto
 {
     public Guid CategoryId { get; set; }
 
-    public Guid  MemberId { get; set; }
-    [StringLength(30)]
+    public Guid MemberId { get; set; }
 
-    public string HeadingName    { get; set; }
-   
+    [StringLength(50)]
+
+    public string HeadingName { get; set; }
+    [StringLength(200)]
+
     public string HeadingImage { get; set; }
 
-    [StringLength(250)]
-    public string HeadingContent  { get; set; }
-   
+    [StringLength(300)]
 
-    public string HeadingTag      { get; set; }
+    public string HeadingContent { get; set; }
 
-    
+    [StringLength(50)]
+
+    public string HeadingTag { get; set; }
+
+
 }

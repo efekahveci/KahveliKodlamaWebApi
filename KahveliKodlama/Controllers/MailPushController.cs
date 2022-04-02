@@ -35,7 +35,7 @@ public class MailPushController : ControllerBase
 
         if (retVal==true)
         {
-            _service.EmailSendNotify();
+           
             return Ok();
 
         }

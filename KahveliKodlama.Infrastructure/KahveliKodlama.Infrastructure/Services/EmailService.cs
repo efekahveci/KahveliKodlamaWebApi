@@ -1,4 +1,5 @@
-﻿using KahveliKodlama.Domain.Entities;
+﻿using KahveliKodlama.Application.Dto;
+using KahveliKodlama.Domain.Entities;
 using KahveliKodlama.Infrastructure.ContextEngine;
 using KahveliKodlama.Infrastructure.Contract;
 using KahveliKodlama.Persistence.Context;
@@ -22,7 +23,7 @@ public class EmailService : IEmailService
 
     public DbSet<Mail> Table => _context.Set<Mail>();
 
-    public void EmailSendNotify()
+    public void EmailSendNotify(NewContentAdd content)
     {
 
         foreach (var item in Table)
@@ -34,7 +35,7 @@ public class EmailService : IEmailService
                 mail.To.Add(item.eMail);
                 mail.From = new MailAddress("kahvelikodlama@gmail.com", "Şifre Güncelleme", System.Text.Encoding.UTF8);
                 mail.Subject = "Şifre Güncelleme Talebi";
-                mail.Body = $"<a target=\"_blank\" href=\"https://localhost:5001\">Yeni şifre talebi için tıklayınız</a>";
+                mail.Body = content.Body;
                 mail.IsBodyHtml = true;
                 SmtpClient smp = new SmtpClient();
                 smp.Credentials = new NetworkCredential("kahvelikodlama@gmail.com", "KahveKodla123");

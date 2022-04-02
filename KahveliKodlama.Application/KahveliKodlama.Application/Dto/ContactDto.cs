@@ -4,12 +4,9 @@ namespace KahveliKodlama.Application.Dto;
 
 public class ContactDto : BaseDto
 {
-   
-    public string Post1 { get; set; }
-    public string PostH1 { get; set; }
-    public string Post2 { get; set; }
-    public string PostCode { get; set; }
 
+    public string Title { get; set; }
+    public string Content { get; set; }
 
-    public virtual Guid HeadingId { get; set; }
+    public string Email { get; set; }
 }

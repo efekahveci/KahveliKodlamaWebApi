@@ -8,26 +8,16 @@ namespace KahveliKodlama.Domain.Entities;
 public class Heading : BaseEntity
 {
 
-    //[Required(ErrorMessage = "Başlık alanı gereklidir.")]
-    //[StringLength(20, ErrorMessage = "En fazla 20 karakter en az 5 karakter uzunluğunda olmalıdır.", MinimumLength = 5)]
-
-    [Display(Name = "Başlık Adı")]
+    [StringLength(50)]
     public string HeadingName { get; set; }
 
-    //[StringLength(500, ErrorMessage = "En fazla 500 karakter en az 2 karakter uzunluğunda olmalıdır.", MinimumLength = 2)]
-    //[Display(Name = "Başlık Açıklaması")]
+    [StringLength(300)]
     public string HeadingContent { get; set; }
+    [StringLength(200)]
     public string HeadingImage { get; set; }
-
-
-    [Display(Name ="Etiket")]
+    [StringLength(50)]
     public string HeadingTag { get; set; }
-
-
-
-    [Display(Name = "Görüntüleme")]
-    public int HeadingViews { get; set; }
-
+    public short HeadingViews { get; set; }
 
     [ForeignKey("MemberId")]
     public virtual Guid MemberId { get; set; }
@@ -35,5 +25,4 @@ public class Heading : BaseEntity
     [ForeignKey("CategoryId")]
     public virtual Guid CategoryId { get; set; }
 
-   
 }

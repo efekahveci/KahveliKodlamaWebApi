@@ -13,9 +13,9 @@ public class BaseEntity
     public DateTime? LastModifyTime { get; set; }
     public DateTime? DeleteTime { get; set; }
 
-
-    public string Field0 { get; set; }
+    [StringLength(100)]
     public string Field1 { get; set; }
+    [StringLength(200)]
     public string Field2 { get; set; }
 
 }

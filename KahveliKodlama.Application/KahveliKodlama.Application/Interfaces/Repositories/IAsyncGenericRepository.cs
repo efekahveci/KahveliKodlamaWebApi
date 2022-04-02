@@ -20,5 +20,5 @@ public interface IAsyncGenericRepository<TEntity> where TEntity : class
 
     Task Delete(string id);
 
-
+    
 }

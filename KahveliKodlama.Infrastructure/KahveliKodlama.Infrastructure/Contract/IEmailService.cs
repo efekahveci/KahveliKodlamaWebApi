@@ -1,4 +1,5 @@
-﻿using KahveliKodlama.Domain.Entities;
+﻿using KahveliKodlama.Application.Dto;
+using KahveliKodlama.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,5 @@ public interface IEmailService {
 
     Task<bool> SendPushEmail(Mail email);
 
-    void EmailSendNotify();
-
+    void EmailSendNotify(NewContentAdd content);
 }

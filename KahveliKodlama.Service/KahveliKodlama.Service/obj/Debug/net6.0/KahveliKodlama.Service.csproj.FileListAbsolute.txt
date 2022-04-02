@@ -84,3 +84,5 @@ C:\Users\efekh\Desktop\Repo\kahvelikodlama\KahveliKodlama\KahveliKodlama.Service
 C:\Users\efekh\Desktop\Repo\kahvelikodlama\KahveliKodlama\KahveliKodlama.Service\KahveliKodlama.Service\obj\Debug\net6.0\refint\KahveliKodlama.Service.dll
 C:\Users\efekh\Desktop\Repo\kahvelikodlama\KahveliKodlama\KahveliKodlama.Service\KahveliKodlama.Service\obj\Debug\net6.0\KahveliKodlama.Service.pdb
 C:\Users\efekh\Desktop\Repo\kahvelikodlama\KahveliKodlama\KahveliKodlama.Service\KahveliKodlama.Service\obj\Debug\net6.0\ref\KahveliKodlama.Service.dll
+C:\Users\Legion\Source\Repos\kahvelikodlama\KahveliKodlama\KahveliKodlama.Service\KahveliKodlama.Service\bin\Debug\net6.0\KahveliKodlama.Infrastructure.dll
+C:\Users\Legion\Source\Repos\kahvelikodlama\KahveliKodlama\KahveliKodlama.Service\KahveliKodlama.Service\bin\Debug\net6.0\KahveliKodlama.Infrastructure.pdb

@@ -4,8 +4,6 @@ using KahveliKodlama.Application.CQRS.Commands.Authenticate.Login;
 using KahveliKodlama.Application.CQRS.Commands.Authenticate.Register;
 using KahveliKodlama.Application.CQRS.Commands.Authenticate.RegisterAdmin;
 using KahveliKodlama.Application.CQRS.Queries.Authenticate;
-using KahveliKodlama.Domain.Auth;
-using KahveliKodlama.Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
@@ -113,20 +111,6 @@ public class AuthenticateController : ControllerBase
 
     }
 
-    [HttpPost]
-    [Route("PasswordReset")]
-    public async Task<ResponseResult> PasswordReset([FromBody]  ResetPassViewModel model)
-    {
-        return await _authService.PasswordReset(model);
-
-    }
 
 
-    //[HttpPost("UpdatePassword/{userId}/{id}")]
-
-    //public async Task<ResponseResult> UpdatePassword([FromBody] UpdatePassViewModel model, [FromBody] string userId, string token)
-    //{
-    //    return await _authService.UpdatePassword(model);
-
-    //}
 }

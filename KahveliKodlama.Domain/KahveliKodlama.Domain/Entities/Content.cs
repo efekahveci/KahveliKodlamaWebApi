@@ -6,17 +6,19 @@ namespace KahveliKodlama.Domain.Entities;
 
 public class Content : BaseEntity 
 {
-  
 
-    [Required(ErrorMessage = "Post alanı boş bırakılamaz..")]
-    [Display(Name = "Post Adı")]
-    [MinLength(3,ErrorMessage ="En az 3 kelime olmalı")]
-    public string Post1 { get; set; }
-    public string PostH1 { get; set; }
-    public string Post2 { get; set; }
-    public string PostCode { get; set; }
+
+    public string ContentImage1url { get; set; }
+    public string Content1 { get; set; }
+    public string ContentHeading2 { get; set; }
+    public string Content2 { get; set; }
+
+    public string CodeBlock1 { get; set; }
+    public string ContentHeading3 { get; set; }
+    public string Content3 { get; set; }
 
 
     [ForeignKey("HeadingId")]
     public virtual Guid HeadingId { get; set; }
+
 }

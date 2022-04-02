@@ -15,8 +15,13 @@ namespace KahveliKodlama.Service.Implementation;
 
 public class ContentService : AsyncGenericRepository<Content>,IContentService
 {
+   
+
+   
     public async Task<Content> UpdateContent(ContentDto contentDto)
     {
+      
+
         var result = await GetById(contentDto.Id.ToString());
 
         var retVal = result.Merge(contentDto);

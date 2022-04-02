@@ -16,11 +16,14 @@ public class ContentController : ControllerBase
 {
     private readonly IContentService _contentService;
     private readonly IMapper _mapper;
+    private readonly IEventPublisher _publish;
 
-    public ContentController(IContentService contentService, IMapper mapper)
+   
+    public ContentController(IContentService contentService, IMapper mapper, IEventPublisher publish)
     {
         _contentService = contentService;
         _mapper = mapper;
+        _publish=publish;
     }
 
     [HttpGet("getAllDto")]
@@ -122,6 +125,12 @@ public class ContentController : ControllerBase
            
 
             await _contentService.Create(result);
+
+            var newContent = new NewContentAdd();
+            newContent.Body = result.Content1;
+
+
+             _publish.PublishAsync(newContent);
 
             return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, new List<Content>() { result }));
 

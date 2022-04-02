@@ -516,19 +516,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\efekh\\.nuget\\packages\\": {}
+    "C:\\Users\\Legion\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\efekh\\Desktop\\Repo\\kahvelikodlama\\KahveliKodlama\\KahveliKodlama.Core\\KahveliKodlama.Core\\KahveliKodlama.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Legion\\source\\repos\\kahvelikodlama\\KahveliKodlama\\KahveliKodlama.Core\\KahveliKodlama.Core\\KahveliKodlama.Core.csproj",
       "projectName": "KahveliKodlama.Core",
-      "projectPath": "C:\\Users\\efekh\\Desktop\\Repo\\kahvelikodlama\\KahveliKodlama\\KahveliKodlama.Core\\KahveliKodlama.Core\\KahveliKodlama.Core.csproj",
-      "packagesPath": "C:\\Users\\efekh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\efekh\\Desktop\\Repo\\kahvelikodlama\\KahveliKodlama\\KahveliKodlama.Core\\KahveliKodlama.Core\\obj\\",
+      "projectPath": "C:\\Users\\Legion\\source\\repos\\kahvelikodlama\\KahveliKodlama\\KahveliKodlama.Core\\KahveliKodlama.Core\\KahveliKodlama.Core.csproj",
+      "packagesPath": "C:\\Users\\Legion\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Legion\\source\\repos\\kahvelikodlama\\KahveliKodlama\\KahveliKodlama.Core\\KahveliKodlama.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\efekh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Legion\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -542,8 +542,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\efekh\\Desktop\\Repo\\kahvelikodlama\\KahveliKodlama\\KahveliKodlama.Domain\\KahveliKodlama.Domain\\KahveliKodlama.Domain.csproj": {
-              "projectPath": "C:\\Users\\efekh\\Desktop\\Repo\\kahvelikodlama\\KahveliKodlama\\KahveliKodlama.Domain\\KahveliKodlama.Domain\\KahveliKodlama.Domain.csproj"
+            "C:\\Users\\Legion\\source\\repos\\kahvelikodlama\\KahveliKodlama\\KahveliKodlama.Domain\\KahveliKodlama.Domain\\KahveliKodlama.Domain.csproj": {
+              "projectPath": "C:\\Users\\Legion\\source\\repos\\kahvelikodlama\\KahveliKodlama\\KahveliKodlama.Domain\\KahveliKodlama.Domain\\KahveliKodlama.Domain.csproj"
             }
           }
         }

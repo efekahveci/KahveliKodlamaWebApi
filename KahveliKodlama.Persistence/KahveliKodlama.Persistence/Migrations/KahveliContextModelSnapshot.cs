@@ -49,14 +49,13 @@ namespace KahveliKodlama.Persistence.Migrations
                     b.Property<DateTime?>("DeleteTime")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<string>("Field0")
-                        .HasColumnType("text");
-
                     b.Property<string>("Field1")
-                        .HasColumnType("text");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<string>("Field2")
-                        .HasColumnType("text");
+                        .HasMaxLength(200)
+                        .HasColumnType("character varying(200)");
 
                     b.Property<DateTime?>("LastModifyTime")
                         .HasColumnType("timestamp with time zone");
@@ -77,8 +76,8 @@ namespace KahveliKodlama.Persistence.Migrations
                             CategoryDesc = "C# | MVC | WEB API | BLAZOR",
                             CategoryImage = "https://okankaradag.com/wp-content/uploads/2021/06/asp.net-core-logo.png",
                             CategoryName = ".Net Core",
-                            CreatedTime = new DateTime(2022, 3, 27, 19, 21, 1, 823, DateTimeKind.Utc).AddTicks(6879),
-                            LastModifyTime = new DateTime(2022, 3, 27, 19, 21, 1, 823, DateTimeKind.Utc).AddTicks(6876),
+                            CreatedTime = new DateTime(2022, 4, 2, 18, 56, 49, 342, DateTimeKind.Utc).AddTicks(6561),
+                            LastModifyTime = new DateTime(2022, 4, 2, 18, 56, 49, 342, DateTimeKind.Utc).AddTicks(6557),
                             Status = true
                         },
                         new
@@ -89,8 +88,8 @@ namespace KahveliKodlama.Persistence.Migrations
                             CategoryDesc = "Angular JS | TypeScript | JavaScript | HTML | CSS",
                             CategoryImage = "https://wikiimg.tojsiabtv.com/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png",
                             CategoryName = "Angular",
-                            CreatedTime = new DateTime(2022, 3, 27, 19, 21, 1, 823, DateTimeKind.Utc).AddTicks(6898),
-                            LastModifyTime = new DateTime(2022, 3, 27, 19, 21, 1, 823, DateTimeKind.Utc).AddTicks(6897),
+                            CreatedTime = new DateTime(2022, 4, 2, 18, 56, 49, 342, DateTimeKind.Utc).AddTicks(6589),
+                            LastModifyTime = new DateTime(2022, 4, 2, 18, 56, 49, 342, DateTimeKind.Utc).AddTicks(6589),
                             Status = true
                         },
                         new
@@ -101,8 +100,8 @@ namespace KahveliKodlama.Persistence.Migrations
                             CategoryDesc = "SOLID | OOP | CLEAN CODE",
                             CategoryImage = "https://www.educative.io/v2api/editorpage/4792707659595776/image/5909454286487552",
                             CategoryName = "Nesneye Yönelimli Programlama",
-                            CreatedTime = new DateTime(2022, 3, 27, 19, 21, 1, 823, DateTimeKind.Utc).AddTicks(6908),
-                            LastModifyTime = new DateTime(2022, 3, 27, 19, 21, 1, 823, DateTimeKind.Utc).AddTicks(6908),
+                            CreatedTime = new DateTime(2022, 4, 2, 18, 56, 49, 342, DateTimeKind.Utc).AddTicks(6631),
+                            LastModifyTime = new DateTime(2022, 4, 2, 18, 56, 49, 342, DateTimeKind.Utc).AddTicks(6631),
                             Status = true
                         },
                         new
@@ -113,8 +112,8 @@ namespace KahveliKodlama.Persistence.Migrations
                             CategoryDesc = "ARCHITECTURE | DESIGN PATTERN",
                             CategoryImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhkxtBPjz_cFRYFHzR6XmfCIVFPEAZwpOlaA&usqp=CAU",
                             CategoryName = "Software Engineering",
-                            CreatedTime = new DateTime(2022, 3, 27, 19, 21, 1, 823, DateTimeKind.Utc).AddTicks(6919),
-                            LastModifyTime = new DateTime(2022, 3, 27, 19, 21, 1, 823, DateTimeKind.Utc).AddTicks(6918),
+                            CreatedTime = new DateTime(2022, 4, 2, 18, 56, 49, 342, DateTimeKind.Utc).AddTicks(6641),
+                            LastModifyTime = new DateTime(2022, 4, 2, 18, 56, 49, 342, DateTimeKind.Utc).AddTicks(6641),
                             Status = true
                         });
                 });
@@ -126,9 +125,7 @@ namespace KahveliKodlama.Persistence.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<string>("Content")
-                        .IsRequired()
-                        .HasMaxLength(1000)
-                        .HasColumnType("character varying(1000)");
+                        .HasColumnType("text");
 
                     b.Property<DateTime>("CreatedTime")
                         .HasColumnType("timestamp with time zone");
@@ -136,28 +133,25 @@ namespace KahveliKodlama.Persistence.Migrations
                     b.Property<DateTime?>("DeleteTime")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<string>("Field0")
+                    b.Property<string>("Email")
                         .HasColumnType("text");
 
                     b.Property<string>("Field1")
-                        .HasColumnType("text");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<string>("Field2")
-                        .HasColumnType("text");
+                        .HasMaxLength(200)
+                        .HasColumnType("character varying(200)");
 
                     b.Property<DateTime?>("LastModifyTime")
                         .HasColumnType("timestamp with time zone");
-
-                    b.Property<Guid>("MemberId")
-                        .HasColumnType("uuid");
 
                     b.Property<bool>("Status")
                         .HasColumnType("boolean");
 
                     b.Property<string>("Title")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("character varying(30)");
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
@@ -170,39 +164,46 @@ namespace KahveliKodlama.Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
+                    b.Property<string>("CodeBlock1")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Content1")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Content2")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Content3")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ContentHeading2")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ContentHeading3")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ContentImage1url")
+                        .HasColumnType("text");
+
                     b.Property<DateTime>("CreatedTime")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<DateTime?>("DeleteTime")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<string>("Field0")
-                        .HasColumnType("text");
-
                     b.Property<string>("Field1")
-                        .HasColumnType("text");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<string>("Field2")
-                        .HasColumnType("text");
+                        .HasMaxLength(200)
+                        .HasColumnType("character varying(200)");
 
                     b.Property<Guid>("HeadingId")
                         .HasColumnType("uuid");
 
                     b.Property<DateTime?>("LastModifyTime")
                         .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("Post1")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Post2")
-                        .HasColumnType("text");
-
-                    b.Property<string>("PostCode")
-                        .HasColumnType("text");
-
-                    b.Property<string>("PostH1")
-                        .HasColumnType("text");
 
                     b.Property<bool>("Status")
                         .HasColumnType("boolean");
@@ -227,29 +228,32 @@ namespace KahveliKodlama.Persistence.Migrations
                     b.Property<DateTime?>("DeleteTime")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<string>("Field0")
-                        .HasColumnType("text");
-
                     b.Property<string>("Field1")
-                        .HasColumnType("text");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<string>("Field2")
-                        .HasColumnType("text");
+                        .HasMaxLength(200)
+                        .HasColumnType("character varying(200)");
 
                     b.Property<string>("HeadingContent")
-                        .HasColumnType("text");
+                        .HasMaxLength(300)
+                        .HasColumnType("character varying(300)");
 
                     b.Property<string>("HeadingImage")
-                        .HasColumnType("text");
+                        .HasMaxLength(200)
+                        .HasColumnType("character varying(200)");
 
                     b.Property<string>("HeadingName")
-                        .HasColumnType("text");
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)");
 
                     b.Property<string>("HeadingTag")
-                        .HasColumnType("text");
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)");
 
-                    b.Property<int>("HeadingViews")
-                        .HasColumnType("integer");
+                    b.Property<short>("HeadingViews")
+                        .HasColumnType("smallint");
 
                     b.Property<DateTime?>("LastModifyTime")
                         .HasColumnType("timestamp with time zone");
@@ -281,14 +285,13 @@ namespace KahveliKodlama.Persistence.Migrations
                     b.Property<DateTime?>("DeleteTime")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<string>("Field0")
-                        .HasColumnType("text");
-
                     b.Property<string>("Field1")
-                        .HasColumnType("text");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<string>("Field2")
-                        .HasColumnType("text");
+                        .HasMaxLength(200)
+                        .HasColumnType("character varying(200)");
 
                     b.Property<DateTime?>("LastModifyTime")
                         .HasColumnType("timestamp with time zone");
@@ -339,14 +342,13 @@ namespace KahveliKodlama.Persistence.Migrations
                     b.Property<string>("Email")
                         .HasColumnType("text");
 
-                    b.Property<string>("Field0")
-                        .HasColumnType("text");
-
                     b.Property<string>("Field1")
-                        .HasColumnType("text");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<string>("Field2")
-                        .HasColumnType("text");
+                        .HasMaxLength(200)
+                        .HasColumnType("character varying(200)");
 
                     b.Property<bool>("Gender")
                         .HasColumnType("boolean");

@@ -5,10 +5,14 @@ namespace KahveliKodlama.Application.Dto;
 public class ContentDto : BaseDto
 {
    
-    public string Post1 { get; set; }
-    public string PostH2 { get; set; }
-    public string Post2 { get; set; }
-    public string PostCode { get; set; }
+    public string ContentImage1url { get; set; }
+    public string Content1 { get; set; }
+    public string ContentHeading2 { get; set; }
+    public string Content2 { get; set; }
+    public string CodeBlock1 { get; set; }
+    public string ContentHeading3 { get; set; }
+    public string Content3 { get; set; }
 
     public virtual Guid HeadingId { get; set; }
+
 }

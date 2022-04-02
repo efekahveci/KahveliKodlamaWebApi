@@ -14,6 +14,8 @@ namespace KahveliKodlama.Service.Implementation;
 
 public class HeadingService : AsyncGenericRepository<Heading>, IHeadingService
 {
+ 
+
     public async Task<List<Heading>> GetSubHeadings(string categoryId)
     {
         var result = await GetAllQuery.Where(x=>x.CategoryId==Guid.Parse(categoryId)).ToListAsync();

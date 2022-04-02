@@ -141,7 +141,7 @@ public class HeadingController : ControllerBase
     [HttpPost("addHeading")]
     [ServiceFilter(typeof(ValidationFilterAttribute))]
     [Authorize]
-    public async Task<Heading> AddHeading([FromBody] HeadingDto heading)
+    public async Task<IActionResult> AddHeading([FromBody] HeadingDto heading)
     {
 
         var identity = HttpContext.User.Identity as ClaimsIdentity;
@@ -152,10 +152,20 @@ public class HeadingController : ControllerBase
 
         heading.MemberId = Guid.Parse(userid);
 
-        var retval = _mapper.Map<HeadingDto, Heading>(heading);
+        if (ModelState.IsValid)
+        {
 
-        await _headingService.Create(retval);
-        return null;
+            var retval = _mapper.Map<HeadingDto, Heading>(heading);
+           await _headingService.Create(retval);
+
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, new List<string> { MessageHelper.validOk }));
+
+        }
+        return NoContent();
+
+
+
+
     }
 
     [HttpPatch("updateHeading")]
