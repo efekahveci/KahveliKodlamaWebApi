@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection;
 
 namespace KahveliKodlama.Application.Validators;
 
 public record DateValidator<T>() : Validator, IValidator<T>
 {
-    public List<Exception> Validate(T value, int? minYear,int? param2, string source, System.Reflection.PropertyInfo pi,object model)
-    {            
+    public List<Exception> Validate(T value, int? minYear, int? param2, string source, System.Reflection.PropertyInfo pi, object model)
+    {
         var errorList = new List<Exception>();
         if (!DateTime.TryParse(value.ToString(), out DateTime temp))
         {
@@ -28,5 +27,5 @@ public record DateValidator<T>() : Validator, IValidator<T>
         return errorList;
     }
 
-   
+
 }

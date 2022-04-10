@@ -19,7 +19,7 @@ public class ResponseResult
     public ResponseResult(ResponseCode responseCode, string message, object data) : this(responseCode, message)
     {
         Data = data;
-       
+
         Records = ((IEnumerable<object>)data).Count();
 
     }

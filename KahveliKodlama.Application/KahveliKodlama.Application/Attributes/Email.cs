@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
+﻿using System.ComponentModel.DataAnnotations;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace KahveliKodlama.Application.Attributes;
 public class Email : ValidationAttribute
@@ -16,7 +11,7 @@ public class Email : ValidationAttribute
 
         string text = value.ToString().Trim();
 
-        if (!Regex.Match(text,@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$").Success)
+        if (!Regex.Match(text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$").Success)
             return new ValidationResult("Email'i geçerli giriniz");
 
         if (text.Length > 30)

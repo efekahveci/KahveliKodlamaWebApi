@@ -14,13 +14,9 @@ using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
-
-using System.Net;
-using System.Net.Mail;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web;
 
 namespace KahveliKodlama.Service.Implementation;
 
@@ -34,11 +30,11 @@ public class AuthService : IAuthService
     private readonly SignInManager<AppUser> _signInManager;
     private readonly IEventPublisher _publish;
 
-   
 
-    public AuthService(IEventPublisher publish,UserManager<AppUser> userManager, RoleManager<IdentityRole> roleManager, IConfiguration configuration, IMemberService memberService, SignInManager<AppUser> signInManager)
+
+    public AuthService(IEventPublisher publish, UserManager<AppUser> userManager, RoleManager<IdentityRole> roleManager, IConfiguration configuration, IMemberService memberService, SignInManager<AppUser> signInManager)
     {
-        _publish = publish; 
+        _publish = publish;
         _userManager = userManager;
         _roleManager = roleManager;
         _configuration = configuration;
@@ -83,19 +79,19 @@ public class AuthService : IAuthService
     public async Task<ResponseResult> Login(LoginCommandRequest model)
     {
         var user = await _userManager.FindByEmailAsync(model.Email);
-        var member = await _memberService.GetUser(model.Email); 
+        var member = await _memberService.GetUser(model.Email);
 
         if (user != null &&
             await _userManager.CheckPasswordAsync(user, model.Password))
         {
             var userRoles = await _userManager.GetRolesAsync(user);
-   
+
 
             var authClaims = new List<Claim>
             {
                 new Claim("username", user.UserName),
                 new Claim("email", user.Email),
-          
+
 
                 new Claim("role", userRoles[0]),
                 new Claim("id", member.Id.ToString()),
@@ -152,13 +148,12 @@ public class AuthService : IAuthService
             Email = model.Email,
             SecurityStamp = Guid.NewGuid().ToString(),
             UserName = model.Username,
-            Pass = model.Password,
-            
+
 
         };
 
         var result = await _userManager.CreateAsync(user, model.Password);
-        
+
 
 
         if (!result.Succeeded)
@@ -188,8 +183,8 @@ public class AuthService : IAuthService
             {
                 Email = model.Email,
                 SecurityStamp = Guid.NewGuid().ToString(),
-                UserName = model.Username,
-                Pass = model.Password
+                UserName = model.Username
+
 
             };
             var result = await _userManager.CreateAsync(user, model.Password);
@@ -212,5 +207,5 @@ public class AuthService : IAuthService
             return new ResponseResult(Domain.Enum.ResponseCode.No_Content, "Yetkisiz istek");
     }
 
-   
+
 }

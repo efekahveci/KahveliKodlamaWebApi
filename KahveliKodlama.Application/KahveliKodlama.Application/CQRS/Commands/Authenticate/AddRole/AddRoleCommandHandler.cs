@@ -17,7 +17,7 @@ public class AddRoleCommandHandler : IRequestHandler<AddRoleCommandRequest, Resp
         _authService = authService;
     }
 
-    
+
     public async Task<ResponseResult> Handle(AddRoleCommandRequest request, CancellationToken cancellationToken)
     {
         var valid = new AddRoleCommandValidator();

@@ -11,10 +11,10 @@ public static class ServiceRegistration
 {
     public static void AddInfrastructureLayer(this IServiceCollection serviceCollection)
     {
-       
-         serviceCollection.AddScoped<IEmailService, EmailService>();
+
+        serviceCollection.AddScoped<IEmailService, EmailService>();
     }
 
-  
+
 
 }

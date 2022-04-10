@@ -26,8 +26,8 @@ public class KahveliContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
 
-        var tp = AppDomain.CurrentDomain.GetAssemblies().SelectMany(x=>x.GetTypes()).Where(type=>typeof(IEntityBuilder).
-        IsAssignableFrom(type) && !type.IsAbstract && !type.IsInterface).ToList();
+        var tp = AppDomain.CurrentDomain.GetAssemblies().SelectMany(x => x.GetTypes()).Where(type => typeof(IEntityBuilder).
+          IsAssignableFrom(type) && !type.IsAbstract && !type.IsInterface).ToList();
 
         foreach (var typ in tp)
         {
@@ -39,5 +39,5 @@ public class KahveliContext : DbContext
         base.OnModelCreating(modelBuilder);
 
     }
-    
+
 }

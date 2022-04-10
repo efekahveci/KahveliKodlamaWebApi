@@ -2,22 +2,16 @@
 using KahveliKodlama.Application.Dto;
 using KahveliKodlama.Application.Validators;
 using KahveliKodlama.Core.Extensions;
-using KahveliKodlama.Domain.Common;
 using KahveliKodlama.Domain.Entities;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.IO;
 using System.Linq;
-using System.Net;
-using System.Threading.Tasks;
 
 namespace KahveliKodlama.Application.Filters;
 
-public class ValidationFilterAttribute :IActionFilter
+public class ValidationFilterAttribute : IActionFilter
 {
 
     private readonly IMapper _mapper;
@@ -39,7 +33,7 @@ public class ValidationFilterAttribute :IActionFilter
 
     //    return new ValidationResult("hata mesajı");
     //}
-  
+
     public void OnActionExecuting(ActionExecutingContext context)
     {
 

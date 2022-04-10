@@ -13,7 +13,7 @@ namespace KahveliKodlama.Persistence.Repositories;
 
 public class AsyncGenericRepository<TEntity> : IAsyncGenericRepository<TEntity> where TEntity : BaseEntity, new()
 {
-    private readonly KahveliContext _context;    
+    private readonly KahveliContext _context;
 
     public AsyncGenericRepository()
     {
@@ -24,7 +24,7 @@ public class AsyncGenericRepository<TEntity> : IAsyncGenericRepository<TEntity> 
 
 
 
-    public IQueryable<TEntity> GetAllQuery => Table.AsNoTracking().Where(x => x.Status == true).OrderByDescending(x=>x.CreatedTime).AsQueryable();
+    public IQueryable<TEntity> GetAllQuery => Table.AsNoTracking().Where(x => x.Status == true).OrderByDescending(x => x.CreatedTime).AsQueryable();
 
 
     public async Task Create(TEntity entity)
@@ -45,38 +45,38 @@ public class AsyncGenericRepository<TEntity> : IAsyncGenericRepository<TEntity> 
         await _context.SaveChangesAsync();
     }
 
-  
 
-    public  IQueryable<TEntity> GetAllQueryInc(Expression<Func<TEntity, object>> includes)
-    {           
+
+    public IQueryable<TEntity> GetAllQueryInc(Expression<Func<TEntity, object>> includes)
+    {
         return Table.Include(includes).AsNoTracking().Where(x => x.Status == true).AsQueryable();
     }
 
 
     public async Task<TEntity> GetById(string id)
-    { 
-      var result =  await Table.FindAsync(Guid.Parse(id));
+    {
+        var result = await Table.FindAsync(Guid.Parse(id));
 
         if (result.Status != true)
             return null;
         else return result;
     }
-    public async Task<TEntity> GetByIdInc(string id,Expression<Func<TEntity, object>> includes)
+    public async Task<TEntity> GetByIdInc(string id, Expression<Func<TEntity, object>> includes)
     {
-        return await  Table
+        return await Table
                      .AsNoTracking()
                      .Include(includes)
                      .Where(x => x.Status == true)
                      .FirstOrDefaultAsync(e => e.Id == Guid.Parse(id));
     }
 
-   
+
 
     public async Task UniqueCreate(TEntity entity)
     {
-        var result = await Table.AsNoTracking().FirstOrDefaultAsync(e=>e.Id == entity.Id);
+        var result = await Table.AsNoTracking().FirstOrDefaultAsync(e => e.Id == entity.Id);
 
-        if (result!=null)
+        if (result != null)
         {
             await Table.AddAsync(entity);
             await _context.SaveChangesAsync();
@@ -91,6 +91,10 @@ public class AsyncGenericRepository<TEntity> : IAsyncGenericRepository<TEntity> 
         await _context.SaveChangesAsync();
 
 
+
+
+
+
     }
-    
+
 }

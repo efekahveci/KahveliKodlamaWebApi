@@ -36,10 +36,8 @@ public class EngineContext
     /// <summary>
     /// Gets the singleton TIntegration engine used to access TIntegration services.
     /// </summary>
-    public static IEngine Current
-    {
-        get
-        {
+    public static IEngine Current {
+        get {
             if (Singleton<IEngine>.Instance == null)
             {
                 Create();

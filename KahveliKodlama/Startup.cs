@@ -1,4 +1,3 @@
-using FluentValidation.AspNetCore;
 using KahveliKodlama.Application;
 using KahveliKodlama.Application.Filters;
 using KahveliKodlama.Core.Extensions;
@@ -15,7 +14,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Serilog;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace KahveliKodlama;
@@ -31,14 +29,14 @@ public class Startup
 
     public void ConfigureServices(IServiceCollection services)
     {
-        services.AddControllers().AddFluentValidation();
+        services.AddControllers();
 
         //400 bad request cevaplarýný customize eder
 
         services.Configure<ApiBehaviorOptions>(o =>
         {
             o.InvalidModelStateResponseFactory = actionContext =>
-                new BadRequestObjectResult(new ResponseResult(Domain.Enum.ResponseCode.Bad_Request, MessageHelper.validError, 
+                new BadRequestObjectResult(new ResponseResult(Domain.Enum.ResponseCode.Bad_Request, MessageHelper.validError,
                 actionContext.ModelState.SelectMany(x => x.Value.Errors)
                            .Select(y => y.ErrorMessage)
                            .ToList()));
@@ -102,6 +100,6 @@ public class Startup
         });
 
     }
-  
+
 }
 

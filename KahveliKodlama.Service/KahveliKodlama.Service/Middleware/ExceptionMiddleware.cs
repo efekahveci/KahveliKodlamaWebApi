@@ -61,12 +61,12 @@ public class ExceptionMiddleware
             //LogContext.PushProperty("status", Convert.ToString(httpContext.Response.StatusCode));
             //LogContext.PushProperty("method", Convert.ToString(httpContext.Request.Method));
 
-     
+
 
 
 
             Log.Warning("_next");
-          //  LogContext.PushProperty("response", Convert.ToString("kahveic"));
+            //  LogContext.PushProperty("response", Convert.ToString("kahveic"));
 
 
             await _next(httpContext);
@@ -81,7 +81,7 @@ public class ExceptionMiddleware
         }
         catch (Exception ex)
         {
-            
+
             LogContext.PushProperty("ex", Convert.ToString(ex));
             Log.Warning("_error");
 
@@ -97,7 +97,7 @@ public class ExceptionMiddleware
 
         }
 
-     
+
 
 
     }
@@ -124,6 +124,6 @@ public class ExceptionMiddleware
         return requestBody;
     }
 
- 
- 
+
+
 }

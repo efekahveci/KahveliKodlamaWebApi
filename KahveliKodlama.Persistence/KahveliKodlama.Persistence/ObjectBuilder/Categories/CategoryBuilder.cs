@@ -32,8 +32,8 @@ public class CategoryBuilder : EntityBuilder<Category>
             LastModifyTime = DateTime.UtcNow,
             CategoryActive = true,
             CreatedTime = DateTime.UtcNow,
-            CategoryDesc= "Angular JS | TypeScript | JavaScript | HTML | CSS",
-            CategoryImage= "https://wikiimg.tojsiabtv.com/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png",
+            CategoryDesc = "Angular JS | TypeScript | JavaScript | HTML | CSS",
+            CategoryImage = "https://wikiimg.tojsiabtv.com/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png",
             CategoryCode = "002",
 
 
@@ -46,8 +46,8 @@ public class CategoryBuilder : EntityBuilder<Category>
             LastModifyTime = DateTime.UtcNow,
             CategoryActive = true,
             CreatedTime = DateTime.UtcNow,
-            CategoryDesc= "SOLID | OOP | CLEAN CODE",
-            CategoryImage= "https://www.educative.io/v2api/editorpage/4792707659595776/image/5909454286487552",
+            CategoryDesc = "SOLID | OOP | CLEAN CODE",
+            CategoryImage = "https://www.educative.io/v2api/editorpage/4792707659595776/image/5909454286487552",
             CategoryCode = "003",
 
 

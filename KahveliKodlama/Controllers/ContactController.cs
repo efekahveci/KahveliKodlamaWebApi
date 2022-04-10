@@ -24,66 +24,101 @@ public class ContactController : ControllerBase
     }
 
     [HttpGet("getAllDto")]
-    public List<ContactDto> GetAllDto()
+    public async Task<IActionResult> GetAllDtoContact()
     {
-        var result = _contactService.GetAllQuery.ToListAsync();
+        var result = await _contactService.GetAllQuery.ToListAsync();
 
+        if (result.Count > 0)
+        {
+            var retVal = _mapper.Map<List<Contact>, List<ContactDto>>(result);
 
-        var retVal = _mapper.Map<Task<List<Contact>>, List<ContactDto>>(result);
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, retVal));
 
-        return retVal;
+        }
+
+        return NotFound();
     }
     [HttpGet("getAll")]
-    public Task<List<Contact>> GetAll()
+    public async Task<IActionResult> GetAllContact()
     {
-        var result = _contactService.GetAllQuery.ToListAsync();
 
-        return result;
+        var result = await _contactService.GetAllQuery.ToListAsync();
+
+        if (result.Count > 0)
+        {
+
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, result));
+
+        }
+
+        return NotFound();
     }
 
     [HttpGet("getByIdDto/{id}")]
-    public async Task<ContactDto> GetByIdDto(string id)
+    public async Task<IActionResult> GetByIdDtoContact(string id)
     {
         var result = await _contactService.GetById(id);
 
-        var retVal = _mapper.Map<Contact, ContactDto>(result);
 
-        return retVal;
+        if (result != null)
+        {
+            var retVal = _mapper.Map<Contact, ContactDto>(result);
+
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, new List<ContactDto> { retVal }));
+        }
+
+        return NotFound();
     }
     [HttpGet("getById/{id}")]
-    public Task<Contact> GetById(string id)
+    public async Task<IActionResult> GetByIdContact(string id)
     {
-        var result = _contactService.GetById(id);
+        var result = await _contactService.GetById(id);
 
-        return result;
+
+        if (result != null)
+        {
+
+
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, new List<Contact> { result }));
+        }
+
+        return NotFound();
     }
 
-    [HttpPost("addPost")]
+    [HttpPost("add")]
     public async Task<IActionResult> AddContact([FromBody] ContactDto contact)
     {
 
         if (ModelState.IsValid)
         {
 
-           var result = _mapper.Map<ContactDto, Contact>(contact);
+            var result = _mapper.Map<ContactDto, Contact>(contact);
 
             await _contactService.Create(result);
 
-            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, new List<Contact>() { result }));
+
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk));
 
         }
 
 
-        return NotFound(new ResponseResult(Domain.Enum.ResponseCode.Not_Found, MessageHelper.validError, new List<string> { "Bir hata var " }));
+        return NotFound(new ResponseResult(Domain.Enum.ResponseCode.Not_Found, MessageHelper.validError));
 
     }
 
-    [HttpPut]
-    public async Task<ActionResult<Contact>> UpdateContact([FromBody] Contact contact)
+    [HttpPut("update")]
+    public async Task<ActionResult<Contact>> UpdateContact([FromBody] ContactDto contact)
     {
 
-        await _contactService.Update(contact);
-        return Ok(contact);
+        if (ModelState.IsValid)
+        {
+
+            await _contactService.UpdateContact(contact);
+
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk));
+
+        }
+        return NotFound();
 
     }
 
@@ -91,7 +126,14 @@ public class ContactController : ControllerBase
     public async Task<IActionResult> DeleteContact(string id)
     {
 
-        await _contactService.Delete(id);
-        return Ok();
+        if (ModelState.IsValid)
+        {
+
+            await _contactService.Delete(id);
+
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk));
+
+        }
+        return NotFound();
     }
 }

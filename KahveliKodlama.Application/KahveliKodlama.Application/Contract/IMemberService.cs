@@ -11,8 +11,8 @@ public interface IMemberService : IAsyncGenericRepository<Member>
     Task<List<Member>> GetTopMembers();
     Task<Member> UpdateMember(MemberDto member);
 
-    Task<int> AddPointMember(Member member,int point);
+    Task<int> AddPointMember(Member member, int point);
     Task<Member> GetUser(string email);
 
-  
+
 }

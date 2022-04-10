@@ -1,10 +1,9 @@
 ﻿using KahveliKodlama.Domain.Common;
 using System;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace KahveliKodlama.Domain.Entities;
 
-public class Content : BaseEntity 
+public class Content : BaseEntity
 {
 
 

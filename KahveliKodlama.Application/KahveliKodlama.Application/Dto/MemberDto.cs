@@ -1,11 +1,6 @@
-﻿using KahveliKodlama.Application.Attributes;
+﻿using KahveliKodlama.Application.Filters;
 using KahveliKodlama.Domain.Entities;
-using MediatR;
 using System.Collections.Generic;
-
-using Microsoft.AspNetCore.Mvc;
-using System.ComponentModel.DataAnnotations;
-using KahveliKodlama.Application.Filters;
 
 namespace KahveliKodlama.Application.Dto;
 

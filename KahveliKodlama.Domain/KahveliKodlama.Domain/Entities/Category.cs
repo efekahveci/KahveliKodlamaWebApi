@@ -22,7 +22,7 @@ public class Category : BaseEntity
     public string CategoryCode { get; set; }
     public ICollection<Heading> Headings { get; set; }
 
-    
+
 
 
 

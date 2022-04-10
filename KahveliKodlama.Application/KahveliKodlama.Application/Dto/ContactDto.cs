@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace KahveliKodlama.Application.Dto;
+﻿namespace KahveliKodlama.Application.Dto;
 
 public class ContactDto : BaseDto
 {

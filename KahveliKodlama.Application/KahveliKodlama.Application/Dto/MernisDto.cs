@@ -1,6 +1,4 @@
-﻿using MediatR;
-
-namespace KahveliKodlama.Application.Dto;
+﻿namespace KahveliKodlama.Application.Dto;
 
 public class MernisDto : BaseDto
 {

@@ -15,7 +15,7 @@ public static class MapExtension
             if (value != null && typeOfRet.GetProperty(item.Name) is not null)
                 typeOfRet.GetProperty(item.Name)!.SetValue(entity, value, null);
 
-        
+
         }
 
         entity.LastModifyTime = DateTime.UtcNow;

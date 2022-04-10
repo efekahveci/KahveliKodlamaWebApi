@@ -1,8 +1,4 @@
-﻿
-
-
-using KahveliKodlama.Application.Contract;
-using KahveliKodlama.Application.Mapper;
+﻿using KahveliKodlama.Application.Mapper;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
@@ -18,7 +14,7 @@ public static class ServiceRegistration
 
         serviceCollection.AddAutoMapper(typeof(MappingProfile));
         serviceCollection.AddMediatR(assm);
-     
+
 
     }
 

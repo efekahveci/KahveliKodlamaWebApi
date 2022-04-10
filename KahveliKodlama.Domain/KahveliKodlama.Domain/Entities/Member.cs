@@ -6,7 +6,7 @@ namespace KahveliKodlama.Domain.Entities;
 
 public class Member : BaseEntity
 {
-   
+
     //[Required(ErrorMessage = "Kullanıcı adı alanı gereklidir.")]
     //[Display(Name = "Kullanıcı Adı")]
     //[StringLength(25, ErrorMessage = "En fazla 25 karakter en az 3 karakter uzunluğunda olmalıdır.", MinimumLength = 3)]
@@ -20,14 +20,11 @@ public class Member : BaseEntity
     public string Email { get; set; }
 
 
-    [Display(Name = "Cinsiyet")] 
+    [Display(Name = "Cinsiyet")]
     public bool Gender { get; set; }
 
     //[Required(ErrorMessage = "Şifre alanı gereklidir.")]
     //[StringLength(15, ErrorMessage = "En fazla 15 karakter en az 5 karakter uzunluğunda olmalıdır.", MinimumLength = 5)]
-
-    [Display(Name = "Şifre")]
-    public string Password { get; set; }
 
     //[StringLength(15, ErrorMessage = "En fazla 15 karakter en az 2 karakter uzunluğunda olmalıdır.", MinimumLength = 2)]
     //[Display(Name = "İsim")]
@@ -38,7 +35,7 @@ public class Member : BaseEntity
     public string Surname { get; set; }
 
     [Display(Name = "Yaş")]
-   
+
     public short? Age { get; set; }
 
     [StringLength(500)]
@@ -61,5 +58,5 @@ public class Member : BaseEntity
     public bool IsVerifiedEmail { get; set; }
     public bool IsVerifiedInfo { get; set; }
     public ICollection<Heading> Headings { get; set; }
-    
+
 }

@@ -2,9 +2,7 @@
 using KahveliKodlama.Application.Contract;
 using KahveliKodlama.Service.Events;
 using KahveliKodlama.Service.Implementation;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
 using System.Linq;
 using System.Reflection;
 
@@ -64,6 +62,6 @@ public static class ServiceRegistration
 
 
     }
-    }
+}
 
 

@@ -6,7 +6,6 @@ using KahveliKodlama.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace KahveliKodlama.API.Controllers;
@@ -26,76 +25,125 @@ public class CategoryController : ControllerBase
     }
 
     [HttpGet("getAllData")]
-    public  IQueryable<Category> GetAllData()
+    public async Task<IActionResult> GetAllDataCategory()
     {
-        var result =  _categoryService.GetAllQueryInc(x => x.Headings);
+        var result = await _categoryService.GetAllQueryInc(x => x.Headings).ToListAsync();
 
-        return result;
-    }
-
-    [HttpGet("getAllDto")]
-    public async Task<IActionResult> GetAllDto()
-    {
-
-        var result = await _categoryService.GetAllQuery.ToListAsync();
-
-        if (result.Count() > 0)
+        if (result.Count > 0)
         {
-            var retVal = _mapper.Map<List<Category>, List<CategoryDto>>(result);
-            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, retVal));
+
+
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, result));
 
         }
 
-        return NoContent();
+        return NotFound();
+
+
     }
 
-    [HttpGet("getAll")]
-    public async Task<IActionResult> GetAll()
+    [HttpGet("getAllDto")]
+    public async Task<IActionResult> GetAllDtoCategory()
     {
-        
 
         var result = await _categoryService.GetAllQuery.ToListAsync();
 
         if (result.Count > 0)
         {
-            
+            var retVal = _mapper.Map<List<Category>, List<CategoryDto>>(result);
+
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, retVal));
+
+        }
+
+        return NotFound();
+    }
+
+    [HttpGet("getAll")]
+    public async Task<IActionResult> GetAllCategory()
+    {
+
+
+        var result = await _categoryService.GetAllQuery.ToListAsync();
+
+        if (result.Count > 0)
+        {
+
             return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, result));
 
         }
 
-        return NoContent();
+        return NotFound();
     }
 
     [HttpGet("getByIdDto/{id}")]
-    public async Task<CategoryDto> GetByIdDto(string id)
+    public async Task<IActionResult> GetByIdDtoCategory(string id)
     {
+
         var result = await _categoryService.GetById(id);
 
-        var retVal = _mapper.Map<Category, CategoryDto>(result);
 
-        return retVal;
+        if (result != null)
+        {
+            var retVal = _mapper.Map<Category, CategoryDto>(result);
+
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, new List<CategoryDto> { retVal }));
+        }
+
+        return NotFound();
+
     }
     [HttpGet("getById/{id}")]
-    public Task<Category> GetById(string id)
+    public async Task<IActionResult> GetByIdCategory(string id)
     {
-        var result = _categoryService.GetById(id);
+        var result = await _categoryService.GetByIdInc(id, x => x.Headings);
 
-        return result;
+
+        if (result != null)
+        {
+
+
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, new List<Category> { result }));
+        }
+
+        return NotFound();
     }
 
-    [HttpPost]
-    public async Task<Category> AddCategory([FromBody] Category category)
+    [HttpPost("add")]
+    public async Task<IActionResult> AddCategory([FromBody] CategoryDto category)
     {
-        await _categoryService.Create(category);
-        return category;
+
+        if (ModelState.IsValid)
+        {
+
+            var result = _mapper.Map<CategoryDto, Category>(category);
+
+            await _categoryService.Create(result);
+
+
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk));
+
+        }
+
+
+        return NotFound(new ResponseResult(Domain.Enum.ResponseCode.Not_Found, MessageHelper.validError));
+
     }
 
-    [HttpPut]
-    public async Task<ActionResult<Category>> UpdateCategory([FromBody] Category category)
+    [HttpPut("update")]
+    public async Task<IActionResult> UpdateCategory([FromBody] CategoryDto category)
     {
 
-        await _categoryService.Update(category);
-        return Ok(category);
+        if (ModelState.IsValid)
+        {
+
+            await _categoryService.UpdateCategory(category);
+
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk));
+
+        }
+        return NotFound();
+
 
     }
 
@@ -103,8 +151,15 @@ public class CategoryController : ControllerBase
     public async Task<IActionResult> DeleteCategory(string id)
     {
 
-        await _categoryService.Delete(id);
-        return Ok();
+        if (ModelState.IsValid)
+        {
+
+            await _categoryService.Delete(id);
+
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk));
+
+        }
+        return NotFound();
     }
 
 }

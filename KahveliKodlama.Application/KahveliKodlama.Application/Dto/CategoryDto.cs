@@ -1,6 +1,6 @@
 ﻿namespace KahveliKodlama.Application.Dto;
 
-public class CategoryDto :BaseDto
+public class CategoryDto : BaseDto
 {
 
     public string CategoryName { get; set; }

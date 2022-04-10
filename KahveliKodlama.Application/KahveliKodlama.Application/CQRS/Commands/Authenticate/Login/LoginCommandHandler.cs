@@ -1,8 +1,6 @@
 ﻿using KahveliKodlama.Application.Contract;
-using KahveliKodlama.Core.Extensions;
 using KahveliKodlama.Domain.Entities;
 using MediatR;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -19,7 +17,7 @@ public class LoginCommandHandler : IRequestHandler<LoginCommandRequest, Response
 
     public async Task<ResponseResult> Handle(LoginCommandRequest request, CancellationToken cancellationToken)
     {
-       
+
         return await _authService.Login(request);
     }
 }

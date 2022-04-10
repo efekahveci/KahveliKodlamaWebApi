@@ -1,5 +1,4 @@
-﻿using KahveliKodlama.Application.Dto;
-using KahveliKodlama.Application.Interfaces.Repositories;
+﻿using KahveliKodlama.Application.Interfaces.Repositories;
 using KahveliKodlama.Domain.Entities;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -13,7 +12,7 @@ public interface IHeadingService : IAsyncGenericRepository<Heading>
     Task<List<Heading>> GetSubHeadings(string categoryId);
 
 
- //   Task<List<Heading>> GetSubCategoryHeadings(string categoryId);
+    //   Task<List<Heading>> GetSubCategoryHeadings(string categoryId);
 
 
 }

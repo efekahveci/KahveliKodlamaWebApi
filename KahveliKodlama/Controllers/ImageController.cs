@@ -20,14 +20,14 @@ public class ImageController : Controller
     public ImageController(IFileUpload fileUpload, IWebHostEnvironment environment)
     {
         _fileUpload = fileUpload;
-        _environment= environment;
+        _environment = environment;
     }
 
 
     [Authorize]
 
     [HttpPost]
-    public async Task<bool> PostImage(IFormFile file,int userId)
+    public async Task<bool> PostImage(IFormFile file, int userId)
     {
         //var files = file;
 
@@ -85,11 +85,11 @@ public class ImageController : Controller
         string email = claims.FirstOrDefault(y => y.Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress").Value;
 
 
-        var result = userName+"+++"+email;
+        var result = userName + "+++" + email;
 
         //veritabanına kayıt ekleneceği zaman bir yerde tutulacak onay verilirse ilgili kayıt işlenecek.
 
-        return await _fileUpload.Complate(file,result);
+        return await _fileUpload.Complate(file, result);
     }
 
 }

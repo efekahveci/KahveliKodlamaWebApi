@@ -1,9 +1,7 @@
 ﻿using KahveliKodlama.Application.Contract;
 using KahveliKodlama.Application.Dto;
-using KahveliKodlama.Domain.Entities;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity;
 using System.IO;
 using System.Threading.Tasks;
 
@@ -31,8 +29,8 @@ public class FileUpload : IFileUpload
 
 
         string[] _Split = userName.Split("+++");
-        userName = _Split[0];   
-        string email=_Split[1];
+        userName = _Split[0];
+        string email = _Split[1];
 
         //var result = await _userManager.FindByNameAsync(user.Identity.Name);
 
@@ -54,8 +52,8 @@ public class FileUpload : IFileUpload
                 using (FileStream stream = File.Create(path + name))
                 {
 
-             
-                    await _memberService.UpdateMember(new MemberDto { Email=email, Image = path + name  }) ;
+
+                    await _memberService.UpdateMember(new MemberDto { Email = email, Image = path + name });
                     await file.CopyToAsync(stream);
                     await stream.FlushAsync();
                     return true;

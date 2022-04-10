@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace KahveliKodlama.Application.Attributes;
-public class StringLength: ValidationAttribute
+public class StringLength : ValidationAttribute
 {
     readonly int _length;
 
     public StringLength(int lenght)
     {
-        _length = lenght;   
+        _length = lenght;
     }
 
     protected override ValidationResult IsValid(object value, ValidationContext validationContext)

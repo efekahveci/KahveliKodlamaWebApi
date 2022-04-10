@@ -16,4 +16,4 @@ public interface IAuthService
     Task<ResponseResult> AddRole(AddRoleCommandRequest model);
     Task<ResponseResult> Logout();
 
-} 
+}

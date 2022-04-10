@@ -18,12 +18,12 @@ public class ContentController : ControllerBase
     private readonly IMapper _mapper;
     private readonly IEventPublisher _publish;
 
-   
+
     public ContentController(IContentService contentService, IMapper mapper, IEventPublisher publish)
     {
         _contentService = contentService;
         _mapper = mapper;
-        _publish=publish;
+        _publish = publish;
     }
 
     [HttpGet("getAllDto")]
@@ -40,7 +40,7 @@ public class ContentController : ControllerBase
 
         }
 
-        return NoContent();
+        return NotFound();
     }
 
     [HttpGet("getAll")]
@@ -54,7 +54,7 @@ public class ContentController : ControllerBase
             return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, result));
         }
 
-        return NoContent();
+        return NotFound();
     }
 
     [HttpGet("getByIdDto/{id}")]
@@ -74,7 +74,7 @@ public class ContentController : ControllerBase
             return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, new List<ContentDto>() { retVal }));
         }
 
-        return NoContent();
+        return NotFound();
     }
 
     [HttpGet("getByIdHeadingContent/{id}")]
@@ -94,7 +94,7 @@ public class ContentController : ControllerBase
             return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, retVal));
         }
 
-        return NoContent();
+        return NotFound();
     }
 
     [HttpGet("getById/{id}")]
@@ -108,7 +108,7 @@ public class ContentController : ControllerBase
             return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, result));
         }
 
-        return NoContent();
+        return NotFound();
     }
     [HttpPost("add")]
 
@@ -116,13 +116,13 @@ public class ContentController : ControllerBase
     public async Task<IActionResult> AddContent([FromBody] ContentDto content)
     {
 
-        var result  = _mapper.Map<ContentDto, Content>(content);
+        var result = _mapper.Map<ContentDto, Content>(content);
 
 
         if (result != null)
         {
 
-           
+
 
             await _contentService.Create(result);
 
@@ -130,7 +130,7 @@ public class ContentController : ControllerBase
             newContent.Body = result.Content1;
 
 
-             _publish.PublishAsync(newContent);
+            _publish.PublishAsync(newContent);
 
             return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, new List<Content>() { result }));
 
@@ -142,7 +142,7 @@ public class ContentController : ControllerBase
 
     }
 
-    [HttpPut("Update")]
+    [HttpPut("update")]
     public async Task<IActionResult> UpdateContent([FromBody] Content content)
     {
 
@@ -152,25 +152,25 @@ public class ContentController : ControllerBase
 
             await _contentService.Update(content);
 
-            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, new List<Content>() { content}));
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, new List<Content>() { content }));
 
         }
-        return NoContent();
+        return NotFound();
 
     }
-    [HttpPatch("Update")]
+    [HttpPatch("update")]
     public async Task<IActionResult> UpdateContent([FromBody] ContentDto content)
     {
 
         if (ModelState.IsValid)
-        {   
+        {
 
             await _contentService.UpdateContent(content);
 
-            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, new List<ContentDto>() { content}));
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, new List<ContentDto>() { content }));
 
         }
-        return NoContent();
+        return NotFound();
 
     }
 
@@ -187,6 +187,6 @@ public class ContentController : ControllerBase
             return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, new List<string>() { "Kullanıcı sistemden silindi." }));
 
         }
-        return NoContent();
+        return NotFound();
     }
 }

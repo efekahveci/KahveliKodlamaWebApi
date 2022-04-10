@@ -4,7 +4,7 @@ using MediatR;
 
 namespace KahveliKodlama.Application.CQRS.Commands.Authenticate.RegisterAdmin;
 
-public class RegisterAdminCommandRequest:IRequest<ResponseResult>
+public class RegisterAdminCommandRequest : IRequest<ResponseResult>
 {
     [Username]
     public string Username { get; set; }

@@ -4,7 +4,7 @@ namespace KahveliKodlama.Application.Dto;
 
 public class ContentDto : BaseDto
 {
-   
+
     public string ContentImage1url { get; set; }
     public string Content1 { get; set; }
     public string ContentHeading2 { get; set; }

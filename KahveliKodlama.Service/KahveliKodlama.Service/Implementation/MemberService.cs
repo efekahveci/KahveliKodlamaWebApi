@@ -12,23 +12,23 @@ namespace KahveliKodlama.Service.Implementation;
 
 public class MemberService : AsyncGenericRepository<Member>, IMemberService
 {
-    public async Task<int> AddPointMember(Member member,int point)
+    public async Task<int> AddPointMember(Member member, int point)
     {
-     
+
         member.Point += point;
 
         await Update(member);
 
-        return member.Point;    
+        return member.Point;
     }
 
-    public async Task<List<Member>>GetTopMembers()
+    public async Task<List<Member>> GetTopMembers()
     {
 
         var orderByDescendingResult = await GetAllQuery.ToListAsync();
 
         return orderByDescendingResult
-           .OrderByDescending(c => c.Point).Take(10).ToList();               
+           .OrderByDescending(c => c.Point).Take(10).ToList();
     }
 
     public async Task<Member> GetUser(string email)
@@ -37,18 +37,18 @@ public class MemberService : AsyncGenericRepository<Member>, IMemberService
 
         var result = await query.ToListAsync();
 
-        return  result.FirstOrDefault(x => x.Email == email);
-                    
-        
+        return result.FirstOrDefault(x => x.Email == email);
+
+
     }
 
-  
+
 
     public async Task<Member> UpdateMember(MemberDto member)
     {
         var result = await GetUser(member.Email);
 
-        var retVal=result.Merge(member);
+        var retVal = result.Merge(member);
 
         if (member.GetType().GetProperties()
                        .All(p => p.GetValue(member) != null) && !result.IsVerifiedInfo)

@@ -17,6 +17,6 @@ public class GetUsersHandler : IRequestHandler<GetUsersQueryRequest, ResponseRes
 
     public async Task<ResponseResult> Handle(GetUsersQueryRequest request, CancellationToken cancellationToken)
     {
-        return  await _authService.GetUsersAsync();
+        return await _authService.GetUsersAsync();
     }
 }

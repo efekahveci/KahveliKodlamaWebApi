@@ -1,6 +1,5 @@
 ﻿using KahveliKodlama.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
 
 namespace KahveliKodlama.Persistence.ObjectBuilder.Headings;
 
@@ -17,7 +16,7 @@ public class HeadingBuilder : EntityBuilder<Heading>
         //    HeadingViews = 45,
         //    MemberId = Guid.Parse("4ebf1452-3bdc-3618-a25a-c31575c89074"),
         //    HeadingTag = "Visual Studio",
-         
+
         //    CreatedTime = DateTime.UtcNow,
         //    LastModifyTime = DateTime.UtcNow,
         //    Status = true

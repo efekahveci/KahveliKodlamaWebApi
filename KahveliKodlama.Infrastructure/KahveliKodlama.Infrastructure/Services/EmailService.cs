@@ -4,13 +4,8 @@ using KahveliKodlama.Infrastructure.ContextEngine;
 using KahveliKodlama.Infrastructure.Contract;
 using KahveliKodlama.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Net.Mail;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KahveliKodlama.Infrastructure.Services;
 public class EmailService : IEmailService
@@ -44,14 +39,14 @@ public class EmailService : IEmailService
                 smp.EnableSsl = true;
                 smp.Send(mail);
             }
-            catch (Exception )
+            catch (Exception)
             {
 
-                throw ;
+                throw;
             }
         }
 
-      
+
 
     }
 
@@ -60,7 +55,7 @@ public class EmailService : IEmailService
 
         var result = await Table.FirstOrDefaultAsync(x => x.eMail == email.eMail);
 
-        if (result==null)
+        if (result == null)
         {
             try
             {
@@ -85,6 +80,6 @@ public class EmailService : IEmailService
 
         return false;
 
-      
+
     }
 }

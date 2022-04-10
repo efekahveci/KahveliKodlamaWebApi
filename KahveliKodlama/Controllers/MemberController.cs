@@ -2,7 +2,6 @@
 using KahveliKodlama.Application.Contract;
 using KahveliKodlama.Application.Dto;
 using KahveliKodlama.Application.Filters;
-using KahveliKodlama.Application.Validators;
 using KahveliKodlama.Core.Extensions;
 using KahveliKodlama.Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
@@ -19,14 +18,14 @@ namespace KahveliKodlama.API.Controllers;
 [Route("api/[controller]")]
 [ApiController]
 public class MemberController : ControllerBase
-{ 
-    
+{
+
     private readonly IMemberService _memberService;
     private readonly IMapper _mapper;
 
     public MemberController(IMemberService memberService, IMapper mapper)
     {
-      
+
         _mapper = mapper;
         _memberService = memberService;
 
@@ -39,19 +38,19 @@ public class MemberController : ControllerBase
 
         var result = await _memberService.GetAllQuery.ToListAsync();
 
-        if (result.Count>0)
+        if (result.Count > 0)
         {
             var retVal = _mapper.Map<List<Member>, List<MemberDto>>(result);
             return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, retVal));
 
         }
 
-        return NoContent();
+        return NotFound();
 
 
     }
 
-  
+
     [HttpGet("getAll")]
     public async Task<IActionResult> GetAllMember()
     {
@@ -60,11 +59,11 @@ public class MemberController : ControllerBase
 
         if (result.Count > 0)
         {
-       
-            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK,MessageHelper.validOk,result));
+
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, result));
         }
 
-        return NoContent();
+        return NotFound();
     }
 
     [HttpGet("getByIdDto")]
@@ -78,28 +77,28 @@ public class MemberController : ControllerBase
 
         var userid = claims.FirstOrDefault(x => x.Type == "id").Value;
 
-        var result = await _memberService.GetByIdInc(userid, x=>x.Headings);
+        var result = await _memberService.GetByIdInc(userid, x => x.Headings);
 
 
-        if (result!=null)
+        if (result != null)
         {
             var retVal = _mapper.Map<Member, MemberDto>(result);
 
             var test = retVal.Headings;
-   
 
-            retVal.Image= retVal.Image.Substring(retVal.Image.LastIndexOf('\\') + 1);
 
-            
+            retVal.Image = retVal.Image.Substring(retVal.Image.LastIndexOf('\\') + 1);
 
-            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk,new List<MemberDto>() { retVal }));
+
+
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, new List<MemberDto>() { retVal }));
         }
 
-        return NoContent();
+        return NotFound();
     }
 
     [HttpGet("getById/{id}")]
-   
+
     public async Task<IActionResult> GetByIdMember(string id)
     {
         var result = await _memberService.GetById(id);
@@ -110,7 +109,7 @@ public class MemberController : ControllerBase
             return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, result));
         }
 
-        return NoContent();
+        return NotFound();
     }
 
     [HttpGet("getTop")]
@@ -124,23 +123,23 @@ public class MemberController : ControllerBase
             return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, result));
         }
 
-        return NoContent();
+        return NotFound();
     }
- 
-    
+
+
 
     [HttpPost("add")]
     [ServiceFilter(typeof(ValidationFilterAttribute))]
-   
 
-    public async Task<IActionResult> AddMember([FromBody]  MemberDto member)
+
+    public async Task<IActionResult> AddMember([FromBody] MemberDto member)
     {
 
-      
+
         var result = await _memberService.GetUser(member.Email);
 
 
-        if (result==null)
+        if (result == null)
         {
 
             result = _mapper.Map<MemberDto, Member>(member);
@@ -152,7 +151,7 @@ public class MemberController : ControllerBase
         }
 
 
-        return NotFound(new ResponseResult(Domain.Enum.ResponseCode.Not_Found, MessageHelper.validError,new List<string> { "Kayıt Daha önce eklenmiş"}));
+        return NotFound(new ResponseResult(Domain.Enum.ResponseCode.Not_Found, MessageHelper.validError, new List<string> { "Kayıt Daha önce eklenmiş" }));
 
 
     }
@@ -163,12 +162,12 @@ public class MemberController : ControllerBase
 
         var client = new MernisTC.KPSPublicSoapClient(MernisTC.KPSPublicSoapClient.EndpointConfiguration.KPSPublicSoap);
 
-        var response = await client.TCKimlikNoDogrulaAsync(Convert.ToInt64(member.TCKNO), member.Name, member.Surname, member.Year);            
+        var response = await client.TCKimlikNoDogrulaAsync(Convert.ToInt64(member.TCKNO), member.Name, member.Surname, member.Year);
 
         var result = await _memberService.GetUser(member.Email);
 
 
-        if (ModelState.IsValid && response.Body.TCKimlikNoDogrulaResult && result!=null)
+        if (ModelState.IsValid && response.Body.TCKimlikNoDogrulaResult && result != null)
         {
 
             await _memberService.AddPointMember(result, 50);
@@ -176,7 +175,7 @@ public class MemberController : ControllerBase
             return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validPoint, response.Body.TCKimlikNoDogrulaResult));
 
         }
-        return NoContent();
+        return NotFound();
     }
 
     [HttpPut("update")]
@@ -194,7 +193,7 @@ public class MemberController : ControllerBase
             return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, result));
 
         }
-        return NoContent();
+        return NotFound();
     }
 
 
@@ -213,7 +212,7 @@ public class MemberController : ControllerBase
             return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, result));
 
         }
-        return NoContent();
+        return NotFound();
     }
 
 
@@ -229,10 +228,10 @@ public class MemberController : ControllerBase
 
             await _memberService.Delete(id);
 
-            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, new List<string>() { "Kullanıcı sistemden silindi."}));
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, new List<string>() { "Kullanıcı sistemden silindi." }));
 
         }
-        return NoContent();
+        return NotFound();
     }
 
 }

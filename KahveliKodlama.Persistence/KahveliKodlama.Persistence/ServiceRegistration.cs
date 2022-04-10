@@ -17,30 +17,21 @@ namespace KahveliKodlama.Persistence;
 
 public static class ServiceRegistration
 {
-    public static void AddPersistanceLayer(this IServiceCollection serviceCollection, IConfiguration configuration=null)
+    public static void AddPersistanceLayer(this IServiceCollection serviceCollection, IConfiguration configuration = null)
     {
         //                      add-migration -Context KahveliContext
         //                      add-migration -Context IdentityContext
         //                      update-database -Context KahveliContext
         //                      update-database -Context IdentityContext
 
-     
+
         serviceCollection.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         serviceCollection.AddSingleton<IEngine, KahveliContextEngine>();
-
-
-
-        //image kısmı yolu eklenecek 
-
 
         serviceCollection.AddDbContext<KahveliContext>(options =>
         options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
 
         serviceCollection.AddDbContext<IdentityContext>(options => options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
-          //.UseTriggers(triggerOptions =>
-          //{
-          //    triggerOptions.AddTrigger<CloneUser>();
-          //}));
 
 
         // For Identity  
@@ -52,14 +43,14 @@ public static class ServiceRegistration
             _.Password.RequireUppercase = false; //Büyük harf zorunluluğunu kaldırıyoruz.
             _.Password.RequireDigit = false; //0-9 arası sayısal karakter zorunluluğunu kaldırıyoruz.
             _.Password.RequiredLength = 3;
-        
+
 
 
         })
             .AddEntityFrameworkStores<IdentityContext>()
             .AddDefaultTokenProviders();
 
-     
+
 
         // Adding Authentication  
         serviceCollection.AddAuthentication(options =>
@@ -81,8 +72,8 @@ public static class ServiceRegistration
                 ValidateAudience = true,
                 ValidAudience = configuration["JWT:ValidAudience"],
                 ValidIssuer = configuration["JWT:ValidIssuer"],
-                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:Secret"])),                     
-                ValidateIssuerSigningKey = true,  
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:Secret"])),
+                ValidateIssuerSigningKey = true,
                 ClockSkew = TimeSpan.Zero
 
 
@@ -95,7 +86,7 @@ public static class ServiceRegistration
             options.LoginPath = "/api/Authenticate/login";
             options.LogoutPath = "/api/Authenticate/logout";
         });
-         
+
     }
 
     public static void ConfigureRequestPipeline(this IApplicationBuilder application)

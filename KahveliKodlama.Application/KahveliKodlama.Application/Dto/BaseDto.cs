@@ -11,10 +11,10 @@ public class BaseDto
     public int? ElapsedDay {
 
         get {
-            return  (DateTime.UtcNow - CreatedTime).Days;
+            return (DateTime.UtcNow - CreatedTime).Days;
         }
 
-       
+
     }
 
 }

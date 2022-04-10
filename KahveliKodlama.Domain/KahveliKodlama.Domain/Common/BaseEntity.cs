@@ -9,7 +9,7 @@ public class BaseEntity
     [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public Guid Id { get; set; }
     public bool Status { get; set; } = true;
-    public DateTime CreatedTime { get; set; } 
+    public DateTime CreatedTime { get; set; }
     public DateTime? LastModifyTime { get; set; }
     public DateTime? DeleteTime { get; set; }
 

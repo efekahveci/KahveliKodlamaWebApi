@@ -23,16 +23,16 @@ public class HeadingController : ControllerBase
     private readonly IHeadingService _headingService;
     private readonly IMapper _mapper;
 
-    public HeadingController(IHeadingService headingService,IMapper mapper)
+    public HeadingController(IHeadingService headingService, IMapper mapper)
     {
         _headingService = headingService;
         _mapper = mapper;
     }
 
     [HttpGet("getAllDto")]
-    public  async Task<IActionResult> getAllDtoHeading()
+    public async Task<IActionResult> getAllDtoHeading()
     {
-       
+
 
 
         var result = await _headingService.GetAllQuery.ToListAsync();
@@ -43,13 +43,13 @@ public class HeadingController : ControllerBase
         {
             var retVal = _mapper.Map<List<Heading>, List<HeadingDto>>(result);
 
-            
 
-            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk,  retVal));
+
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, retVal));
 
         }
 
-        return NoContent();
+        return NotFound();
     }
 
 
@@ -64,7 +64,7 @@ public class HeadingController : ControllerBase
             return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, result));
         }
 
-        return NoContent();
+        return NotFound();
     }
 
     [HttpGet("getTop")]
@@ -79,13 +79,13 @@ public class HeadingController : ControllerBase
 
         }
 
-        return NoContent();
+        return NotFound();
     }
     [HttpGet("getByIdDto/{id}")]
     public async Task<IActionResult> GetByIdDtoHeading(string id)
     {
         var result = await _headingService.GetById(id);
-       
+
 
         if (result != null)
         {
@@ -94,12 +94,12 @@ public class HeadingController : ControllerBase
 
         }
 
-        return NoContent();
+        return NotFound();
 
     }
 
 
-  // [Authorize("Admin")]
+    // [Authorize("Admin")]
 
     [HttpGet("getById/{id}")]
     public async Task<IActionResult> GetByIdHeading(string id)
@@ -112,13 +112,13 @@ public class HeadingController : ControllerBase
             return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, result));
         }
 
-        return NoContent();
+        return NotFound();
     }
 
     [HttpGet("getSubHeading/{id}")]
     public async Task<IActionResult> GetSubHeading(string id)
     {
-       
+
 
 
         var result = await _headingService.GetSubHeadings(id);
@@ -135,7 +135,7 @@ public class HeadingController : ControllerBase
 
         }
 
-        return NoContent();
+        return NotFound();
     }
 
     [HttpPost("addHeading")]
@@ -156,7 +156,7 @@ public class HeadingController : ControllerBase
         {
 
             var retval = _mapper.Map<HeadingDto, Heading>(heading);
-           await _headingService.Create(retval);
+            await _headingService.Create(retval);
 
             return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, new List<string> { MessageHelper.validOk }));
 
@@ -183,10 +183,10 @@ public class HeadingController : ControllerBase
             return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, result));
 
         }
-        return NoContent();
+        return NotFound();
 
     }
- 
+
 
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteHeading(string id)
@@ -197,9 +197,9 @@ public class HeadingController : ControllerBase
 
             await _headingService.Delete(id);
 
-            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, new List<string>() { "Kullanıcı sistemden silindi." }));
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, new List<string>() { " silindi." }));
 
         }
-        return NoContent();
+        return NotFound();
     }
 }

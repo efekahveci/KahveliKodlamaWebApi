@@ -6,25 +6,24 @@ using KahveliKodlama.Application.CQRS.Commands.Authenticate.RegisterAdmin;
 using KahveliKodlama.Application.CQRS.Queries.Authenticate;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
 namespace KahveliKodlama.API.Controllers;
 
 [Route("api/[controller]")]
-[ApiController] 
-[EnableCors("MyPolicy")]
+[ApiController]
+
 public class AuthenticateController : ControllerBase
 {
     private readonly IAuthService _authService;
     private readonly IMediator _mediator;
-  
+
     public AuthenticateController(IAuthService authService, IMediator mediator)
     {
         _authService = authService;
         _mediator = mediator;
-  
+
     }
 
     [HttpGet("getUsers")]
@@ -32,28 +31,27 @@ public class AuthenticateController : ControllerBase
     {
         var result = await _mediator.Send(new GetUsersQueryRequest());
 
-        if (result.Data!=null)
+        if (result.Data != null)
         {
             return Ok(result);
         }
 
-        return NoContent();
+        return NotFound();
 
     }
 
-    [HttpPost("logout")]
+    [HttpGet("logout")]
     [Authorize]
     public async Task<IActionResult> Logout()
     {
-     
-      return Ok(await _authService.Logout()); 
+
+        return Ok(await _authService.Logout());
 
     }
 
     [HttpPost]
     [Route("add-role")]
     [Authorize(Roles = "SuperAdmin")]
-    //Demo parametreleri
     public async Task<IActionResult> AddRole([FromBody] AddRoleCommandRequest model)
     {
 
@@ -63,7 +61,7 @@ public class AuthenticateController : ControllerBase
 
         }
 
-        return Unauthorized();
+        return NotFound();
 
     }
 
@@ -101,6 +99,7 @@ public class AuthenticateController : ControllerBase
     [Route("register-admin")]
     public async Task<IActionResult> RegisterAdmin([FromBody] RegisterAdminCommandRequest model)
     {
+
         if (ModelState.IsValid)
         {
             return Ok(await _mediator.Send(model));

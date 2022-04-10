@@ -1,6 +1,5 @@
 ﻿using KahveliKodlama.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
 
 namespace KahveliKodlama.Persistence.ObjectBuilder.Contents;
 
@@ -8,7 +7,7 @@ public class ContentBuilder : EntityBuilder<Content>
 {
     public override void MapEntity(ModelBuilder builder)
     {
-      
+
 
         //builder.Entity<Content>().HasData(new Content
         //{
@@ -18,6 +17,6 @@ public class ContentBuilder : EntityBuilder<Content>
 
 
         //});
-    
+
     }
 }

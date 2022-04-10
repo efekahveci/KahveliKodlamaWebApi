@@ -10,7 +10,7 @@ public partial class MemberBuilder : EntityBuilder<Member>
     {
         builder.Entity<Member>(entity =>
         {
-           //Eklenecek kayıtlarda varsayılan değerler atama
+            //Eklenecek kayıtlarda varsayılan değerler atama
             entity.Property(e => e.Image).HasDefaultValue("Empty");
             entity.Property(e => e.Age).HasDefaultValue(Convert.ToInt16(1));
             entity.Property(e => e.About).HasDefaultValue("Empty");
@@ -45,7 +45,7 @@ public partial class MemberBuilder : EntityBuilder<Member>
         //    Like=8,
         //    IsVerifiedInfo = true,
         //    Point = 98
-            
+
         //});
 
         //builder.Entity<Member>().HasData(new Member
@@ -97,7 +97,7 @@ public partial class MemberBuilder : EntityBuilder<Member>
         //    Point = 12
         //});
 
-      
+
 
 
     }

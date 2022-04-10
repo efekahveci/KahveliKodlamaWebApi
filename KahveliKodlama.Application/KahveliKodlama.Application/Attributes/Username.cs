@@ -1,21 +1,13 @@
-﻿using KahveliKodlama.Core.Extensions;
-using KahveliKodlama.Domain.Entities;
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
+﻿using System.ComponentModel.DataAnnotations;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace KahveliKodlama.Application.Attributes;
-public class Username:ValidationAttribute
+public class Username : ValidationAttribute
 {
-   
+
     protected override ValidationResult IsValid(object value, ValidationContext validationContext)
     {
-        if(value == null)
+        if (value == null)
             return new ValidationResult("Kullanıcı adını lütfen boş geçmeyiniz.");
 
         string text = value.ToString().Trim();
@@ -29,7 +21,7 @@ public class Username:ValidationAttribute
         if (text.Length > 15)
             return new ValidationResult("Kullanıcı adınızı lütfen en fazla 15 karakter giriniz.");
 
-       
+
         return ValidationResult.Success;
 
     }

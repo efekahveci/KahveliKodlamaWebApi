@@ -3,15 +3,13 @@ using KahveliKodlama.Infrastructure.ContextEngine;
 using Serilog;
 using Serilog.Context;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Text.Json;
-using System.Threading.Tasks;
 
 namespace KahveliKodlama.Service.Events;
 
-public partial class EventPublisher:IEventPublisher {
+public partial class EventPublisher : IEventPublisher
+{
 
     public virtual void PublishAsync<TEvent>(TEvent @event)
     {
@@ -26,8 +24,8 @@ public partial class EventPublisher:IEventPublisher {
                 Log.Warning($"_event publish :  {JsonSerializer.Serialize(@event)}");
 
                 //try to handle published event
-                 consumer.HandleEventAsync(@event);
-            
+                consumer.HandleEventAsync(@event);
+
             }
             catch (Exception exception)
             {
@@ -37,9 +35,9 @@ public partial class EventPublisher:IEventPublisher {
                     LogContext.PushProperty("ex", exception.Message);
 
 
-                   // Console.WriteLine(exception.Message);
+                    // Console.WriteLine(exception.Message);
                     //Loglama
-                   // await logger.ErrorAsync(exception.Message, exception);
+                    // await logger.ErrorAsync(exception.Message, exception);
                 }
                 catch
                 {

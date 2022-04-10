@@ -1,8 +1,6 @@
 ﻿using KahveliKodlama.Application.Contract;
-using KahveliKodlama.Core.Extensions;
 using KahveliKodlama.Domain.Entities;
 using MediatR;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -18,8 +16,8 @@ public class RegisterAdminCommandHandler : IRequestHandler<RegisterAdminCommandR
     }
     public async Task<ResponseResult> Handle(RegisterAdminCommandRequest request, CancellationToken cancellationToken)
     {
-     
-       return await _authService.RegisterAdmin(request);
+
+        return await _authService.RegisterAdmin(request);
 
     }
 }

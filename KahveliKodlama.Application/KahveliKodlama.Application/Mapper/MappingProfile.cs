@@ -17,9 +17,9 @@ public class MappingProfile : Profile
 
         CreateMap<Heading, HeadingDto>()
             .ReverseMap();
-    
+
         CreateMap<Content, ContentDto>().ReverseMap();
-    
+
         CreateMap<Contact, ContactDto>().ReverseMap();
 
         CreateMap<Category, CategoryDto>().ReverseMap();
