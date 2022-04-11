@@ -29,19 +29,16 @@ public partial class EventPublisher : IEventPublisher
             }
             catch (Exception exception)
             {
-                //log error, we put in to nested try-catch to prevent possible cyclic (if some error occurs)
+
                 try
                 {
                     LogContext.PushProperty("ex", exception.Message);
 
 
-                    // Console.WriteLine(exception.Message);
-                    //Loglama
-                    // await logger.ErrorAsync(exception.Message, exception);
                 }
                 catch
                 {
-                    // ignored
+
                 }
             }
         }

@@ -19,7 +19,7 @@ public class AsyncGenericRepository<TEntity> : IAsyncGenericRepository<TEntity> 
     {
         _context = EngineContext.Current.Resolve<KahveliContext>();
     }
-    //2400
+
     public DbSet<TEntity> Table => _context.Set<TEntity>();
 
 

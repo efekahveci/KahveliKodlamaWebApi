@@ -4,13 +4,11 @@ using System.Collections.Generic;
 
 namespace KahveliKodlama.Application.Dto;
 
-//[ModelBinder(typeof(DefaultModelBinder<MemberDto>))]
-
 public class MemberDto : BaseDto
 {
     public string Username { get; set; }
-    [CustomValid]
 
+    [CustomValid]
     public string Name { get; set; }
     public string Surname { get; set; }
     public string Email { get; set; }

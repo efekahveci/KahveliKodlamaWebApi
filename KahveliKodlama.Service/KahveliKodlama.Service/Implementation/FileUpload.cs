@@ -24,17 +24,14 @@ public class FileUpload : IFileUpload
 
     public async Task<bool> Complate(IFormFile file, string userName)
     {
-        //var currentUserName =  user.FindFirst(ClaimTypes.NameIdentifier).Value;
-        //AppUser efe = await _userManager.FindByNameAsync(currentUserName);
+
 
 
         string[] _Split = userName.Split("+++");
         userName = _Split[0];
         string email = _Split[1];
 
-        //var result = await _userManager.FindByNameAsync(user.Identity.Name);
 
-        //var userid= await _memberService.GetUser(result.Email);
 
         foreach (var item in extension)
         {

@@ -36,27 +36,9 @@ public static class ServiceRegistration
                      var serviceType = assignedTypes.GetInterfaces().First(i => i.GetGenericTypeDefinition() == typeof(IConsumer<>));
                      serviceCollection.AddScoped(serviceType, assignedTypes);
                  });
-        //var consumers = AppDomain.CurrentDomain.GetAssemblies().SelectMany(x => x.GetTypes()).Where(type => typeof(IConsumer<>).
-        //        IsAssignableFrom(type) && type.IsInterface).ToList();
 
 
-        //foreach (var consumer in consumers)
-        //{
-        // consumers
-        //.ForEach(typesToRegister =>
-        //{
-        //    typesToRegister.serviceTypes.ForEach(typeToRegister => services.AddScoped(typeToRegister, typesToRegister.assignedType));
-        //});
 
-        //    var deneme = consumer.FindInterfaces(consumer, );
-
-
-        //    foreach (var findInterface in consumer.FindInterfaces((type, criteria) =>
-        //    {
-        //        var isMatch = type.IsGenericType && ((Type)criteria).IsAssignableFrom(type.GetGenericTypeDefinition());
-        //        return isMatch;
-        //    }, typeof(IConsumer<>)))
-        //        serviceCollection.AddScoped(findInterface, consumer);
 
         serviceCollection.AddHealthChecks();
 

@@ -29,7 +29,7 @@ public class EmailService : IEmailService
                 mail.IsBodyHtml = true;
                 mail.To.Add(item.eMail);
                 mail.From = new MailAddress("kahvelikodlama@gmail.com", "Şifre Güncelleme", System.Text.Encoding.UTF8);
-                mail.Subject = "Şifre Güncelleme Talebi";
+                mail.Subject = "Yeni İçerik Eklnedi.";
                 mail.Body = content.Body;
                 mail.IsBodyHtml = true;
                 SmtpClient smp = new SmtpClient();

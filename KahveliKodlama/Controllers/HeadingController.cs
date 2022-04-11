@@ -99,8 +99,6 @@ public class HeadingController : ControllerBase
     }
 
 
-    // [Authorize("Admin")]
-
     [HttpGet("getById/{id}")]
     public async Task<IActionResult> GetByIdHeading(string id)
     {

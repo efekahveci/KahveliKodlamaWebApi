@@ -24,9 +24,6 @@ public class ResponseResult
 
     }
 
-
-
-
     public ResponseCode StatusCode { get; set; }
     public string Message { get; set; }
     public object Data { get; set; }

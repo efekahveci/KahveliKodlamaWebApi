@@ -146,12 +146,12 @@ public class MemberController : ControllerBase
 
             await _memberService.Create(result);
 
-            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, new List<Member>() { result }));
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk));
 
         }
 
 
-        return NotFound(new ResponseResult(Domain.Enum.ResponseCode.Not_Found, MessageHelper.validError, new List<string> { "Kayıt Daha önce eklenmiş" }));
+        return NotFound(new ResponseResult(Domain.Enum.ResponseCode.Not_Found, MessageHelper.validError));
 
 
     }
@@ -172,7 +172,7 @@ public class MemberController : ControllerBase
 
             await _memberService.AddPointMember(result, 50);
 
-            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validPoint, response.Body.TCKimlikNoDogrulaResult));
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk));
 
         }
         return NotFound();
@@ -190,7 +190,7 @@ public class MemberController : ControllerBase
 
             await _memberService.Update(member);
 
-            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, result));
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk));
 
         }
         return NotFound();
@@ -209,7 +209,7 @@ public class MemberController : ControllerBase
 
             await _memberService.UpdateMember(member);
 
-            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, result));
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk));
 
         }
         return NotFound();
@@ -218,7 +218,7 @@ public class MemberController : ControllerBase
 
 
 
-    [HttpDelete("delete/{id}")]
+    [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteMember(string id)
     {
 
@@ -228,7 +228,7 @@ public class MemberController : ControllerBase
 
             await _memberService.Delete(id);
 
-            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk, new List<string>() { "Kullanıcı sistemden silindi." }));
+            return Ok(new ResponseResult(Domain.Enum.ResponseCode.OK, MessageHelper.validOk));
 
         }
         return NotFound();
